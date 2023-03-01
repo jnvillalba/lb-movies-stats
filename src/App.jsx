@@ -4,9 +4,12 @@ import movies from "./movies";
 function App() {
   const [directorMasRepetido, setDirectorMasRepetido] = useState("");
   const [maxContador, setMaxContador] = useState(0);
+
+
+  const lista_urls = movies.map(objeto => objeto.url);
   useEffect(() => {
     const contadorDirectores = {};
-
+   console.log(lista_urls)
     movies.forEach((pelicula) => {
       if (contadorDirectores[pelicula.director]) {
         contadorDirectores[pelicula.director]++;
