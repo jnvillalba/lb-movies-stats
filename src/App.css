@@ -30,7 +30,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .moviesList li{
+    .moviesList li {
         width: 80%;
     }
 }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   
   return (
-    <header className="header-area header-sticky">
+    <div className="header-area header-sticky">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -44,16 +44,32 @@ const NavBar = () => {
                   <Link to="/years">Years</Link>
                 </li>
               </ul>
-              <a className="menu-trigger">
-                <span>Menu</span>
-              </a>
+              
               {/* ***** Menu End ***** */}
             </nav>
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
 export default NavBar;
+
+/*const NavBar = () => {
+  return (
+    <Navbar className=" main-nav" collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Brand href="/">Stats</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto nav">
+          <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="/Directors">Directors</Nav.Link>
+          <Nav.Link as={Link} to="/Writers">Writers</Nav.Link>
+          <Nav.Link as={Link} to="/Actors">Actors</Nav.Link>
+          <Nav.Link as={Link} to="/years">Years</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+}; */

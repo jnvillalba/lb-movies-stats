@@ -18,7 +18,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route index element={<Home />} />
-          <Route exact path="/Directos" element={<Years />} />
+          <Route exact path="/Years" element={<Years />} />
           <Route
             exact
             path="/Directors"
