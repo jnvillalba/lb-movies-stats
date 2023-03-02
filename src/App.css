@@ -9,5 +9,15 @@ body {
     margin-right: 20px;
 }
 
-#apariciones {
+.moviesList {
+    display: flex;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.moviesList li{
+    display: flex;
+    color: #fff;
+    flex-wrap: wrap;
+    margin: 6px;
 }

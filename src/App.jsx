@@ -22,6 +22,7 @@ function App() {
               <Category title={"Directors"} lista={directores} />
               <Category title={"Writers"} lista={escritores} />
               <Category title={"Actors"} lista={actores} />
+              <Category title={"Years"} lista={años} />
               <Details title={"Years"} lista={años.slice(0, 8)} />
             </div>
           </div>

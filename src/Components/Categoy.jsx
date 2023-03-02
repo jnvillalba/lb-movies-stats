@@ -27,39 +27,41 @@ const Categoy = ({ title, lista }) => {
     <div className="gaming-library">
       <div className="col-lg-12">
         <div className="heading-section">
-        <h4 align="center">
+          <h4 className="cat-title" align="center">
             <em>{title}</em>
           </h4>
         </div>
+
         {lista.slice(0, 5).map((director) => (
           <div className="item" key={director[0]}>
-            <ul>
-              <li>
-                {title !== "Years" && (
-                  <img
-                    className="templatemo-item"
-                    src={handleImg(director[0])}
-                    width={100}
-                    height={100}
-                    alt={director[0]}
-                  />
-                )}
-              </li>
-              <li>
-                <h4 align="center">{director[0]}</h4>
-              </li>
-              <li>
-                <h4 align="center">{director[1]}</h4>
-              </li>
-
-              {moviesList(director[0]).map((pelicula) => (
-                <li key={pelicula.name}>
-                  <p align="center">
+            {title !== "Years" && (
+              <div className="col-lg-2">
+                <img
+                  className="templatemo-item"
+                  src={handleImg(director[0])}
+                  width={100}
+                  height={100}
+                  alt={director[0]}
+                />
+              </div>
+            )}
+            <div className="col-lg-2">
+              <h4  align="center">{director[0]}</h4>
+            </div>
+            <div className="col-lg-2">
+              <h4 align="center" className="counter">
+                {director[1]}
+              </h4>
+            </div>
+            <div className="col-lg-8">
+              <ul className="moviesList">
+                {moviesList(director[0]).map((pelicula) => (
+                  <li key={pelicula.name}>
                     {pelicula.name} ({pelicula.year})
-                  </p>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>
