@@ -58,7 +58,7 @@ const Categoy = ({ title, lista }) => {
                 {director[1]}
               </h4>
             </div>
-            <div className="col-lg-8">
+            <div className="col-lg-6">
               <ul className="moviesList">
                 {moviesList(director[0]).map((pelicula) => (
                   <li key={pelicula.name}>

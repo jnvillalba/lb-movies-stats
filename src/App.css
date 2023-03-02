@@ -13,14 +13,22 @@ body {
     display: flex;
     color: #fff;
     flex-wrap: wrap;
-    
+
 }
 
-.moviesList li{
+.moviesList li {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     flex-wrap: wrap;
     margin: 6px;
+}
+
+@media (max-width: 426px) {
+    .movieList {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
 }
