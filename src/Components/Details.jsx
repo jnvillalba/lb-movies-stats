@@ -41,10 +41,20 @@ const Details = ({ title, lista }) => {
                   <img src={movie.img} />
 
                   <h4 align="center">
-                    {movie.name} ({movie.year})<p>{movie.directors}</p>
-                    <p>{movie.writers}</p>
-                    <p>{movie.actors.splice(0, 5)}</p>
+                    {movie.name} ({movie.year})
                   </h4>
+                  <div>
+                    <p>{movie.directors.join(", ")}</p>
+                    <p>{movie.writers.join(", ")}</p>
+                  </div>
+
+                  {movie.actors.length > 0 ? (
+                    movie.actors
+                      .splice(0, 5)
+                      .map((actors) => <p key={actors}>{actors}</p>)
+                  ) : (
+                    <p>No actors found</p>
+                  )}
                 </div>
               </div>
             ))}
