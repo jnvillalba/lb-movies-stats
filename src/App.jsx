@@ -11,9 +11,9 @@ function App() {
     const actores = obtenerRepetidos(movies, "actors");
     const directores = obtenerRepetidos(movies, "director");
     const escritores = obtenerRepetidos(movies, "writers");
-    setActoresRepetidos(actores)
-    setDirectoresRepetidos(directores)
-    setEscritoresRepetidos(escritores)
+    setActoresRepetidos(actores);
+    setDirectoresRepetidos(directores);
+    setEscritoresRepetidos(escritores);
   }, [movies]);
 
   return (
@@ -53,9 +53,16 @@ function App() {
 export default App;
 
 function obtenerRepetidos(lista, propiedad) {
-  const contador = lista.flatMap((objeto) => objeto[propiedad])
-    .reduce((contador, item) => (contador[item] = (contador[item] || 0) + 1, contador), {});
-  const repetidos = Object.entries(contador)
-    .filter(([_, repeticiones]) => repeticiones > 1);
+  const contador = lista
+    .flatMap((objeto) => objeto[propiedad])
+    .reduce(
+      (contador, item) => (
+        (contador[item] = (contador[item] || 0) + 1), contador
+      ),
+      {}
+    );
+  const repetidos = Object.entries(contador).filter(
+    ([_, repeticiones]) => repeticiones > 1
+  );
   return repetidos.sort((a, b) => b[1] - a[1]);
 }
