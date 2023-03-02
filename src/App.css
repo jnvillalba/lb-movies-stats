@@ -14,10 +14,14 @@ body {
     color: #fff;
     flex-wrap: wrap;
 
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+
 }
 
 .moviesList li {
-    display: flex;
+    display: list-item;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -25,8 +29,15 @@ body {
     margin: 6px;
 }
 
+@media (min-width: 768px) {
+    .moviesList li{
+        width: 80%;
+    }
+}
+
 @media (max-width: 426px) {
     .movieList {
+        display: list-item !important;
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
