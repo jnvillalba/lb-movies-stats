@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import movies from "./movies";
-import Table from "./Table";
+import movies from "./Lists/movies";
 
+import Category from "./Components/Categoy";
+import NavBar from "./Components/NavBar";
+import Details from "./Components/Details";
 function App() {
   //const lista_urls = movies.map((objeto) => objeto.url);
   const actores = obtenerRepetidos(movies, "actors");
@@ -10,15 +12,22 @@ function App() {
   const escritores = obtenerRepetidos(movies, "writers");
   const años = obtenerRepetidos(movies, "year");
   return (
-    <div className="container mt-2">
-      <h1 align="center">Stats</h1>
-      <h2 align="center" className="mt-1"> Movies: {movies.length} </h2>
-      <Table tr={"Directors"}  lista={directores}/>
-      <Table tr={"Writers"} lista={escritores}/>
-      <Table tr={"Actors"} lista={actores}/>
-      <Table tr={"Years"} lista={años}/>
-      
-    </div>
+    <>
+      <NavBar />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-content">
+              <h2>Movies: {movies.length}</h2>
+              <Category title={"Directors"} lista={directores} />
+              <Category title={"Writers"} lista={escritores} />
+              <Category title={"Actors"} lista={actores} />
+              <Details title={"Years"} lista={años.slice(0, 8)} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
