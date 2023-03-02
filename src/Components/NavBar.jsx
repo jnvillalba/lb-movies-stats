@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  
   return (
     <header className="header-area header-sticky">
       <div className="container">
@@ -8,9 +10,7 @@ const NavBar = () => {
           <div className="col-12">
             <nav className="main-nav">
               {/* ***** Logo Start ***** */}
-              <h1 className="logo">
-                Stats
-              </h1>
+              <h1 className="logo">Stats</h1>
               {/* ***** Logo End ***** */}
               {/* ***** Search End ***** */}
               {/*<div className="search-input">
@@ -29,21 +29,19 @@ const NavBar = () => {
               {/* ***** Menu Start ***** */}
               <ul className="nav">
                 <li>
-                  <a href="index.html" className="active">
-                    Home
-                  </a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <a href="browse.html">Directors</a>
+                  <Link to="/Directors">Directors</Link>
                 </li>
                 <li>
-                  <a href="details.html">Writers</a>
+                  <Link to="/Writers">Writers</Link>
                 </li>
                 <li>
-                  <a href="streams.html">Actors</a>
+                  <Link to="/Actors">Actors</Link>
                 </li>
                 <li>
-                  <a href="streams.html">Years</a>
+                  <Link to="/years">Years</Link>
                 </li>
               </ul>
               <a className="menu-trigger">

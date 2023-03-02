@@ -1,8 +1,13 @@
 import React from "react";
 import cast from "../Lists/cast";
 import movies from "../Lists/movies";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Categoy = ({ title, lista }) => {
+  const navigate = useNavigate();
+  const goToYears = () => navigate("/Years");
+
   const handleImg = (name) => {
     let imgFind = cast.find((x) => x.name === name);
     let img = imgFind ? imgFind.img : "";
@@ -68,7 +73,7 @@ const Categoy = ({ title, lista }) => {
 
       <div className="col-lg-12">
         <div className="main-button">
-          <a href="profile.html">View All</a>
+          <Link to={`/${title}`}> View All </Link> 
         </div>
       </div>
     </div>

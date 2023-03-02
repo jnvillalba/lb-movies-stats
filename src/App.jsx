@@ -1,50 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import movies from "./Lists/movies";
-import Category from "./Components/Categoy";
 import NavBar from "./Components/NavBar";
-import Details from "./Components/Details";
-
+import Home from "./Components/Home";
+import Years from "./Components/Years";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import OLists from "./Components/OLists";
+import { obtenerRepetidos } from "./Utils";
+import movies from "./Lists/movies";
 function App() {
   //const lista_urls = movies.map((objeto) => objeto.url);
   const actores = obtenerRepetidos(movies, "actors");
   const directores = obtenerRepetidos(movies, "directors");
   const escritores = obtenerRepetidos(movies, "writers");
-  const años = obtenerRepetidos(movies, "year");
   return (
     <>
-      <NavBar />
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="page-content">
-              <h2>Movies: {movies.length}</h2>
-              <Category title={"Directors"} lista={directores} />
-              <Category title={"Writers"} lista={escritores} />
-              <Category title={"Actors"} lista={actores} />
-              <Category title={"Years"} lista={años} />
-              <Details title={"Years"} lista={años.slice(0, 8)} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route exact path="/Directos" element={<Years />} />
+          <Route
+            exact
+            path="/Directors"
+            element={<OLists title={"Directors"} lista={directores} />}
+          />
+          <Route
+            exact
+            path="/Writers"
+            element={<OLists title={"Writers"} lista={escritores} />}
+          />
+          <Route
+            exact
+            path="/Actors"
+            element={<OLists title={"Actors"} lista={actores} />}
+          />
+          <Route exact path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
 
 export default App;
-
-function obtenerRepetidos(lista, propiedad) {
-  const contador = lista
-    .flatMap((objeto) => objeto[propiedad])
-    .reduce(
-      (contador, item) => (
-        (contador[item] = (contador[item] || 0) + 1), contador
-      ),
-      {}
-    );
-  const repetidos = Object.entries(contador).filter(
-    ([_, repeticiones]) => repeticiones > 1
-  );
-  return repetidos.sort((a, b) => b[1] - a[1]);
-}

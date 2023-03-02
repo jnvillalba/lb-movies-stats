@@ -1,6 +1,7 @@
 import React from "react";
 import cast from "../Lists/cast";
 import movies from "../Lists/movies";
+import { Link } from "react-router-dom";
 
 const Details = ({ title, lista }) => {
   const handleImg = (name) => {
@@ -40,7 +41,7 @@ const Details = ({ title, lista }) => {
                     <img src={handleImg(director[0])} alt={director[0]} />
                   )}
                   <h4 align="center">
-                    {director[0]}
+                    <Link to={`/${director[0]}`}> {director[0]}</Link>
                     <br />
                     <p>{director[1]}</p>
                   </h4>
