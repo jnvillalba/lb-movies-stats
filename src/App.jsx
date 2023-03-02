@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import movies from "./Lists/movies";
-
 import Category from "./Components/Categoy";
 import NavBar from "./Components/NavBar";
 import Details from "./Components/Details";
+
 function App() {
   //const lista_urls = movies.map((objeto) => objeto.url);
   const actores = obtenerRepetidos(movies, "actors");
@@ -14,10 +14,10 @@ function App() {
   return (
     <>
       <NavBar />
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-content">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="page-content">
               <h2>Movies: {movies.length}</h2>
               <Category title={"Directors"} lista={directores} />
               <Category title={"Writers"} lista={escritores} />
