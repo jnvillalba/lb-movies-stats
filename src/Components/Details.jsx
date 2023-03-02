@@ -1,30 +1,30 @@
-import React from "react";
-import cast from "../Lists/cast";
+import React, { useState } from "react";
+
 import movies from "../Lists/movies";
-import { Link } from "react-router-dom";
 
 const Details = ({ title, lista }) => {
-  console.log(lista);
-  const handleImg = (name) => {
-    let imgFind = movies.find((x) => x.name === name);
-    let img = imgFind ? imgFind.img : "";
-    return img;
+  const [poster, setPoster] = useState("");
+
+  const moviePoster = (name) => {
+    fetch(
+      `https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${name}`
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        if (json.results.length > 0) {
+          setPoster(
+            `http://image.tmdb.org/t/p/w500/${json.results[0].poster_path}`
+          );
+        } else {
+          setPoster("Not Found");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    return poster;
   };
 
-  const moviesList = (name) => {
-    switch (title) {
-      case "Actors":
-        return movies.filter((x) => x.actors.includes(name));
-      case "movies":
-        return movies.filter((x) => x.movies.includes(name));
-      case "Writers":
-        return movies.filter((x) => x.writers.includes(name));
-      case "Years":
-        return movies.filter((x) => x.year == name);
-      default:
-        return [];
-    }
-  };
   return (
     <div className="most-popular">
       <div className="row">
@@ -38,7 +38,7 @@ const Details = ({ title, lista }) => {
             {lista.map((movie) => (
               <div className="col-lg-3 col-sm-6" key={movie[0]}>
                 <div className="item">
-                  <img src={movie.img} />
+                  <img src={"moviePoster(movie.name)"} />
 
                   <h4 align="center">
                     {movie.name} ({movie.year})
@@ -46,15 +46,10 @@ const Details = ({ title, lista }) => {
                   <div>
                     <p>{movie.directors.join(", ")}</p>
                     <p>{movie.writers.join(", ")}</p>
+                   
                   </div>
 
-                  {movie.actors.length > 0 ? (
-                    movie.actors
-                      .splice(0, 5)
-                      .map((actors) => <p key={actors}>{actors}</p>)
-                  ) : (
-                    <p>No actors found</p>
-                  )}
+                  <p className="mt-2">{movie.actors.splice(0,5).join(", ")}</p>
                 </div>
               </div>
             ))}
