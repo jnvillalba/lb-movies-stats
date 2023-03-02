@@ -188,7 +188,6 @@ let movies = [
 
     year: 2022,
     url: "https://boxd.it/uF8E",
-    director: "Cooper Raiff",
     actors: [
       [
         "Cooper Raiff",
@@ -760,7 +759,7 @@ let movies = [
   },
   {
     name: "Ready or Not",
-    director: ["Matt Bettinelli Olpin", "Tyler Gillett"],
+    directors: ["Matt Bettinelli Olpin", "Tyler Gillett"],
     writers: ["Guy Busick", "R Christopher Murphy"],
 
     year: 2019,
@@ -798,7 +797,7 @@ let movies = [
   },
   {
     name: "The Marriage App",
-    director: ["Sebastian De Caro"],
+    directors: ["Sebastian De Caro"],
     writers: ["Gabriel Korenfeld", "Rocio Blanco", "Daniel Cuparo"],
 
     year: 2022,
@@ -828,7 +827,7 @@ let movies = [
   },
   {
     name: "Instant Family",
-    director: ["Sean Anders"],
+    directors: ["Sean Anders"],
     writers: ["Sean Anders", "John Morris 1"],
 
     year: 2018,
@@ -895,7 +894,7 @@ let movies = [
   },
   {
     name: "Enola Holmes 2",
-    director: ["Harry Bradbeer"],
+    directors: ["Harry Bradbeer"],
     writers: ["Jack Thorne", "Nancy Springer"],
 
     year: 2022,
@@ -926,7 +925,7 @@ let movies = [
   },
   {
     name: "Closer",
-    director: ["Mike Nichols"],
+    directors: ["Mike Nichols"],
     writers: ["Patrick Marber"],
 
     year: 2004,
@@ -955,7 +954,7 @@ let movies = [
   },
   {
     name: "Alive",
-    director: ["Frank Marshall"],
+    directors: ["Frank Marshall"],
     writers: ["John Patrick Shanley"],
 
     year: 1993,
@@ -1006,7 +1005,7 @@ let movies = [
   },
   {
     name: "The Pale Blue Eye",
-    director: ["Scott Cooper"],
+    directors: ["Scott Cooper"],
     writers: ["Scott Cooper", "Louis Bayard"],
 
     year: 2022,
@@ -1042,7 +1041,7 @@ let movies = [
   },
   {
     name: "The Silence of the Sky",
-    director: ["Marco Dutra"],
+    directors: ["Marco Dutra"],
     writers: ["Caetano Gotardo", "Sergio Bizzio", "Lucia Puenzo"],
 
     year: 2016,
@@ -1066,7 +1065,7 @@ let movies = [
   },
   {
     name: "RRR",
-    director: ["S S Rajamouli 1"],
+    directors: ["S S Rajamouli 1"],
     writers: ["S S Rajamouli 1", "Vijayendra Prasad"],
 
     year: 2022,
@@ -1107,7 +1106,7 @@ let movies = [
   },
   {
     name: "Tales of an Immoral Couple",
-    director: ["Manolo Caro 1"],
+    directors: ["Manolo Caro 1"],
     writers: ["Manolo Caro 1"],
 
     year: 2016,
@@ -1137,7 +1136,7 @@ let movies = [
   },
   {
     name: "West Side Story",
-    director: ["Steven Spielberg"],
+    directors: ["Steven Spielberg"],
     writers: ["Tony Kushner"],
 
     year: 2021,
@@ -1271,7 +1270,7 @@ let movies = [
   },
   {
     name: "Death on the Nile",
-    director: ["Kenneth Branagh"],
+    directors: ["Kenneth Branagh"],
     writers: ["Agatha Christie", "Michael Green 3"],
 
     year: 2022,
@@ -1331,7 +1330,7 @@ let movies = [
   },
   {
     name: "Death Proof",
-    director: ["Quentin Tarantino"],
+    directors: ["Quentin Tarantino"],
     writers: ["Quentin Tarantino"],
 
     year: 2007,
@@ -1378,7 +1377,7 @@ let movies = [
   },
   {
     name: "Trial by Fire",
-    director: ["Edward Zwick"],
+    directors: ["Edward Zwick"],
     writers: ["Geoffrey Fletcher", "David Grann"],
 
     year: 2018,
@@ -1420,7 +1419,7 @@ let movies = [
   },
   {
     name: "Talk to Her",
-    director: ["Pedro Almodovar"],
+    directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
 
     year: 2002,
@@ -1455,7 +1454,7 @@ let movies = [
   },
   {
     name: "Planet Terror",
-    director: ["Robert Rodriguez 1"],
+    directors: ["Robert Rodriguez 1"],
     writers: ["Robert Rodriguez 1"],
 
     year: 2007,
@@ -1495,7 +1494,7 @@ let movies = [
   },
   {
     name: "Triangle of Sadness",
-    director: ["Ruben Ostlund"],
+    directors: ["Ruben Ostlund"],
     writers: ["Ruben Ostlund"],
 
     year: 2022,
@@ -1652,7 +1651,7 @@ let movies = [
   },
   {
     name: "A Beautiful Day in the Neighborhood",
-    director: ["Marielle Heller"],
+    directors: ["Marielle Heller"],
     writers: ["Noah Harpster", "Micah Fitzerman Blue"],
     year: 2019,
     url: "https://boxd.it/i7vA",
@@ -1733,7 +1732,7 @@ let movies = [
   },
   {
     name: "BARDO, False Chronicle of a Handful of Truths",
-    director: ["Alejandro Gonzalez Inarritu"],
+    directors: ["Alejandro Gonzalez Inarritu"],
     writers: ["Nicolas Giacobone", "Alejandro Gonzalez Inarritu"],
     year: 2022,
     url: "https://boxd.it/pAgy",
@@ -1769,7 +1768,7 @@ let movies = [
   },
   {
     name: "Guillermo del Toro's Pinocchio",
-    director: ["Mark Gustafson", "Guillermo Del Toro"],
+    directors: ["Mark Gustafson", "Guillermo Del Toro"],
     writers: ["Guillermo Del Toro", "Patrick Mchale"],
     year: 2022,
     url: "https://boxd.it/kjMW",
@@ -1802,7 +1801,7 @@ let movies = [
   },
   {
     name: "Marcel the Shell with Shoes On",
-    director: ["Dean Fleischer Camp"],
+    directors: ["Dean Fleischer Camp"],
     writers: [
       "Dean Fleischer Camp",
       "Jenny Slate",
@@ -1831,7 +1830,7 @@ let movies = [
   },
   {
     name: "Van Helsing",
-    director: ["Stephen Sommers"],
+    directors: ["Stephen Sommers"],
     writers: ["Stephen Sommers"],
     year: 2004,
     url: "https://boxd.it/21aa",
@@ -1868,7 +1867,7 @@ let movies = [
   },
   {
     name: "You People",
-    director: ["Kenya Barris"],
+    directors: ["Kenya Barris"],
     writers: ["Jonah Hill", "Kenya Barris"],
     year: 2023,
     url: "https://boxd.it/wJYe",
@@ -1929,7 +1928,7 @@ let movies = [
   },
   {
     name: "Porco Rosso",
-    director: ["Hayao Miyazaki"],
+    directors: ["Hayao Miyazaki"],
     writers: ["Hayao Miyazak"],
     year: 1992,
     url: "https://boxd.it/1Tp2",
@@ -1952,7 +1951,7 @@ let movies = [
   },
   {
     name: "42",
-    director: ["Brian Helgeland"],
+    directors: ["Brian Helgeland"],
     writers: ["Brian Helgeland"],
 
     year: 2013,
@@ -2045,7 +2044,7 @@ let movies = [
   },
   {
     name: "Spiderhead",
-    director: ["Joseph Kosinski"],
+    directors: ["Joseph Kosinski"],
     writers: ["Rhett Reese", "Paul Wernick"],
 
     year: 2022,
@@ -2069,7 +2068,7 @@ let movies = [
   },
   {
     name: "Emma.",
-    director: ["Autumn De Wilde"],
+    directors: ["Autumn De Wilde"],
     writers: ["Eleanor Catton", "Jane Austen"],
 
     year: 2020,
@@ -2130,7 +2129,7 @@ let movies = [
   },
   {
     name: "Legion of Super-Heroes",
-    director: ["Jeff Wamester"],
+    directors: ["Jeff Wamester"],
     writers: ["Josie Campbell"],
 
     year: 2023,
@@ -2158,7 +2157,7 @@ let movies = [
   },
   {
     name: "Robin Hood",
-    director: ["Ridley Scott"],
+    directors: ["Ridley Scott"],
     writers: ["Brian Helgeland", "Cyrus Voris", "Ethan Reiff"],
 
     year: 2010,
@@ -2242,7 +2241,7 @@ let movies = [
   },
   {
     name: "The Sea Beast",
-    director: ["Chris Williams"],
+    directors: ["Chris Williams"],
     writers: ["Chris Williams", "Nell Benjamin"],
 
     year: 2022,
@@ -2276,7 +2275,7 @@ let movies = [
   },
   {
     name: "Green Lantern: Beware My Power",
-    director: ["Jeff Wamester"],
+    directors: ["Jeff Wamester"],
     writers: ["John Semper", "Ernie Altbacker"],
     year: 2022,
     url: "https://boxd.it/xvNy",
@@ -2298,7 +2297,7 @@ let movies = [
   },
   {
     name: "The Gift",
-    director: ["Sam Raimi"],
+    directors: ["Sam Raimi"],
     writers: ["Tom Epperson", "Billy Bob Thornton"],
 
     year: 2000,
@@ -2352,7 +2351,7 @@ let movies = [
   },
   {
     name: "The Hunt",
-    director: ["Thomas Vinterberg"],
+    directors: ["Thomas Vinterberg"],
     writers: ["Thomas Vinterberg", "Tobias Lindholm"],
 
     year: 2012,
@@ -2398,7 +2397,7 @@ let movies = [
   },
   {
     name: "The Widows of Thursdays",
-    director: ["Marcelo Pineyro"],
+    directors: ["Marcelo Pineyro"],
     writers: ["Marcelo Pineyro", "Marcelo Figueras", "Claudia Pineiro"],
 
     year: 2009,
@@ -2421,7 +2420,7 @@ let movies = [
   },
   {
     name: "Ant-Man and the Wasp: Quantumania",
-    director: ["Peyton Reed"],
+    directors: ["Peyton Reed"],
     writers: ["Jeff Loveness"],
     year: 2023,
     url: "https://boxd.it/nL2y",
@@ -2496,7 +2495,7 @@ let movies = [
   },
   {
     name: "The Sum of All Fears",
-    director: ["Phil Alden Robinson 1"],
+    directors: ["Phil Alden Robinson 1"],
     writers: ["Tom Clancy 1", "Daniel Pyne", "Paul Attanasio"],
 
     year: 2002,
@@ -2606,7 +2605,7 @@ let movies = [
   },
   {
     name: "13 Going on 30",
-    director: ["Gary Winick"],
+    directors: ["Gary Winick"],
     writers: ["Josh Goldsmith", "Cathy Yuspa"],
 
     year: 2004,
@@ -2670,12 +2669,10 @@ let movies = [
   },
   {
     name: "Shithouse",
-    director: ["Cooper Raiff"],
+    directors: ["Cooper Raiff"],
     writers: ["Cooper Raiff"],
-
     year: 2020,
     url: "https://boxd.it/nCFc",
-    director: "Cooper Raiff",
     actors: [
       "Cooper Raiff",
       "Dylan Gelula",
@@ -2704,7 +2701,7 @@ let movies = [
   },
   {
     name: "Knock at the Cabin",
-    director: ["M Night Shyamalan"],
+    directors: ["M Night Shyamalan"],
     writers: ["M Night Shyamalan", "Michael Sherman 3", "Steve Desmond 1"],
 
     year: 2023,
@@ -2739,7 +2736,7 @@ let movies = [
   },
   {
     name: "Bombshell",
-    director: ["Jay Roach"],
+    directors: ["Jay Roach"],
     writers: ["Charles Randolph 1"],
 
     year: 2019,
@@ -2874,7 +2871,7 @@ let movies = [
   },
   {
     name: "We Have a Ghost",
-    director: ["Christopher Landon 2"],
+    directors: ["Christopher Landon 2"],
     writers: ["Christopher Landon 2"],
 
     year: 2023,
@@ -2912,7 +2909,7 @@ let movies = [
   },
   {
     name: "Pitch Perfect 2",
-    director: ["Elizabeth Banks"],
+    directors: ["Elizabeth Banks"],
     writers: ["Kay Cannon"],
 
     year: 2015,
@@ -3045,7 +3042,7 @@ let movies = [
   },
   {
     name: "Kicking and Screaming",
-    director: ["Noah Baumbach"],
+    directors: ["Noah Baumbach"],
     writers: ["Oliver Berkman", "Noah Baumbach"],
 
     year: 1995,
@@ -3094,7 +3091,7 @@ let movies = [
   },
   {
     name: "Gridiron Gang",
-    director: ["Phil Joanou"],
+    directors: ["Phil Joanou"],
     writers: ["Jeff Maguire", "Jac Flanders"],
 
     year: 2006,
@@ -3165,7 +3162,7 @@ let movies = [
   },
   {
     name: "Mr. Brooks",
-    director: ["Bruce A Evans"],
+    directors: ["Bruce A Evans"],
     writers: ["Raynold Gideon", "Bruce A Evans"],
 
     year: 2007,
@@ -3218,7 +3215,7 @@ let movies = [
   },
   {
     name: "The Whale",
-    director: ["Darren Aronofsky"],
+    directors: ["Darren Aronofsky"],
     writers: ["Samuel D Hunter"],
 
     year: 2022,
@@ -3236,7 +3233,7 @@ let movies = [
   },
   {
     name: "The Boy in the Striped Pyjamas",
-    director: ["Mark Herman"],
+    directors: ["Mark Herman"],
     writers: ["John Boyne", "Mark Herman"],
     year: 2008,
     url: "https://boxd.it/1NOK",
@@ -3271,7 +3268,7 @@ let movies = [
   },
   {
     name: "The Salvation",
-    director: ["Kristian Levring"],
+    directors: ["Kristian Levring"],
     writers: ["Anders Thomas Jensen", "Kristian Levring"],
 
     year: "2014",
@@ -3328,12 +3325,11 @@ let movies = [
   },
   {
     name: "The Invisible Guardian",
-    director: ["Fernando Gonzalez Molina"],
+    directors: ["Fernando Gonzalez Molina"],
     writers: ["Dolores Redondo", "Luiso Berdejo"],
 
     year: "2017",
     url: "https://letterboxd.com/film/the-invisible-guardian/",
-    director: "Fernando González Molina",
     actors: [
       "Marta Etura",
       "Elvira Mínguez",
@@ -3357,11 +3353,11 @@ let movies = [
   },
   {
     name: "Apollo 10½:  A Space Age Childhood",
-    director: ["Richard Linklater"],
+    directors: ["Richard Linklater"],
     writers: ["Richard Linklater"],
     year: "2022",
     url: "https://letterboxd.com/film/apollo-10-a-space-age-childhood/",
-    director: "Richard Linklater",
+
     actors: [
       "Milo Coy",
       "Jack Black",
