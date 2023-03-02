@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react";
 import Details from ".//Details";
 import movies from "../Lists/movies";
-import { obtenerRepetidos } from '../Utils';
+import { obtenerRepetidos } from "../Utils";
+import { useParams } from "react-router-dom";
 const Years = () => {
-    const actores = obtenerRepetidos(movies, "actors");
-  const directores = obtenerRepetidos(movies, "directors");
-  const escritores = obtenerRepetidos(movies, "writers");
   const años = obtenerRepetidos(movies, "year");
-  return (
-    <Details title={"Years"} lista={años} />
-  )
-}
+  const { id } = useParams();
 
-export default Years
+  const moviesID = movies.filter((objeto) => objeto.year == id);
+  return <Details title={`${id}`} lista={moviesID} />;
+};
 
+export default Years;

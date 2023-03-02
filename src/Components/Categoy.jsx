@@ -51,7 +51,13 @@ const Categoy = ({ title, lista }) => {
               </div>
             )}
             <div className="col-lg-2">
-              <h4  align="center">{director[0]}</h4>
+              {title !== "Years" ? (
+                <h4 align="center">{director[0]}</h4>
+              ) : (
+                <h4 align="center">
+                  <Link to={`/${director[0]}`}> {director[0]}</Link>
+                </h4>
+              )}
             </div>
             <div className="col-lg-2">
               <h4 align="center" className="counter">
@@ -73,7 +79,7 @@ const Categoy = ({ title, lista }) => {
 
       <div className="col-lg-12">
         <div className="main-button">
-          <Link to={`/${title}`}> View All </Link> 
+          <Link to={`/${title}`}> View All </Link>
         </div>
       </div>
     </div>

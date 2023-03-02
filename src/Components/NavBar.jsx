@@ -41,7 +41,7 @@ const NavBar = () => {
                   <Link to="/Actors">Actors</Link>
                 </li>
                 <li>
-                  <Link to="/years">Years</Link>
+                  <Link to="/Years">Years</Link>
                 </li>
               </ul>
               
@@ -55,21 +55,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-/*const NavBar = () => {
-  return (
-    <Navbar className=" main-nav" collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="/">Stats</Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto nav">
-          <Nav.Link as={Link} to="/">Home</Nav.Link>
-          <Nav.Link as={Link} to="/Directors">Directors</Nav.Link>
-          <Nav.Link as={Link} to="/Writers">Writers</Nav.Link>
-          <Nav.Link as={Link} to="/Actors">Actors</Nav.Link>
-          <Nav.Link as={Link} to="/years">Years</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  );
-}; */

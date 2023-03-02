@@ -4,8 +4,9 @@ import movies from "../Lists/movies";
 import { Link } from "react-router-dom";
 
 const Details = ({ title, lista }) => {
+  console.log(lista);
   const handleImg = (name) => {
-    let imgFind = cast.find((x) => x.name === name);
+    let imgFind = movies.find((x) => x.name === name);
     let img = imgFind ? imgFind.img : "";
     return img;
   };
@@ -14,8 +15,8 @@ const Details = ({ title, lista }) => {
     switch (title) {
       case "Actors":
         return movies.filter((x) => x.actors.includes(name));
-      case "Directors":
-        return movies.filter((x) => x.directors.includes(name));
+      case "movies":
+        return movies.filter((x) => x.movies.includes(name));
       case "Writers":
         return movies.filter((x) => x.writers.includes(name));
       case "Years":
@@ -34,25 +35,19 @@ const Details = ({ title, lista }) => {
             </h4>
           </div>
           <div className="row">
-            {lista.map((director) => (
-              <div className="col-lg-3 col-sm-6" key={director[0]}>
+            {lista.map((movie) => (
+              <div className="col-lg-3 col-sm-6" key={movie[0]}>
                 <div className="item">
-                  {title !== "Years" && (
-                    <img src={handleImg(director[0])} alt={director[0]} />
-                  )}
+                  <img src={movie.img} />
+
                   <h4 align="center">
-                    <Link to={`/${director[0]}`}> {director[0]}</Link>
-                    <br />
-                    <p>{director[1]}</p>
+                    {movie.name} ({movie.year})<p>{movie.directors}</p>
+                    <p>{movie.writers}</p>
+                    <p>{movie.actors.splice(0, 5)}</p>
                   </h4>
                 </div>
               </div>
             ))}
-            <div className="col-lg-12">
-              <div className="main-button">
-                <a href="browse.html">View All</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

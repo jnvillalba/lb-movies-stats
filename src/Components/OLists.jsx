@@ -1,6 +1,7 @@
 import React from "react";
 import cast from "../Lists/cast";
 import movies from "../Lists/movies";
+import { Link } from "react-router-dom";
 const OLists = ({ title, lista }) => {
   const handleImg = (name) => {
     let imgFind = cast.find((x) => x.name === name);
@@ -49,7 +50,13 @@ const OLists = ({ title, lista }) => {
                       </div>
                     )}
                     <div className="col-lg-2">
-                      <h4 align="center">{director[0]}</h4>
+                      {title !== "Years" ? (
+                        <h4 align="center">{director[0]}</h4>
+                      ) : (
+                        <h4 align="center">
+                          <Link to={`/${director[0]}`}> {director[0]}</Link>
+                        </h4>
+                      )}
                     </div>
                     <div className="col-lg-2">
                       <h4 align="center" className="counter">

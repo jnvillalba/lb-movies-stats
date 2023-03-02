@@ -12,13 +12,19 @@ function App() {
   const actores = obtenerRepetidos(movies, "actors");
   const directores = obtenerRepetidos(movies, "directors");
   const escritores = obtenerRepetidos(movies, "writers");
+  const años = obtenerRepetidos(movies, "year");
   return (
     <>
       <BrowserRouter>
         <NavBar />
         <Routes>
           <Route index element={<Home />} />
-          <Route exact path="/Years" element={<Years />} />
+          <Route exact path="/:id" element={<Years />} />
+          <Route
+            exact
+            path="/Years"
+            element={<OLists title={"Years"} lista={años} />}
+          />
           <Route
             exact
             path="/Directors"
