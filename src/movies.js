@@ -1,3 +1,4 @@
+//datos obtenidos con https://github.com/jnvillalba/letterboxd-scrapper
 let movies = [
   {
     name: "Babylon",
@@ -1953,10 +1954,8 @@ let movies = [
     name: "42",
     directors: ["Brian Helgeland"],
     writers: ["Brian Helgeland"],
-
     year: 2013,
     url: "https://boxd.it/3GBo",
-
     actors: [
       "Chadwick Boseman",
       "Harrison Ford",
@@ -2159,10 +2158,8 @@ let movies = [
     name: "Robin Hood",
     directors: ["Ridley Scott"],
     writers: ["Brian Helgeland", "Cyrus Voris", "Ethan Reiff"],
-
     year: 2010,
     url: "https://boxd.it/1D6o",
-
     actors: [
       "Russell Crowe",
       "Cate Blanchett",

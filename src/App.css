@@ -4,3 +4,10 @@ body {
     background: gray;
     font-family: Assistant, sans-serif
 }
+
+.rounded-circle {
+    margin-right: 20px;
+}
+
+#apariciones {
+}
