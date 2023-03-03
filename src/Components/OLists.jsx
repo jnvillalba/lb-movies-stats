@@ -1,11 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import cast from "../Lists/cast";
 import movies from "../Lists/movies";
 import { Link } from "react-router-dom";
 const OLists = ({ title, lista }) => {
+  const [posters, setPosters] = useState({});
+
+  useEffect(() => {
+    lista.forEach((person) => {
+      personPoster(person[0]);
+    });
+  }, []);
+
+  const personPoster = (name) => {
+    let nombreCompleto = name;
+    let nombreMinusculas = nombreCompleto.toLowerCase();
+    let nombreFormateado = nombreMinusculas.replace(" ", "+");
+    fetch(
+      `https://api.themoviedb.org/3/search/person?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${nombreFormateado}`
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        if (json.results.length > 0) {
+          setPosters((prevState) => ({
+            ...prevState,
+            [name]: `http://image.tmdb.org/t/p/w500/${json.results[0].profile_path}`,
+          }));
+        } else {
+          setPosters((prevState) => ({
+            ...prevState,
+            [name]: "Not Found",
+          }));
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   const handleImg = (name) => {
-    let imgFind = cast.find((x) => x.name === name);
-    let img = imgFind ? imgFind.img : "";
+
+    const postersList = Object.entries(posters).map(([name, url]) => ({ name, url }));
+
+    let imgFind = postersList.find((x) => x.name === name);
+    let img = imgFind ? imgFind.url :"" ;
+    console.log(imgFind)
     return img;
   };
 

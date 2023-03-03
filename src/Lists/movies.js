@@ -219,10 +219,8 @@ let movies = [
     name: "The Method",
     directors: ["Marcelo Pineyro"],
     writers: ["Mateo Gil", "Jordi Galceran", "Marcelo Pineyro"],
-
     year: 2005,
     url: "https://boxd.it/1CuE",
-
     actors: [
       "Eduardo Noriega",
       "Najwa Nimri",
@@ -238,10 +236,8 @@ let movies = [
     name: "The Good Nurse",
     directors: ["Tobias Lindholm"],
     writers: ["Krysty Wilson Cairns"],
-
     year: 2022,
     url: "https://boxd.it/jIXI",
-
     actors: [
       "Jessica Chastain",
       "Eddie Redmayne",
@@ -295,10 +291,8 @@ let movies = [
     name: "White Men Can't Jump",
     directors: ["Ron Shelton"],
     writers: ["Ron Shelton"],
-
     year: 1992,
     url: "https://boxd.it/1WWy",
-
     actors: [
       "Wesley Snipes",
       "Woody Harrelson",
@@ -369,10 +363,8 @@ let movies = [
     name: "Puss in Boots: The Last Wish",
     directors: ["Joel Crawford"],
     writers: ["Paul Fisher", "Tommy Swerdlow", "Etan Cohen", "Tom Wheeler"],
-
     year: 2022,
     url: "https://boxd.it/aaie",
-
     actors: [
       "Antonio Banderas",
       "Salma Hayek",
@@ -409,12 +401,9 @@ let movies = [
     name: "The Substitute",
     directors: ["Diego Lerman"],
     writers: ["Maria Meira", "Diego Lerman", "Luciana De Mello"],
-
     year: 2022,
     url: "https://boxd.it/xsT4",
-
-    actors: [
-      "Juan Minujín",
+    actors: ["Juan Minujín",
       "Bárbara Lennie",
       "Alfredo Castro",
       "Rita Cortese",
@@ -428,10 +417,8 @@ let movies = [
     name: "Operation Mincemeat",
     directors: ["John Madden"],
     writers: ["Michelle Ashford"],
-
     year: 2021,
     url: "https://boxd.it/oAY4",
-
     actors: [
       "Colin Firth",
       "Matthew Macfadyen",
@@ -473,10 +460,8 @@ let movies = [
     name: "Puss in Boots",
     directors: ["Chris Miller 1"],
     writers: ["Brian Lynch", "William Davies", "Tom Wheeler"],
-
     year: 2011,
     url: "https://boxd.it/eL34",
-
     actors: [
       "Antonio Banderas",
       "Salma Hayek",
@@ -510,10 +495,8 @@ let movies = [
     name: "Aftersun",
     directors: ["Charlotte Wells"],
     writers: ["Charlotte Wells"],
-
     year: 2022,
     url: "https://boxd.it/Arw0",
-
     actors: [
       "Frankie Corio",
       "Paul Mescal",
@@ -547,10 +530,8 @@ let movies = [
       "Ben Garant",
       "Jim Hogshire",
     ],
-
     year: 2006,
     url: "https://boxd.it/1XL2",
-
     actors: [
       "Dax Shepard",
       "Will Arnett",
@@ -581,10 +562,8 @@ let movies = [
     name: "Along Came a Spider",
     directors: ["Lee Tamahori"],
     writers: ["Marc Moss", "James Patterson 1"],
-
     year: 2001,
     url: "https://boxd.it/27yW",
-
     actors: [
       "Morgan Freeman",
       "Monica Potter",
@@ -638,10 +617,8 @@ let movies = [
     name: "The Bone Collector",
     directors: ["Phillip Noyce"],
     writers: ["Jeffery Deaver", "Jeremy Iacone"],
-
     year: 1999,
     url: "https://boxd.it/1Yzw",
-
     actors: [
       "Denzel Washington",
       "Angelina Jolie",
@@ -690,10 +667,8 @@ let movies = [
     name: "The Menu",
     directors: ["Mark Mylod"],
     writers: ["Seth Reiss", "Will Tracy 1"],
-
     year: 2022,
     url: "https://boxd.it/lScm",
-
     actors: [
       "Ralph Fiennes",
       "Anya Taylor-Joy",
@@ -737,7 +712,6 @@ let movies = [
     writers: ["Ti West"],
     year: 2022,
     url: "https://boxd.it/sxVa",
-
     actors: [
       "Mia Goth",
       "Jenna Ortega",
@@ -757,7 +731,6 @@ let movies = [
     name: "Ready or Not",
     directors: ["Matt Bettinelli Olpin", "Tyler Gillett"],
     writers: ["Guy Busick", "R Christopher Murphy"],
-
     year: 2019,
     url: "https://boxd.it/kOf0",
     actors: [
@@ -795,10 +768,8 @@ let movies = [
     name: "The Marriage App",
     directors: ["Sebastian De Caro"],
     writers: ["Gabriel Korenfeld", "Rocio Blanco", "Daniel Cuparo"],
-
     year: 2022,
     url: "https://boxd.it/zLxK",
-
     actors: [
       "Luisana Lopilato",
       "Juan Minujín",
@@ -825,10 +796,8 @@ let movies = [
     name: "Instant Family",
     directors: ["Sean Anders"],
     writers: ["Sean Anders", "John Morris 1"],
-
     year: 2018,
     url: "https://boxd.it/hHpQ",
-
     actors: [
       "Mark Wahlberg",
       "Rose Byrne",
@@ -892,10 +861,8 @@ let movies = [
     name: "Enola Holmes 2",
     directors: ["Harry Bradbeer"],
     writers: ["Jack Thorne", "Nancy Springer"],
-
     year: 2022,
     url: "https://boxd.it/vfDe",
-
     actors: [
       "Millie Bobby Brown",
       "Henry Cavill",
@@ -923,10 +890,8 @@ let movies = [
     name: "Closer",
     directors: ["Mike Nichols"],
     writers: ["Patrick Marber"],
-
     year: 2004,
     url: "https://boxd.it/270K",
-
     actors: [
       "Julia Roberts",
       "Jude Law",
@@ -952,10 +917,8 @@ let movies = [
     name: "Alive",
     directors: ["Frank Marshall"],
     writers: ["John Patrick Shanley"],
-
     year: 1993,
     url: "https://boxd.it/210u",
-
     actors: [
       "Ethan Hawke",
       "Vincent Spano",
@@ -1003,10 +966,8 @@ let movies = [
     name: "The Pale Blue Eye",
     directors: ["Scott Cooper"],
     writers: ["Scott Cooper", "Louis Bayard"],
-
     year: 2022,
     url: "https://boxd.it/u8tk",
-
     actors: [
       "Christian Bale",
       "Harry Melling",
@@ -1039,10 +1000,8 @@ let movies = [
     name: "The Silence of the Sky",
     directors: ["Marco Dutra"],
     writers: ["Caetano Gotardo", "Sergio Bizzio", "Lucia Puenzo"],
-
     year: 2016,
     url: "https://boxd.it/ezJC",
-
     actors: [
       "Leonardo Sbaraglia",
       "Carolina Dieckmann",
@@ -1063,10 +1022,8 @@ let movies = [
     name: "RRR",
     directors: ["S S Rajamouli 1"],
     writers: ["S S Rajamouli 1", "Vijayendra Prasad"],
-
     year: 2022,
     url: "https://boxd.it/ljDs",
-
     actors: [
       "N. T. Rama Rao Jr.",
       "Ram Charan",
@@ -1104,10 +1061,8 @@ let movies = [
     name: "Tales of an Immoral Couple",
     directors: ["Manolo Caro 1"],
     writers: ["Manolo Caro 1"],
-
     year: 2016,
     url: "https://boxd.it/duNW",
-
     actors: [
       "Cecilia Suárez",
       "Ximena Romo",
@@ -1134,10 +1089,8 @@ let movies = [
     name: "West Side Story",
     directors: ["Steven Spielberg"],
     writers: ["Tony Kushner"],
-
     year: 2021,
     url: "https://boxd.it/iwt0",
-
     actors: [
       "Ansel Elgort",
       "Rachel Zegler",
@@ -1268,10 +1221,8 @@ let movies = [
     name: "Death on the Nile",
     directors: ["Kenneth Branagh"],
     writers: ["Agatha Christie", "Michael Green 3"],
-
     year: 2022,
     url: "https://boxd.it/ifpg",
-
     actors: [
       "Kenneth Branagh",
       "Gal Gadot",
@@ -1328,10 +1279,8 @@ let movies = [
     name: "Death Proof",
     directors: ["Quentin Tarantino"],
     writers: ["Quentin Tarantino"],
-
     year: 2007,
     url: "https://boxd.it/27GG",
-
     actors: [
       "Kurt Russell",
       "Zoë Bell",
@@ -1375,10 +1324,8 @@ let movies = [
     name: "Trial by Fire",
     directors: ["Edward Zwick"],
     writers: ["Geoffrey Fletcher", "David Grann"],
-
     year: 2018,
     url: "https://boxd.it/hjMw",
-
     actors: [
       "Jack O'Connell",
       "Laura Dern",
@@ -1417,10 +1364,8 @@ let movies = [
     name: "Talk to Her",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
-
     year: 2002,
     url: "https://boxd.it/2beG",
-
     actors: [
       "Leonor Watling",
       "Rosario Flores",
@@ -1452,10 +1397,8 @@ let movies = [
     name: "Planet Terror",
     directors: ["Robert Rodriguez 1"],
     writers: ["Robert Rodriguez 1"],
-
     year: 2007,
     url: "https://boxd.it/27Gw",
-
     actors: [
       "Rose McGowan",
       "Freddy Rodríguez",
@@ -1492,10 +1435,8 @@ let movies = [
     name: "Triangle of Sadness",
     directors: ["Ruben Ostlund"],
     writers: ["Ruben Ostlund"],
-
     year: 2022,
     url: "https://boxd.it/hXlq",
-
     actors: [
       "Harris Dickinson",
       "Charlbi Dean",
@@ -1651,7 +1592,6 @@ let movies = [
     writers: ["Noah Harpster", "Micah Fitzerman Blue"],
     year: 2019,
     url: "https://boxd.it/i7vA",
-
     actors: [
       "Matthew Rhys",
       "Tom Hanks",
@@ -1732,7 +1672,6 @@ let movies = [
     writers: ["Nicolas Giacobone", "Alejandro Gonzalez Inarritu"],
     year: 2022,
     url: "https://boxd.it/pAgy",
-
     actors: [
       "Daniel Giménez Cacho",
       "Griselda Siciliani",
@@ -1768,7 +1707,6 @@ let movies = [
     writers: ["Guillermo Del Toro", "Patrick Mchale"],
     year: 2022,
     url: "https://boxd.it/kjMW",
-
     actors: [
       "Gregory Mann",
       "Ewan McGregor",
@@ -1806,7 +1744,6 @@ let movies = [
     ],
     year: 2021,
     url: "https://boxd.it/wMAk",
-
     actors: [
       "Jenny Slate",
       "Dean Fleischer Camp",
@@ -1830,7 +1767,6 @@ let movies = [
     writers: ["Stephen Sommers"],
     year: 2004,
     url: "https://boxd.it/21aa",
-
     actors: [
       "Hugh Jackman",
       "Kate Beckinsale",
@@ -1867,7 +1803,6 @@ let movies = [
     writers: ["Jonah Hill", "Kenya Barris"],
     year: 2023,
     url: "https://boxd.it/wJYe",
-
     actors: [
       "Jonah Hill",
       "Lauren London",
@@ -1928,7 +1863,6 @@ let movies = [
     writers: ["Hayao Miyazak"],
     year: 1992,
     url: "https://boxd.it/1Tp2",
-
     actors: [
       "Shûichirô Moriyama",
       "Tokiko Katô",
@@ -2040,10 +1974,8 @@ let movies = [
     name: "Spiderhead",
     directors: ["Joseph Kosinski"],
     writers: ["Rhett Reese", "Paul Wernick"],
-
     year: 2022,
     url: "https://boxd.it/mLsO",
-
     actors: [
       "Chris Hemsworth",
       "Miles Teller",
@@ -2064,10 +1996,8 @@ let movies = [
     name: "Emma.",
     directors: ["Autumn De Wilde"],
     writers: ["Eleanor Catton", "Jane Austen"],
-
     year: 2020,
     url: "https://boxd.it/kmg0",
-
     actors: [
       "Anya Taylor-Joy",
       "Johnny Flynn",
@@ -2125,10 +2055,8 @@ let movies = [
     name: "Legion of Super-Heroes",
     directors: ["Jeff Wamester"],
     writers: ["Josie Campbell"],
-
     year: 2023,
     url: "https://boxd.it/BW1O",
-
     actors: [
       "Meg Donnelly",
       "Harry Shum Jr.",
@@ -2235,10 +2163,8 @@ let movies = [
     name: "The Sea Beast",
     directors: ["Chris Williams"],
     writers: ["Chris Williams", "Nell Benjamin"],
-
     year: 2022,
     url: "https://boxd.it/kv3a",
-
     actors: [
       "Karl Urban",
       "Zaris-Angel Hator",
@@ -2271,7 +2197,6 @@ let movies = [
     writers: ["John Semper", "Ernie Altbacker"],
     year: 2022,
     url: "https://boxd.it/xvNy",
-
     actors: [
       "Aldis Hodge",
       "Jimmi Simpson",
@@ -2291,10 +2216,8 @@ let movies = [
     name: "The Gift",
     directors: ["Sam Raimi"],
     writers: ["Tom Epperson", "Billy Bob Thornton"],
-
     year: 2000,
     url: "https://boxd.it/27ys",
-
     actors: [
       "Cate Blanchett",
       "Giovanni Ribisi",
@@ -2345,10 +2268,8 @@ let movies = [
     name: "The Hunt",
     directors: ["Thomas Vinterberg"],
     writers: ["Thomas Vinterberg", "Tobias Lindholm"],
-
     year: 2012,
     url: "https://boxd.it/3wEC",
-
     actors: [
       "Mads Mikkelsen",
       "Thomas Bo Larsen",
@@ -2391,10 +2312,8 @@ let movies = [
     name: "The Widows of Thursdays",
     directors: ["Marcelo Pineyro"],
     writers: ["Marcelo Pineyro", "Marcelo Figueras", "Claudia Pineiro"],
-
     year: 2009,
     url: "https://boxd.it/16sm",
-
     actors: [
       "Ernesto Alterio",
       "Juan Diego Botto",
@@ -2416,7 +2335,6 @@ let movies = [
     writers: ["Jeff Loveness"],
     year: 2023,
     url: "https://boxd.it/nL2y",
-
     actors: [
       "Paul Rudd",
       "Evangeline Lilly",
@@ -2489,10 +2407,8 @@ let movies = [
     name: "The Sum of All Fears",
     directors: ["Phil Alden Robinson 1"],
     writers: ["Tom Clancy 1", "Daniel Pyne", "Paul Attanasio"],
-
     year: 2002,
     url: "https://boxd.it/242I",
-
     actors: [
       "Ben Affleck",
       "Morgan Freeman",
@@ -2599,10 +2515,8 @@ let movies = [
     name: "13 Going on 30",
     directors: ["Gary Winick"],
     writers: ["Josh Goldsmith", "Cathy Yuspa"],
-
     year: 2004,
     url: "https://boxd.it/1X6e",
-
     actors: [
       "Jennifer Garner",
       "Mark Ruffalo",
@@ -2695,10 +2609,8 @@ let movies = [
     name: "Knock at the Cabin",
     directors: ["M Night Shyamalan"],
     writers: ["M Night Shyamalan", "Michael Sherman 3", "Steve Desmond 1"],
-
     year: 2023,
     url: "https://boxd.it/npL2",
-
     actors: [
       "Dave Bautista",
       "Jonathan Groff",
@@ -2730,10 +2642,8 @@ let movies = [
     name: "Bombshell",
     directors: ["Jay Roach"],
     writers: ["Charles Randolph 1"],
-
     year: 2019,
     url: "https://boxd.it/j5YC",
-
     actors: [
       "Charlize Theron",
       "Nicole Kidman",
@@ -2865,10 +2775,8 @@ let movies = [
     name: "We Have a Ghost",
     directors: ["Christopher Landon 2"],
     writers: ["Christopher Landon 2"],
-
     year: 2023,
     url: "https://boxd.it/wa4K",
-
     actors: [
       "David Harbour",
       "Jahi Di'Allo Winston",
@@ -2903,10 +2811,8 @@ let movies = [
     name: "Pitch Perfect 2",
     directors: ["Elizabeth Banks"],
     writers: ["Kay Cannon"],
-
     year: 2015,
     url: "https://boxd.it/7tNa",
-
     actors: [
       "Anna Kendrick",
       "Brittany Snow",
@@ -3036,10 +2942,8 @@ let movies = [
     name: "Kicking and Screaming",
     directors: ["Noah Baumbach"],
     writers: ["Oliver Berkman", "Noah Baumbach"],
-
     year: 1995,
     url: "https://boxd.it/1pHK",
-
     actors: [
       "Josh Hamilton",
       "Olivia d'Abo",
@@ -3085,10 +2989,8 @@ let movies = [
     name: "Gridiron Gang",
     directors: ["Phil Joanou"],
     writers: ["Jeff Maguire", "Jac Flanders"],
-
     year: 2006,
     url: "https://boxd.it/1XRu",
-
     actors: [
       "Dwayne Johnson",
       "Xzibit",
@@ -3156,10 +3058,8 @@ let movies = [
     name: "Mr. Brooks",
     directors: ["Bruce A Evans"],
     writers: ["Raynold Gideon", "Bruce A Evans"],
-
     year: 2007,
     url: "https://boxd.it/25nW",
-
     actors: [
       "Kevin Costner",
       "Demi Moore",
@@ -3209,10 +3109,8 @@ let movies = [
     name: "The Whale",
     directors: ["Darren Aronofsky"],
     writers: ["Samuel D Hunter"],
-
     year: 2022,
     url: "https://boxd.it/tw4c",
-
     actors: [
       "Brendan Fraser",
       "Sadie Sink",
@@ -3229,7 +3127,6 @@ let movies = [
     writers: ["John Boyne", "Mark Herman"],
     year: 2008,
     url: "https://boxd.it/1NOK",
-
     actors: [
       "Asa Butterfield",
       "Jack Scanlon",
@@ -3262,10 +3159,8 @@ let movies = [
     name: "The Salvation",
     directors: ["Kristian Levring"],
     writers: ["Anders Thomas Jensen", "Kristian Levring"],
-
     year: "2014",
     url: "https://boxd.it/7X0M",
-
     actors: [
       "Mads Mikkelsen",
       "Eva Green",
@@ -3319,7 +3214,6 @@ let movies = [
     name: "The Invisible Guardian",
     directors: ["Fernando Gonzalez Molina"],
     writers: ["Dolores Redondo", "Luiso Berdejo"],
-
     year: "2017",
     url: "https://letterboxd.com/film/the-invisible-guardian/",
     actors: [
@@ -3349,7 +3243,6 @@ let movies = [
     writers: ["Richard Linklater"],
     year: "2022",
     url: "https://letterboxd.com/film/apollo-10-a-space-age-childhood/",
-
     actors: [
       "Milo Coy",
       "Jack Black",
@@ -3492,11 +3385,10 @@ export default movies;
 /*
 {
     
-    name: "",
-    year: "",
+    name: "",year: "",
     url: "",
    
-    actors: [],
+    ors: [],
   },
 
 */
