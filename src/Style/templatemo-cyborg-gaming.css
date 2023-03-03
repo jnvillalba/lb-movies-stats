@@ -359,7 +359,7 @@ Header Style
 }
 
 .header-area .main-nav .logo {
-  
+
   flex-basis: 25%;
   margin-right: 5%;
   -webkit-transition: all 0.3s ease 0s;
@@ -446,7 +446,7 @@ Header Style
   text-indent: -9999em;
   z-index: 99;
   right: 20px;
-  
+
 }
 
 .background-header .main-nav .menu-trigger {
@@ -565,17 +565,17 @@ Header Style
     padding-right: 10px;
   }
 
-  
+
 }
 
 @media (max-width: 900px) {
-  
-.header-area{
-  position: relative;
-}
+
+  .header-area {
+    position: relative;
+  }
 
 
-  
+
 
 
 }
@@ -789,8 +789,10 @@ Start Stream Style
   margin-top: 30px;
 }
 
-
---------------------------------------------- Responsive Style --------------------------------------------- */ body {
+/*
+--------------------------------------------- Responsive Style --------------------------------------------- 
+*/
+body {
   overflow-x: hidden;
 }
 
@@ -839,6 +841,7 @@ Start Stream Style
   .most-popular .item .inner-item {
     margin-bottom: 20px;
   }
+
   .heading-section h4 {
     font-size: 20px;
   }
@@ -864,10 +867,10 @@ Start Stream Style
     margin-bottom: 10px;
     padding-bottom: 10px;
     align-content: center;
-    
+
   }
 
-  
+
 
 
   body .page-content {
@@ -879,14 +882,10 @@ Start Stream Style
     display: inline-block;
   }
 
-  
+
 
   .heading-section h4 {
     font-size: 20px;
   }
 
 }
-
-
-
-
