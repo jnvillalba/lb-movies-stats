@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import cast from "../Lists/cast";
 import movies from "../Lists/movies";
 import { Link } from "react-router-dom";
+import cast from '../Lists/cast'
 const OLists = ({ title, lista }) => {
   const [posters, setPosters] = useState({});
 
@@ -39,10 +39,15 @@ const OLists = ({ title, lista }) => {
   const handleImg = (name) => {
 
     const postersList = Object.entries(posters).map(([name, url]) => ({ name, url }));
-
     let imgFind = postersList.find((x) => x.name === name);
     let img = imgFind ? imgFind.url :"" ;
-    console.log(imgFind)
+    return img;
+  };
+
+  const localimg = (name) => {
+    let localimg = cast.find((x) => x.name === name);
+    let img = localimg ? localimg.img: "" ;
+    console.log()
     return img;
   };
 
@@ -79,7 +84,7 @@ const OLists = ({ title, lista }) => {
                       <div className="col-lg-2">
                         <img
                           className="templatemo-item"
-                          src={handleImg(director[0])}
+                          src={localimg(director[0]) || handleImg(director[0])}
                           width={100}
                           height={100}
                           alt={director[0]}
