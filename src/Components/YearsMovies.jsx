@@ -1,5 +1,5 @@
 import React from "react";
-import Details from ".//Details";
+import Details from "./Details";
 import movies from "../Lists/movies";
 import { obtenerRepetidos } from "../Utils";
 import { useParams } from "react-router-dom";

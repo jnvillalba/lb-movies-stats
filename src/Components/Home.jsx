@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import movies from "../Lists/movies";
 import Category from "./Categoy";
-
+import {
+  añosRepetidos,
+  directoresRepetidos,
+  escritoresRepetidos,
+  actoresRepetidos,
+} from "../Utils";
 
 function Home() {
-  //const lista_urls = movies.map((objeto) => objeto.url);
-  const actores = obtenerRepetidos(movies, "actors");
-  const directores = obtenerRepetidos(movies, "directors");
-  const escritores = obtenerRepetidos(movies, "writers");
-  const años = obtenerRepetidos(movies, "year");
   return (
     <>
       <div className="container">
@@ -16,11 +16,10 @@ function Home() {
           <div className="col-lg-12">
             <div className="page-content">
               <h2>Movies: {movies.length}</h2>
-              <Category title={"Directors"} lista={directores} />
-              <Category title={"Writers"} lista={escritores} />
-              <Category title={"Actors"} lista={actores} />
-              <Category title={"Years"} lista={años} />
-              
+              <Category title={"Directors"} lista={directoresRepetidos} />
+              <Category title={"Writers"} lista={escritoresRepetidos} />
+              <Category title={"Actors"} lista={actoresRepetidos} />
+              <Category title={"Years"} lista={añosRepetidos} />
             </div>
           </div>
         </div>
