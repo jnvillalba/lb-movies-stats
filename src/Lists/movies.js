@@ -3295,6 +3295,7 @@ let movies = [
   },
   {
     name: "Blackhat",
+    year: "2015",
     directors: ["Michael Mann"],
     writers: ["Morgan Davis Foehl"],
     actors: [
@@ -3381,6 +3382,7 @@ let movies = [
   },
   {
     name: "Once Upon a Time in Mexico",
+    year: "2003",
     directors: ["Robert Rodriguez"],
     writers: ["Robert Rodriguez"],
     actors: [
