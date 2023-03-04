@@ -15,33 +15,10 @@ let cast = [
     name: "Tom Wheeler",
     img: "https://resizing.flixster.com/IEBksZrY_2K1DftuLAQV_9VPS-E=/218x280/v2/https://flxt.tmsimg.com/assets/85522_v9_ba.jpg",
   },
+
   {
-    name: "Cate Blanchett",
-    img: "https://resizing.flixster.com/hOIAFULVHLPeR0O4dIGyKf6g1bU=/218x280/v2/https://flxt.tmsimg.com/assets/70375_v9_bc.jpg",
-  },
-  {
-    name: "Margot Robbie",
-    img: "https://resizing.flixster.com/e3COlCvHLzsdatwWR05Q-ciNcBY=/218x280/v2/https://flxt.tmsimg.com/assets/579067_v9_bb.jpg",
-  },
-  {
-    name: "Brian Helgeland",
-    img: "https://resizing.flixster.com/SLnhoYwKfxRLAKe5s6R7mcmGtUU=/218x280/v2/https://flxt.tmsimg.com/assets/74254_v9_ba.jpg",
-  },
-  {
-    name: "P.J. Byrne",
-    img: "https://resizing.flixster.com/rj63kmBFwQYN0NXbWoPn9068x_o=/218x280/v2/https://flxt.tmsimg.com/assets/267350_v9_bb.jpg",
-  },
-  {
-    name: "Samara Weaving",
-    img: "https://resizing.flixster.com/S6V0IG7fUB1w0-C43fv-sAaDHII=/218x280/v2/https://flxt.tmsimg.com/assets/586246_v9_bd.jpg",
-  },
-  {
-    name: "Kim Dickens",
-    img: "https://resizing.flixster.com/980uaJlwZf8ee77ylNOnp6TT-Qo=/218x280/v2/https://flxt.tmsimg.com/assets/70031_v9_bb.jpg",
-  },
-  {
-    name: "",
-    img: "",
+    name: "The Substitute",
+    img: "https://m.media-amazon.com/images/M/MV5BN2M2ZTllNzItMWMyOC00MDkyLTlkNWEtOTI5MzIxZGE4NGY3XkEyXkFqcGdeQXVyNzA3Mzc2Mjc@._V1_.jpg",
   },
   {
     name: "",

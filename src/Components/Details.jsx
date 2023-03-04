@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import movies from "../Lists/movies";
+import cast from "../Lists/cast";
 
 const Details = ({ title, lista }) => {
   return (
@@ -23,7 +23,13 @@ const Details = ({ title, lista }) => {
 };
 
 const Movie = ({ movie }) => {
-  const [poster, setPoster] = useState("");
+  const localimg = (name) => {
+    let localimg = cast.find((x) => x.name === name);
+    let img = localimg ? localimg.img : "";
+    console.log(cast);
+    return img;
+  };
+  const [poster, setPoster] = useState();
 
   useEffect(() => {
     moviePoster(movie.name);
@@ -55,7 +61,7 @@ const Movie = ({ movie }) => {
   return (
     <div className="col-lg-3 col-sm-6">
       <div className="item">
-        <img src={poster} alt={poster} />
+        <img src={localimg(movie.name) || poster} alt={poster} />
 
         <h4 align="center">
           {movie.name} ({movie.year})

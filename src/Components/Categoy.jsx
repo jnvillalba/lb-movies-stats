@@ -43,14 +43,13 @@ const Categoy = ({ title, lista }) => {
     }));
     let imgFind = postersList.find((x) => x.name === name);
     let img = imgFind ? imgFind.url : localimg;
-    console.log(imgFind);
     return img;
   };
 
   const localimg = (name) => {
     let localimg = cast.find((x) => x.name === name);
     let img = localimg ? localimg.img : "";
-    console.log();
+    console.log(cast);
     return img;
   };
   const moviesList = (name) => {
