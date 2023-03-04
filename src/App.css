@@ -13,17 +13,13 @@ body {
     display: flex;
     color: #fff;
     flex-wrap: wrap;
-
     flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-
+    justify-content: center;
 }
 
 .moviesList li {
     display: list-item;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
     color: #fff;
     flex-wrap: wrap;
     margin: 6px;
@@ -39,7 +35,7 @@ body {
     .movieList {
         display: list-item !important;
         flex-direction: column !important;
-        justify-content: center !important;
+        justify-content: start !important;
         align-items: center !important;
     }
 }

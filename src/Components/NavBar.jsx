@@ -2,55 +2,54 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  
   return (
-    <div className="header-area header-sticky">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <nav className="main-nav">
-              {/* ***** Logo Start ***** */}
-              <h1 className="logo">Stats</h1>
-              {/* ***** Logo End ***** */}
-              {/* ***** Search End ***** */}
-              {/*<div className="search-input">
-                <form id="search" action="#">
-                  <input
-                    type="text"
-                    placeholder="Type Something"
-                    id="searchText"
-                    name="searchKeyword"
-                    onkeypress="handle"
-                  />
-                  <i className="fa fa-search" />
-                </form>
-              </div>*/}
-              {/* ***** Search End ***** */}
-              {/* ***** Menu Start ***** */}
-              <ul className="nav">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/Directors">Directors</Link>
-                </li>
-                <li>
-                  <Link to="/Writers">Writers</Link>
-                </li>
-                <li>
-                  <Link to="/Actors">Actors</Link>
-                </li>
-                <li>
-                  <Link to="/Years">Years</Link>
-                </li>
-              </ul>
-              
-              {/* ***** Menu End ***** */}
-            </nav>
-          </div>
+        <Link className="navbar-brand" to="/">
+          Stats
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Directors">
+                Directors
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Writers">
+                Writers
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Actors">
+                Actors
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Years">
+                Years
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
