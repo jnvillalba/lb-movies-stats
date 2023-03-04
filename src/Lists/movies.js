@@ -527,7 +527,7 @@ let movies = [
     directors: ["Bob Odenkirk"],
     writers: [
       "Michael Patrick Jann",
-      "Thomas Lennon 2",
+      "Thomas Lennon",
       "Ben Garant",
       "Jim Hogshire",
     ],
@@ -667,7 +667,7 @@ let movies = [
   {
     name: "The Menu",
     directors: ["Mark Mylod"],
-    writers: ["Seth Reiss", "Will Tracy 1"],
+    writers: ["Seth Reiss", "Will Tracy"],
     year: 2022,
     url: "https://boxd.it/lScm",
     actors: [
@@ -796,7 +796,7 @@ let movies = [
   {
     name: "Instant Family",
     directors: ["Sean Anders"],
-    writers: ["Sean Anders", "John Morris 1"],
+    writers: ["Sean Anders", "John Morris"],
     year: 2018,
     url: "https://boxd.it/hHpQ",
     actors: [
@@ -1021,8 +1021,8 @@ let movies = [
   },
   {
     name: "RRR",
-    directors: ["S S Rajamouli 1"],
-    writers: ["S S Rajamouli 1", "Vijayendra Prasad"],
+    directors: ["S S Rajamouli"],
+    writers: ["S S Rajamouli", "Vijayendra Prasad"],
     year: 2022,
     url: "https://boxd.it/ljDs",
     actors: [
@@ -1060,8 +1060,8 @@ let movies = [
   },
   {
     name: "Tales of an Immoral Couple",
-    directors: ["Manolo Caro 1"],
-    writers: ["Manolo Caro 1"],
+    directors: ["Manolo Caro"],
+    writers: ["Manolo Caro"],
     year: 2016,
     url: "https://boxd.it/duNW",
     actors: [
@@ -1221,7 +1221,7 @@ let movies = [
   {
     name: "Death on the Nile",
     directors: ["Kenneth Branagh"],
-    writers: ["Agatha Christie", "Michael Green 3"],
+    writers: ["Agatha Christie", "Michael Green"],
     year: 2022,
     url: "https://boxd.it/ifpg",
     actors: [
@@ -2406,8 +2406,8 @@ let movies = [
   },
   {
     name: "The Sum of All Fears",
-    directors: ["Phil Alden Robinson 1"],
-    writers: ["Tom Clancy 1", "Daniel Pyne", "Paul Attanasio"],
+    directors: ["Phil Alden Robinson"],
+    writers: ["Tom Clancy", "Daniel Pyne", "Paul Attanasio"],
     year: 2002,
     url: "https://boxd.it/242I",
     actors: [
@@ -2609,7 +2609,7 @@ let movies = [
   {
     name: "Knock at the Cabin",
     directors: ["M Night Shyamalan"],
-    writers: ["M Night Shyamalan", "Michael Sherman 3", "Steve Desmond 1"],
+    writers: ["M Night Shyamalan", "Michael Sherman", "Steve Desmond"],
     year: 2023,
     url: "https://boxd.it/npL2",
     actors: [
@@ -2642,7 +2642,7 @@ let movies = [
   {
     name: "Bombshell",
     directors: ["Jay Roach"],
-    writers: ["Charles Randolph 1"],
+    writers: ["Charles Randolph"],
     year: 2019,
     url: "https://boxd.it/j5YC",
     actors: [
@@ -2774,8 +2774,8 @@ let movies = [
   },
   {
     name: "We Have a Ghost",
-    directors: ["Christopher Landon 2"],
-    writers: ["Christopher Landon 2"],
+    directors: ["Christopher Landon"],
+    writers: ["Christopher Landon"],
     year: 2023,
     url: "https://boxd.it/wa4K",
     actors: [

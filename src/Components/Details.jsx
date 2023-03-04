@@ -66,7 +66,9 @@ const Movie = ({ movie }) => {
           </p>
           <p>{movie.writers.join(", ")}</p>
         </div>
-        <p className="mt-2">Cast:</p>
+        <p className="mt-2">
+          <em>Cast:</em>
+        </p>
         {movie.actors.splice(0, 5).map((writer, i) => (
           <p key={i}>{writer}</p>
         ))}
