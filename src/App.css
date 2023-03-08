@@ -29,17 +29,30 @@ body {
     --bs-dropdown-min-width: auto !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
     .moviesList li {
         width: 80%;
     }
 }
 
+@media (min-width: 768px) {
+    .gaming-library .item {
+        justify-content: flex-start !important;
+
+    }
+
+    .moviesList {
+        min-width: 200px;
+        justify-content: flex-start !important;
+        margin-left: 20px;
+    }
+
+}
+
 @media (max-width: 426px) {
-    .movieList {
-        display: list-item !important;
-        flex-direction: column !important;
-        justify-content: start !important;
-        align-items: center !important;
+    .moviesList li {
+        padding: 0 !important;
+        margin: 0 !important;
+        align-items: start !important;
     }
 }

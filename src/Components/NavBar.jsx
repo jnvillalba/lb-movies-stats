@@ -58,7 +58,10 @@ const NavBar = () => {
               >
                 Lists
               </a>
-              <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+              <ul
+                className="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="navbarDropdown"
+              >
                 <li>
                   <Link className="dropdown-item" to="/Vol6">
                     Vol. 6
@@ -87,6 +90,11 @@ const NavBar = () => {
                 <li>
                   <Link className="dropdown-item" to="/Vol1">
                     Vol. 1
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/All">
+                    All
                   </Link>
                 </li>
               </ul>

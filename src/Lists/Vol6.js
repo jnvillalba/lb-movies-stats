@@ -3668,7 +3668,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "Parallel Mothers",
+    name: "Madres Paralelas",
     year: "2021",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
@@ -3946,7 +3946,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "Wasp Network",
+    name: "La Red Avispa",
     year: "2019",
     directors: ["Olivier Assayas"],
     writers: ["Olivier Assayas"],
@@ -4263,7 +4263,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "Today We Fix the World",
+    name: "Hoy se arregla el mundo",
     year: "2022",
     directors: ["Ariel Winograd"],
     writers: ["Mariano Vera"],
@@ -4348,7 +4348,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "All Hail",
+    name: "Granizo",
     year: "2022",
     directors: ["Marcos Carnevale"],
     writers: ["Nicolas Giacobone", "Fernando Balmayor"],
@@ -7051,7 +7051,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "The Legacy of the Bones",
+    name: "Legado en los huesos",
     year: "2019",
     directors: ["Fernando Gonzalez Molina"],
     writers: ["Luiso Berdejo", "Dolores Redondo"],
@@ -7414,7 +7414,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "Offering to the Storm",
+    name: "Ofrenda a la tormenta",
     year: "2020",
     directors: ["Fernando Gonzalez Molina"],
     writers: ["Dolores Redondo", "Luiso Berdejo"],
@@ -7580,7 +7580,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "Unknown Origins",
+    name: "Orígenes secretos",
     year: "2020",
     directors: ["David Galan Galindo"],
     writers: ["Fernando Navarro", "David Galan Galindo"],
@@ -8762,7 +8762,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "Echoes",
+    name: "Ecos de un crimen",
     year: "2022",
     directors: ["Cristian Bernard"],
     writers: ["Gabriel Korenfeld"],

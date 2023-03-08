@@ -15,6 +15,8 @@ function App() {
   const añosRepetidos = encontrarRepetidos(movies, "year");
   const directoresRepetidos = encontrarRepetidos(movies, "directors");
   const escritoresRepetidos = encontrarRepetidos(movies, "writers");
+
+  let todas = movies.concat(Vol6);
   return (
     <>
       <BrowserRouter>
@@ -22,6 +24,7 @@ function App() {
         <Routes>
           <Route index element={<Home list={movies} />} />
           <Route exact path="/Vol6" element={<Home list={Vol6} />} />
+          <Route exact path="/All" element={<Home list={todas} />} />
           <Route exact path="/:id" element={<YearsMovies />} />
           <Route
             exact

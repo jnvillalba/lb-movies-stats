@@ -766,7 +766,7 @@ let movies = [
     ],
   },
   {
-    name: "The Marriage App",
+    name: "Matrimillas",
     directors: ["Sebastian De Caro"],
     writers: ["Gabriel Korenfeld", "Rocio Blanco", "Daniel Cuparo"],
     year: 2022,
@@ -998,7 +998,7 @@ let movies = [
     ],
   },
   {
-    name: "The Silence of the Sky",
+    name: "Era el Cielo",
     directors: ["Marco Dutra"],
     writers: ["Caetano Gotardo", "Sergio Bizzio", "Lucia Puenzo"],
     year: 2016,
@@ -1362,7 +1362,7 @@ let movies = [
     ],
   },
   {
-    name: "Talk to Her",
+    name: "Hable con Ella",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
     year: 2002,
@@ -1668,7 +1668,7 @@ let movies = [
     ],
   },
   {
-    name: "BARDO, False Chronicle of a Handful of Truths",
+    name: "BARDO, falsa crónica de unas cuantas verdades",
     directors: ["Alejandro Gonzalez Inarritu"],
     writers: ["Nicolas Giacobone", "Alejandro Gonzalez Inarritu"],
     year: 2022,
@@ -2310,7 +2310,7 @@ let movies = [
     ],
   },
   {
-    name: "The Widows of Thursdays",
+    name: "Las viudas de los jueves",
     directors: ["Marcelo Pineyro"],
     writers: ["Marcelo Pineyro", "Marcelo Figueras", "Claudia Pineiro"],
     year: 2009,
@@ -3212,7 +3212,7 @@ let movies = [
     ],
   },
   {
-    name: "The Invisible Guardian",
+    name: "El Guardián Invisible",
     directors: ["Fernando Gonzalez Molina"],
     writers: ["Dolores Redondo", "Luiso Berdejo"],
     year: "2017",

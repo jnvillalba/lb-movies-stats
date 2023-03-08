@@ -21,20 +21,20 @@ let cast = [
     img: "https://m.media-amazon.com/images/M/MV5BN2M2ZTllNzItMWMyOC00MDkyLTlkNWEtOTI5MzIxZGE4NGY3XkEyXkFqcGdeQXVyNzA3Mzc2Mjc@._V1_.jpg",
   },
   {
-    name: "",
-    img: "",
+    name: "Ariel Winograd",
+    img: "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRUpKNB7GjSVXf78A8joofQ5zPFSDH1ce0TsDtF9ib8Nnuwq2Pswh8WYr_txw-4YRFM",
   },
   {
-    name: "",
-    img: "",
+    name: "Jeremy Adams",
+    img: "https://m.media-amazon.com/images/M/MV5BMTRiZDY1YTAtOGE0Yi00N2E0LWI1ZjktODkxOTI0YWE5NDcxXkEyXkFqcGdeQXVyMjQzNzk1OTI@._V1_.jpg",
   },
   {
-    name: "",
-    img: "",
+    name: "Gabriel Korenfeld",
+    img: "https://www.quipu.com.ar/img/m/74-medium_default.jpg",
   },
   {
-    name: "",
-    img: "",
+    name: "Dolores Redondo",
+    img: "https://upload.wikimedia.org/wikipedia/commons/5/57/Dolores_redondo.jpg",
   },
 ];
 
