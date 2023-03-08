@@ -1,25 +1,39 @@
 import React from "react";
-import movies from "../Lists/movies";
 import Category from "./Categoy";
-import {
-  añosRepetidos,
-  directoresRepetidos,
-  escritoresRepetidos,
-  actoresRepetidos,
-} from "../Utils";
+import { encontrarRepetidos } from "../Utils";
 
-function Home() {
+function Home({ list }) {
+  const actoresRepetidos = encontrarRepetidos(list, "actors");
+  const añosRepetidos = encontrarRepetidos(list, "year");
+  const directoresRepetidos = encontrarRepetidos(list, "directors");
+  const escritoresRepetidos = encontrarRepetidos(list, "writers");
   return (
     <>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="page-content">
-              <h2>Movies: {movies.length}</h2>
-              <Category title={"Directors"} lista={directoresRepetidos} />
-              <Category title={"Writers"} lista={escritoresRepetidos} />
-              <Category title={"Actors"} lista={actoresRepetidos} />
-              <Category title={"Years"} lista={añosRepetidos} />
+              <h2>Movies: {list.length}</h2>
+              <Category
+                title={"Directors"}
+                lista={directoresRepetidos}
+                filterList={list}
+              />
+              <Category
+                title={"Writers"}
+                lista={escritoresRepetidos}
+                filterList={list}
+              />
+              <Category
+                title={"Actors"}
+                lista={actoresRepetidos}
+                filterList={list}
+              />
+              <Category
+                title={"Years"}
+                lista={añosRepetidos}
+                filterList={list}
+              />
             </div>
           </div>
         </div>

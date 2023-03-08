@@ -1,5 +1,3 @@
-import movies from "./Lists/movies"
-
 export function obtenerRepetidos(lista, propiedad) {
   const contador = lista
     .flatMap((objeto) => objeto[propiedad])
@@ -15,8 +13,6 @@ export function obtenerRepetidos(lista, propiedad) {
   return repetidos.sort((a, b) => b[1] - a[1]);
 }
 
-export const actoresRepetidos = obtenerRepetidos(movies, "actors");
-export const directoresRepetidos = obtenerRepetidos(movies, "directors");
-export const escritoresRepetidos = obtenerRepetidos(movies, "writers");
-export const añosRepetidos = obtenerRepetidos(movies, "year");
-
+export function encontrarRepetidos(lista, propiedad) {
+  return obtenerRepetidos(lista, propiedad);
+}

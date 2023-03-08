@@ -46,6 +46,26 @@ const NavBar = () => {
                 Years
               </Link>
             </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Lists
+              </a>
+              <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                <li>
+                  <Link className="dropdown-item" to="/Vol6">
+                    Vol. 6
+                  </Link>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>

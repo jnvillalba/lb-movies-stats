@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
-import movies from "../Lists/movies";
 import cast from "../Lists/cast";
 import { Link } from "react-router-dom";
 
-const Categoy = ({ title, lista }) => {
+const Categoy = ({ title, lista, filterList }) => {
+
   const [posters, setPosters] = useState({});
   useEffect(() => {
-    lista.forEach((person) => {
-      personPoster(person[0]);
+    lista.forEach((p) => {
+      personPoster(p[0]);
     });
   }, []);
 
   const personPoster = (name) => {
+    
     let nombreCompleto = name;
     let nombreMinusculas = nombreCompleto.toLowerCase();
     let nombreFormateado = nombreMinusculas.replace(" ", "+");
@@ -49,19 +50,19 @@ const Categoy = ({ title, lista }) => {
   const localimg = (name) => {
     let localimg = cast.find((x) => x.name === name);
     let img = localimg ? localimg.img : "";
-    console.log(cast);
     return img;
   };
+
   const moviesList = (name) => {
     switch (title) {
       case "Actors":
-        return movies.filter((x) => x.actors.includes(name));
+        return filterList.filter((x) => x.actors.includes(name));
       case "Directors":
-        return movies.filter((x) => x.directors.includes(name));
+        return filterList.filter((x) => x.directors.includes(name));
       case "Writers":
-        return movies.filter((x) => x.writers.includes(name));
+        return filterList.filter((x) => x.writers.includes(name));
       case "Years":
-        return movies.filter((x) => x.year == name);
+        return filterList.filter((x) => x.year == name);
       default:
         return [];
     }
@@ -75,7 +76,7 @@ const Categoy = ({ title, lista }) => {
           </h4>
         </div>
 
-        {lista.slice(0, 5).map((director) => (
+        {lista.slice(0, 6).map((director) => (
           <div className="item" key={director[0]}>
             {title !== "Years" && (
               <div className="col-lg-2">
@@ -105,6 +106,7 @@ const Categoy = ({ title, lista }) => {
             <div className="col-lg-6">
               <ul className="moviesList">
                 {moviesList(director[0]).map((pelicula) => (
+                  
                   <li key={pelicula.name}>
                     {pelicula.name} ({pelicula.year})
                   </li>

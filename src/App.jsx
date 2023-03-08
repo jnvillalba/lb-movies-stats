@@ -5,21 +5,23 @@ import Home from "./Components/Home";
 import YearsMovies from "./Components/YearsMovies";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import OLists from "./Components/OLists";
-import {
-  añosRepetidos,
-  directoresRepetidos,
-  escritoresRepetidos,
-  actoresRepetidos,
-} from "./Utils";
+import movies from "./Lists/movies";
+import Vol6 from "./Lists/Vol6";
+import { encontrarRepetidos } from "./Utils";
 
 function App() {
   //const lista_urls = movies.map((objeto) => objeto.url);
+  const actoresRepetidos = encontrarRepetidos(movies, "actors");
+  const añosRepetidos = encontrarRepetidos(movies, "year");
+  const directoresRepetidos = encontrarRepetidos(movies, "directors");
+  const escritoresRepetidos = encontrarRepetidos(movies, "writers");
   return (
     <>
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<Home list={movies} />} />
+          <Route exact path="/Vol6" element={<Home list={Vol6} />} />
           <Route exact path="/:id" element={<YearsMovies />} />
           <Route
             exact

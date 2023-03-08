@@ -25,6 +25,10 @@ body {
     margin: 6px;
 }
 
+.dropdown-menu {
+    --bs-dropdown-min-width: auto !important;
+}
+
 @media (min-width: 768px) {
     .moviesList li {
         width: 80%;
