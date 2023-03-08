@@ -75,7 +75,7 @@ const Movie = ({ movie }) => {
         <p className="mt-2">
           <em>Cast:</em>
         </p>
-        {movie.actors.splice(0, 5).map((writer, i) => (
+        {movie.actors.slice(0, 5).map((writer, i) => (
           <p key={i}>{writer}</p>
         ))}
       </div>

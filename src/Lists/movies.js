@@ -3558,8 +3558,8 @@ let movies = [
   {
     name: "The K.E.O.P/S System",
     year: "2022",
-    directors: ["Nicolas Goldbart 1"],
-    writers: ["Nicolas Goldbart 1"],
+    directors: ["Nicolas Goldbart"],
+    writers: ["Nicolas Goldbart"],
     actors: [
       "Daniel Hendler",
       "Alan Sabbagh",

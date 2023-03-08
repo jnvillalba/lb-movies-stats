@@ -64,6 +64,31 @@ const NavBar = () => {
                     Vol. 6
                   </Link>
                 </li>
+                <li>
+                  <Link className="dropdown-item" to="/Vol5">
+                    Vol. 5
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/Vol4">
+                    Vol. 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/Vol3">
+                    Vol. 3
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/Vol2">
+                    Vol. 2
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/Vol1">
+                    Vol. 1
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>
