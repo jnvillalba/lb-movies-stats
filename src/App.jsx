@@ -8,6 +8,7 @@ import OLists from "./Components/OLists";
 import movies from "./Lists/movies";
 import Vol6 from "./Lists/Vol6";
 import { encontrarRepetidos } from "./Utils";
+import Vol5 from "./Lists/Vol5";
 
 function App() {
   //const lista_urls = movies.map((objeto) => objeto.url);
@@ -16,7 +17,7 @@ function App() {
   const directoresRepetidos = encontrarRepetidos(movies, "directors");
   const escritoresRepetidos = encontrarRepetidos(movies, "writers");
 
-  let todas = movies.concat(Vol6);
+  let todas = movies.concat(Vol6).concat(Vol5);
   return (
     <>
       <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route index element={<Home list={movies} />} />
           <Route exact path="/Vol6" element={<Home list={Vol6} />} />
+          <Route exact path="/Vol5" element={<Home list={Vol5} />} />
           <Route exact path="/All" element={<Home list={todas} />} />
           <Route exact path="/:id" element={<YearsMovies />} />
           <Route
