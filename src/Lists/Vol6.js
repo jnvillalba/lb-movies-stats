@@ -5023,7 +5023,7 @@ let Vol6 = [
   {
     name: "Spencer",
     year: "2021",
-    directors: ["Pablo Larrain 1"],
+    directors: ["Pablo Larrain"],
     writers: ["Steven Knight"],
     actors: [
       "Kristen Stewart",

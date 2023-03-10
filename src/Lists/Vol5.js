@@ -50,7 +50,7 @@ let Vol5 = [
     name: "Casino Royale",
     year: "2006",
     directors: ["Martin Campbell"],
-    writers: ["Robert Wade 1", "Neal Purvis", "Paul Haggis"],
+    writers: ["Robert Wade", "Neal Purvis", "Paul Haggis"],
     actors: [
       "Daniel Craig",
       "Eva Green",
@@ -322,7 +322,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "Days of Vinyl",
+    name: "Dias de Vinilo",
     year: "2012",
     directors: ["Gabriel Nesci"],
     writers: ["Gabriel Nesci"],
@@ -1118,7 +1118,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "Women on the Verge of a Nervous Breakdown",
+    name: "Mujeres al borde de un ataque de nervios",
     year: "1988",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
@@ -1154,7 +1154,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "Bad Education",
+    name: "La Mala Educacion",
     year: "2004",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
@@ -1565,7 +1565,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "To Fool a Thief",
+    name: "Vino Para Robar",
     year: "2013",
     directors: ["Ariel Winograd"],
     writers: ["Adrian Garelik"],
@@ -2236,7 +2236,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "High Heels",
+    name: "Tacones Lejanos",
     year: "1991",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
@@ -3664,7 +3664,7 @@ let Vol5 = [
   {
     name: "No",
     year: "2012",
-    directors: ["Pablo Larrain 1"],
+    directors: ["Pablo Larrain"],
     writers: ["Pedro Peirano"],
     actors: [
       "Gael García Bernal",
@@ -3900,10 +3900,10 @@ let Vol5 = [
     ],
   },
   {
-    name: "The Club",
+    name: "El Club",
     year: "2015",
-    directors: ["Pablo Larrain 1"],
-    writers: ["Pablo Larrain 1", "Daniel Villalobos", "Guillermo Calderon 1"],
+    directors: ["Pablo Larrain"],
+    writers: ["Pablo Larrain", "Daniel Villalobos", "Guillermo Calderon 1"],
     actors: [
       "Alfredo Castro",
       "Roberto Farías",
@@ -4069,7 +4069,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "Night of the Pencils",
+    name: "La Noche de los Lapices",
     year: "1986",
     directors: ["Hector Olivera 1"],
     writers: [
@@ -4719,7 +4719,7 @@ let Vol5 = [
   {
     name: "Neruda",
     year: "2016",
-    directors: ["Pablo Larrain 1"],
+    directors: ["Pablo Larrain"],
     writers: ["Guillermo Calderon 1"],
     actors: [
       "Gael García Bernal",
@@ -4777,8 +4777,8 @@ let Vol5 = [
   {
     name: "Tony Manero",
     year: "2008",
-    directors: ["Pablo Larrain 1"],
-    writers: ["Mateo Iribarren", "Pablo Larrain 1", "Alfredo Castro"],
+    directors: ["Pablo Larrain"],
+    writers: ["Mateo Iribarren", "Pablo Larrain", "Alfredo Castro"],
     actors: [
       "Alfredo Castro",
       "Amparo Noguera",
@@ -5852,7 +5852,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "White Elephant",
+    name: "Elefante Blanco",
     year: "2012",
     directors: ["Pablo Trapero"],
     writers: [
@@ -6000,8 +6000,8 @@ let Vol5 = [
   {
     name: "Fuga",
     year: "2006",
-    directors: ["Pablo Larrain 1"],
-    writers: ["Pablo Larrain 1", "Hernan Rodriguez Matte", "Mateo Iribarren"],
+    directors: ["Pablo Larrain"],
+    writers: ["Pablo Larrain", "Hernan Rodriguez Matte", "Mateo Iribarren"],
     actors: [
       "Benjamín Vicuña",
       "Gastón Pauls",
@@ -6446,7 +6446,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "The Summit",
+    name: "La cordillera",
     year: "2017",
     directors: ["Santiago Mitre"],
     writers: ["Mariano Llinas", "Santiago Mitre"],
@@ -6811,7 +6811,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "The Accused",
+    name: "Acusada",
     year: "2018",
     directors: ["Gonzalo Tobal"],
     writers: ["Ulises Porra", "Gonzalo Tobal"],
@@ -8894,7 +8894,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "Dark Habits",
+    name: "Entre Tinieblas",
     year: "1983",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar"],
@@ -8925,7 +8925,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "The Flower of My Secret",
+    name: "La Flor de Mi Secreto",
     year: "1995",
     directors: ["Pedro Almodovar"],
     writers: ["Pedro Almodovar", "Dorothy Parker"],
@@ -9033,7 +9033,7 @@ let Vol5 = [
     name: "Quantum of Solace",
     year: "2008",
     directors: ["Marc Forster"],
-    writers: ["Paul Haggis", "Robert Wade 1", "Neal Purvis"],
+    writers: ["Paul Haggis", "Robert Wade", "Neal Purvis"],
     actors: [
       "Daniel Craig",
       "Olga Kurylenko",
@@ -9256,7 +9256,7 @@ let Vol5 = [
     name: "Skyfall",
     year: "2012",
     directors: ["Sam Mendes"],
-    writers: ["Robert Wade 1", "Neal Purvis", "John Logan"],
+    writers: ["Robert Wade", "Neal Purvis", "John Logan"],
     actors: [
       "Daniel Craig",
       "Judi Dench",
@@ -9316,7 +9316,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "Cheese Head",
+    name: "Cara de Queso",
     year: "2006",
     directors: ["Ariel Winograd"],
     writers: ["Ariel Winograd"],
@@ -9446,7 +9446,7 @@ let Vol5 = [
     name: "Spectre",
     year: "2015",
     directors: ["Sam Mendes"],
-    writers: ["Robert Wade 1", "Neal Purvis", "John Logan", "Jez Butterworth"],
+    writers: ["Robert Wade", "Neal Purvis", "John Logan", "Jez Butterworth"],
     actors: [
       "Daniel Craig",
       "Christoph Waltz",
