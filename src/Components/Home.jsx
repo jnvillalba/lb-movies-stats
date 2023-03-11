@@ -7,6 +7,8 @@ function Home({ list }) {
   const añosRepetidos = encontrarRepetidos(list, "year");
   const directoresRepetidos = encontrarRepetidos(list, "directors");
   const escritoresRepetidos = encontrarRepetidos(list, "writers");
+  const repetidos = encontrarRepetidos(list, "name");
+  console.log(repetidos)
   return (
     <>
       <div className="container">

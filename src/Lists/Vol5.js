@@ -6311,48 +6311,6 @@ let Vol5 = [
       "Saffron Mcintyre",
     ],
   },
-
-  {
-    name: "In the Heart of the Sea",
-    year: "2015",
-    directors: ["Ron Howard"],
-    writers: [
-      "Nathaniel Philbrick",
-      "Rick Jaffa",
-      "Charles Leavitt",
-      "Amanda Silver",
-    ],
-    actors: [
-      "Chris Hemsworth",
-      "Benjamin Walker",
-      "Cillian Murphy",
-      "Brendan Gleeson",
-      "Ben Whishaw",
-      "Michelle Fairley",
-      "Tom Holland",
-      "Paul Anderson",
-      "Frank Dillane",
-      "Joseph Mawle",
-      "Edward Ashley",
-      "Sam Keeley",
-      "Osy Ikhile",
-      "Gary Beadle",
-      "Jamie Sives",
-      "Morgan Chetcuti",
-      "Charlotte Riley",
-      "Nicholas Jones",
-      "Donald Sumpter",
-      "Richard Bremmer",
-      "Jordi Mollà",
-      "Hayley Joanne Bacon",
-      "Andrew Crayford",
-      "Claudia Newman",
-      "Andy Wareham",
-      "Stephanie Jacob",
-      "Robert J. Fraser",
-      "Saffron Mcintyre",
-    ],
-  },
   {
     name: "The Family Fang",
     year: "2015",
@@ -9511,6 +9469,7 @@ let Vol5 = [
       "Taylor Murphy",
     ],
   },
+
 ];
 export default Vol5;
 //, "actors": get_stars(url)
