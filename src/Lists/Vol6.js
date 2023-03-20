@@ -6197,8 +6197,8 @@ let Vol6 = [
   {
     name: "The Weasel's Tale",
     year: "2019",
-    directors: ["Juan Jose Campanella 1"],
-    writers: ["Darren Kloomok", "Juan Jose Campanella 1"],
+    directors: ["Juan Jose Campanella"],
+    writers: ["Darren Kloomok", "Juan Jose Campanella"],
     actors: [
       "Graciela Borges",
       "Oscar Martínez",
