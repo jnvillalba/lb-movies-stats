@@ -844,10 +844,10 @@ let Vol5 = [
     ],
   },
   {
-    name: "The Bottom of the Sea",
+    name: "El Fondo del Mar",
     year: "2003",
-    directors: ["Damian Szifron 1"],
-    writers: ["Damian Szifron 1"],
+    directors: ["Damian Szifron"],
+    writers: ["Damian Szifron"],
     actors: [
       "Daniel Hendler",
       "Gustavo Garzón",
@@ -6041,7 +6041,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "It's Not You, It's Me",
+    name: "No sos vos, soy yo",
     year: "2004",
     directors: ["Juan Taratuto"],
     writers: ["Juan Taratuto", "Cecilia Dopazo"],
@@ -9347,7 +9347,7 @@ let Vol5 = [
     ],
   },
   {
-    name: "Bad Christmas",
+    name: "La Noche Magica",
     year: "2021",
     directors: ["Gaston Portal"],
     writers: ["Gaston Portal"],

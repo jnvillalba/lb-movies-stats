@@ -3911,7 +3911,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "Who Says It's Easy?",
+    name: "¿Quién dice que es fácil?",
     year: "2007",
     directors: ["Juan Taratuto"],
     writers: ["Pablo Solarz"],
@@ -8588,7 +8588,7 @@ let Vol6 = [
     ],
   },
   {
-    name: "The Wrath of God",
+    name: "La Ira de Dios",
     year: "2022",
     directors: ["Sebastian Schindel"],
     writers: ["Sebastian Schindel", "Guillermo Martinez", "Pablo Del Teso"],

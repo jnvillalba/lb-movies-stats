@@ -9,6 +9,7 @@ import movies from "./Lists/movies";
 import Vol6 from "./Lists/Vol6";
 import { encontrarRepetidos } from "./Utils";
 import Vol5 from "./Lists/Vol5";
+import Vol1 from "./Lists/Vol1";
 
 function App() {
   //const lista_urls = movies.map((objeto) => objeto.url);
@@ -17,7 +18,9 @@ function App() {
   const directoresRepetidos = encontrarRepetidos(movies, "directors");
   const escritoresRepetidos = encontrarRepetidos(movies, "writers");
 
-  let todas = movies.concat(Vol6, Vol5);
+  let todas = movies.concat(Vol6, Vol5, Vol1);
+
+  console.log(Vol1.length);
   return (
     <>
       <BrowserRouter>
