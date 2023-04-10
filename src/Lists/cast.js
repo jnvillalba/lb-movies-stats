@@ -15,6 +15,10 @@ let cast = [
     name: "Tom Wheeler",
     img: "https://resizing.flixster.com/IEBksZrY_2K1DftuLAQV_9VPS-E=/218x280/v2/https://flxt.tmsimg.com/assets/85522_v9_ba.jpg",
   },
+  {
+    name: "Guy Busick",
+    img: "https://resizing.flixster.com/5uxV7Frj6DJhx7xg0lan6hrWSpo=/218x280/v2/https://flxt.tmsimg.com/assets/1097415_v9_aa.jpg",
+  },
 
   {
     name: "The Substitute",

@@ -76,7 +76,7 @@ const Categoy = ({ title, lista, filterList }) => {
           </h4>
         </div>
 
-        {lista.slice(0, 6).map((director) => (
+        {lista.slice(0, 9).map((director) => (
           <div className="item" key={director[0]}>
             {title !== "Years" && (
               <div className="col-lg-2">
