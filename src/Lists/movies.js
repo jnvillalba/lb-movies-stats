@@ -459,7 +459,7 @@ let movies = [
   },
   {
     name: "Puss in Boots",
-    directors: ["Chris Miller 1"],
+    directors: ["Chris Miller"],
     writers: ["Brian Lynch", "William Davies", "Tom Wheeler"],
     year: 2011,
     url: "https://boxd.it/eL34",
@@ -562,7 +562,7 @@ let movies = [
   {
     name: "Along Came a Spider",
     directors: ["Lee Tamahori"],
-    writers: ["Marc Moss", "James Patterson 1"],
+    writers: ["Marc Moss", "James Patterson"],
     year: 2001,
     url: "https://boxd.it/27yW",
     actors: [
@@ -3639,7 +3639,7 @@ let movies = [
     name: "El método Tangalanga",
     year: "2022",
     directors: ["Mateo Bendesky"],
-    writers: ["Nicolas Schujman 1", "Sergio Dubcovsky", "Mateo Bendesky"],
+    writers: ["Nicolas Schujman", "Sergio Dubcovsky", "Mateo Bendesky"],
     actors: [
       "Martín Piroyansky",
       "Julieta Zylberberg",
@@ -4459,7 +4459,7 @@ let movies = [
     name: "Shazam! Fury of the Gods",
     year: "2023",
     directors: ["David F Sandberg"],
-    writers: ["Henry Gayden", "Chris Morgan 1"],
+    writers: ["Henry Gayden", "Chris Morgan"],
     actors: [
       "Zachary Levi",
       "Asher Angel",

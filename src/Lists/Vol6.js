@@ -181,7 +181,7 @@ let Vol6 = [
       "Ehren Kruger",
       "Peter Craig",
       "Eric Warren Singer",
-      "Christopher Mcquarrie 1",
+      "Christopher Mcquarrie",
     ],
     actors: [
       "Tom Cruise",
@@ -1067,7 +1067,7 @@ let Vol6 = [
     name: "The Hangover",
     year: "2009",
     directors: ["Todd Phillips"],
-    writers: ["Jon Lucas", "Scott Moore 1"],
+    writers: ["Jon Lucas", "Scott Moore"],
     actors: [
       "Bradley Cooper",
       "Ed Helms",
@@ -1499,7 +1499,7 @@ let Vol6 = [
       "Byron Howard",
       "Charise Castro Smith",
       "Lin Manuel Miranda",
-      "Jason Hand 1",
+      "Jason Hand",
       "Jared Bush",
     ],
     actors: [
@@ -2126,7 +2126,7 @@ let Vol6 = [
     name: "Layer Cake",
     year: "2004",
     directors: ["Matthew Vaughn"],
-    writers: ["Jj Connolly 1"],
+    writers: ["Jj Connolly"],
     actors: [
       "Daniel Craig",
       "Sienna Miller",
@@ -2452,7 +2452,7 @@ let Vol6 = [
     name: "Doctor Strange in the Multiverse of Madness",
     year: "2022",
     directors: ["Sam Raimi"],
-    writers: ["Michael Waldron 1"],
+    writers: ["Michael Waldron"],
     actors: [
       "Benedict Cumberbatch",
       "Elizabeth Olsen",
@@ -2942,7 +2942,7 @@ let Vol6 = [
     name: "Evolution",
     year: "2001",
     directors: ["Ivan Reitman"],
-    writers: ["David Weissman 1", "Don Jakoby", "David Diamond"],
+    writers: ["David Weissman", "Don Jakoby", "David Diamond"],
     actors: [
       "David Duchovny",
       "Julianne Moore",
@@ -3266,7 +3266,7 @@ let Vol6 = [
     directors: ["Peter Farrelly"],
     writers: [
       "Brian Hayes Currie",
-      "John Donohue 1",
+      "John Donohue",
       "Joanna Molloy",
       "Pete Jones",
       "Peter Farrelly",
@@ -3544,7 +3544,7 @@ let Vol6 = [
       "Maurice Williams 2",
       "Ian Edelman",
       "Esa Lewis",
-      "Kid Cudi 1",
+      "Kid Cudi",
       "Sidney Schleiff",
       "Judnick Mayard",
     ],
@@ -4244,9 +4244,9 @@ let Vol6 = [
   {
     name: "Abzurdah",
     year: "2015",
-    directors: ["Daniela Goggi 1"],
+    directors: ["Daniela Goggi"],
     writers: [
-      "Daniela Goggi 1",
+      "Daniela Goggi",
       "Alberto Rojas Apel",
       "Alejandro Montiel",
       "Cielo Latini",
@@ -5427,8 +5427,8 @@ let Vol6 = [
   {
     name: "The Day of the Beast",
     year: "1995",
-    directors: ["Alex De La Iglesia 1"],
-    writers: ["Jorge Guerricaechevarria", "Alex De La Iglesia 1"],
+    directors: ["Alex De La Iglesia"],
+    writers: ["Jorge Guerricaechevarria", "Alex De La Iglesia"],
     actors: [
       "Álex Angulo",
       "Armando De Razza",
@@ -5591,7 +5591,7 @@ let Vol6 = [
   {
     name: "Inside the Mind of a Cat",
     year: "2022",
-    directors: ["Andy Mitchell 1"],
+    directors: ["Andy Mitchell"],
     writers: [],
     actors: [
       "Yuki Hattori",
@@ -6128,7 +6128,7 @@ let Vol6 = [
     name: "Chip 'n Dale: Rescue Rangers",
     year: "2022",
     directors: ["Akiva Schaffer"],
-    writers: ["Doug Mand", "Dan Gregor 1"],
+    writers: ["Doug Mand", "Dan Gregor"],
     actors: [
       "Andy Samberg",
       "John Mulaney",
@@ -6488,7 +6488,7 @@ let Vol6 = [
   {
     name: "Superman: Man of Tomorrow",
     year: "2020",
-    directors: ["Chris Palmer 1"],
+    directors: ["Chris Palmer"],
     writers: ["Tim Sheridan"],
     actors: [
       "Darren Criss",
@@ -6871,7 +6871,7 @@ let Vol6 = [
     name: "Spirited",
     year: "2022",
     directors: ["Sean Anders"],
-    writers: ["John Morris 1", "Sean Anders", "Charles Dickens"],
+    writers: ["John Morris", "Sean Anders", "Charles Dickens"],
     actors: [
       "Will Ferrell",
       "Ryan Reynolds",
@@ -7014,7 +7014,7 @@ let Vol6 = [
     name: "White Boy Rick",
     year: "2018",
     directors: ["Yann Demange"],
-    writers: ["Logan Miller 1", "Andy Weiss 1", "Noah Miller"],
+    writers: ["Logan Miller", "Andy Weiss", "Noah Miller"],
     actors: [
       "Richie Merritt",
       "Matthew McConaughey",

@@ -134,7 +134,7 @@ let Vol1 = [
     name: "Rogue One: A Star Wars Story",
     year: "2016",
     directors: ["Gareth Edwards"],
-    writers: ["Gary Whitta", "Tony Gilroy", "Chris Weitz", "John Knoll 1"],
+    writers: ["Gary Whitta", "Tony Gilroy", "Chris Weitz", "John Knoll"],
     actors: [
       "Felicity Jones",
       "Diego Luna",
@@ -466,7 +466,7 @@ let Vol1 = [
       "Andrew J Cohen",
       "Evan Goldberg",
       "Nicholas Stoller",
-      "Brendan Obrien 1",
+      "Brendan Obrien",
     ],
     actors: [
       "Seth Rogen",
@@ -1162,7 +1162,7 @@ let Vol1 = [
   {
     name: "Burnt",
     year: "2015",
-    directors: ["John Wells 1"],
+    directors: ["John Wells"],
     writers: ["Steven Knight", "Michael Kalesniko"],
     actors: [
       "Bradley Cooper",
@@ -1436,7 +1436,7 @@ let Vol1 = [
     name: "War Dogs",
     year: "2016",
     directors: ["Todd Phillips"],
-    writers: ["Stephen Chin", "Jason Smilovic 1", "Todd Phillips"],
+    writers: ["Stephen Chin", "Jason Smilovic", "Todd Phillips"],
     actors: [
       "Miles Teller",
       "Jonah Hill",
@@ -1583,7 +1583,7 @@ let Vol1 = [
     name: "Miss Peregrine's Home for Peculiar Children",
     year: "2016",
     directors: ["Tim Burton"],
-    writers: ["Jane Goldman 1"],
+    writers: ["Jane Goldman"],
     actors: [
       "Eva Green",
       "Asa Butterfield",
@@ -1986,7 +1986,7 @@ let Vol1 = [
   {
     name: "A Dog's Purpose",
     year: "2017",
-    directors: ["Lasse Hallstrom 1"],
+    directors: ["Lasse Hallstrom"],
     writers: [
       "Cathryn Michon",
       "W Bruce Cameron",
@@ -2410,7 +2410,7 @@ let Vol1 = [
   {
     name: "Shut In",
     year: "2016",
-    directors: ["Farren Blackburn 1"],
+    directors: ["Farren Blackburn"],
     writers: ["Christina Hodson"],
     actors: [
       "Naomi Watts",
@@ -2690,7 +2690,7 @@ let Vol1 = [
   {
     name: "The Cider House Rules",
     year: "1999",
-    directors: ["Lasse Hallstrom 1"],
+    directors: ["Lasse Hallstrom"],
     writers: ["John Irving"],
     actors: [
       "Tobey Maguire",
@@ -3663,8 +3663,8 @@ let Vol1 = [
   {
     name: "Don't Breathe",
     year: "2016",
-    directors: ["Fede Alvarez 1"],
-    writers: ["Rodo Sayagues", "Fede Alvarez 1"],
+    directors: ["Fede Alvarez"],
+    writers: ["Rodo Sayagues", "Fede Alvarez"],
     actors: [
       "Stephen Lang",
       "Jane Levy",
@@ -5090,7 +5090,7 @@ let Vol1 = [
   {
     name: "Hachi: A Dog's Tale",
     year: "2009",
-    directors: ["Lasse Hallstrom 1"],
+    directors: ["Lasse Hallstrom"],
     writers: ["Stephen P Lindsey"],
     actors: [
       "Richard Gere",
@@ -5712,7 +5712,7 @@ let Vol1 = [
     name: "Spotlight",
     year: "2015",
     directors: ["Tom Mccarthy 2"],
-    writers: ["Tom Mccarthy 2", "Josh Singer 1"],
+    writers: ["Tom Mccarthy 2", "Josh Singer"],
     actors: [
       "Mark Ruffalo",
       "Michael Keaton",
@@ -5873,7 +5873,7 @@ let Vol1 = [
     name: "Assassin's Creed",
     year: "2016",
     directors: ["Justin Kurzel"],
-    writers: ["Bill Collage", "Adam Cooper 1", "Michael Lesslie"],
+    writers: ["Bill Collage", "Adam Cooper", "Michael Lesslie"],
     actors: [
       "Michael Fassbender",
       "Marion Cotillard",
@@ -6342,7 +6342,7 @@ let Vol1 = [
   {
     name: "The Machinist",
     year: "2004",
-    directors: ["Brad Anderson 1"],
+    directors: ["Brad Anderson"],
     writers: ["Scott Kosar"],
     actors: [
       "Christian Bale",
@@ -6424,8 +6424,8 @@ let Vol1 = [
   {
     name: "12 Years a Slave",
     year: "2013",
-    directors: ["Steve Mcqueen 1"],
-    writers: ["John Ridley 1"],
+    directors: ["Steve Mcqueen"],
+    writers: ["John Ridley"],
     actors: [
       "Chiwetel Ejiofor",
       "Michael Fassbender",
@@ -6723,7 +6723,7 @@ let Vol1 = [
   {
     name: "Squatters",
     year: "2014",
-    directors: ["Martin Weisz 1"],
+    directors: ["Martin Weisz"],
     writers: ["Justin Shilton"],
     actors: [
       "Richard Dreyfuss",
@@ -6848,7 +6848,7 @@ let Vol1 = [
   {
     name: "The Theory of Everything",
     year: "2014",
-    directors: ["James Marsh 1"],
+    directors: ["James Marsh"],
     writers: ["Anthony Mccarten"],
     actors: [
       "Eddie Redmayne",

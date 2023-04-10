@@ -1403,8 +1403,8 @@ let Vol5 = [
   {
     name: "Good Bye Lenin!",
     year: "2003",
-    directors: ["Wolfgang Becker 1"],
-    writers: ["Bernd Lichtenberg", "Wolfgang Becker 1"],
+    directors: ["Wolfgang Becker"],
+    writers: ["Bernd Lichtenberg", "Wolfgang Becker"],
     actors: [
       "Daniel Brühl",
       "Katrin Sass",
@@ -1429,7 +1429,7 @@ let Vol5 = [
     name: "Trance",
     year: "2013",
     directors: ["Danny Boyle"],
-    writers: ["Joe Ahearne 1", "John Hodge"],
+    writers: ["Joe Ahearne", "John Hodge"],
     actors: [
       "James McAvoy",
       "Vincent Cassel",
@@ -1796,7 +1796,7 @@ let Vol5 = [
   {
     name: "I See You",
     year: "2019",
-    directors: ["Adam Randall 1"],
+    directors: ["Adam Randall"],
     writers: ["Devon Graye"],
     actors: [
       "Helen Hunt",
@@ -2684,7 +2684,7 @@ let Vol5 = [
     name: "Apocalypse Now",
     year: "1979",
     directors: ["Francis Ford Coppola"],
-    writers: ["John Milius 1", "Francis Ford Coppola", "Michael Herr"],
+    writers: ["John Milius", "Francis Ford Coppola", "Michael Herr"],
     actors: [
       "Marlon Brando",
       "Robert Duvall",
@@ -3122,7 +3122,7 @@ let Vol5 = [
     name: "The Florida Project",
     year: "2017",
     directors: ["Sean Baker"],
-    writers: ["Chris Bergoch 1", "Sean Baker"],
+    writers: ["Chris Bergoch", "Sean Baker"],
     actors: [
       "Brooklynn Prince",
       "Willem Dafoe",
@@ -3421,8 +3421,8 @@ let Vol5 = [
   {
     name: "La Ciénaga",
     year: "2001",
-    directors: ["Lucrecia Martel 1"],
-    writers: ["Lucrecia Martel 1"],
+    directors: ["Lucrecia Martel"],
+    writers: ["Lucrecia Martel"],
     actors: [
       "Mercedes Morán",
       "Graciela Borges",
@@ -3720,7 +3720,7 @@ let Vol5 = [
     writers: [
       "Jez Butterworth",
       "John Henry Butterworth",
-      "Christopher Mcquarrie 1",
+      "Christopher Mcquarrie",
     ],
     actors: [
       "Tom Cruise",
@@ -3903,7 +3903,7 @@ let Vol5 = [
     name: "El Club",
     year: "2015",
     directors: ["Pablo Larrain"],
-    writers: ["Pablo Larrain", "Daniel Villalobos", "Guillermo Calderon 1"],
+    writers: ["Pablo Larrain", "Daniel Villalobos", "Guillermo Calderon"],
     actors: [
       "Alfredo Castro",
       "Roberto Farías",
@@ -4071,11 +4071,11 @@ let Vol5 = [
   {
     name: "La Noche de los Lapices",
     year: "1986",
-    directors: ["Hector Olivera 1"],
+    directors: ["Hector Olivera"],
     writers: [
       "Hector Ruiz Nunez",
       "Maria Seoane",
-      "Hector Olivera 1",
+      "Hector Olivera",
       "Daniel Kon",
     ],
     actors: [
@@ -4273,7 +4273,7 @@ let Vol5 = [
   {
     name: "Batman: The Long Halloween, Part One",
     year: "2021",
-    directors: ["Chris Palmer 1"],
+    directors: ["Chris Palmer"],
     writers: ["Tim Sheridan"],
     actors: [
       "Jensen Ackles",
@@ -4297,7 +4297,7 @@ let Vol5 = [
   {
     name: "Batman: The Long Halloween, Part Two",
     year: "2021",
-    directors: ["Chris Palmer 1"],
+    directors: ["Chris Palmer"],
     writers: ["Tim Sheridan"],
     actors: [
       "Jensen Ackles",
@@ -4423,7 +4423,7 @@ let Vol5 = [
     name: "Kick-Ass",
     year: "2010",
     directors: ["Matthew Vaughn"],
-    writers: ["Matthew Vaughn", "Jane Goldman 1"],
+    writers: ["Matthew Vaughn", "Jane Goldman"],
     actors: [
       "Aaron Taylor-Johnson",
       "Chloë Grace Moretz",
@@ -4720,7 +4720,7 @@ let Vol5 = [
     name: "Neruda",
     year: "2016",
     directors: ["Pablo Larrain"],
-    writers: ["Guillermo Calderon 1"],
+    writers: ["Guillermo Calderon"],
     actors: [
       "Gael García Bernal",
       "Luis Gnecco",
@@ -5014,7 +5014,7 @@ let Vol5 = [
     name: "The Rocketeer",
     year: "1991",
     directors: ["Joe Johnston"],
-    writers: ["William Dear 1", "Danny Bilson", "Paul De Meo"],
+    writers: ["William Dear", "Danny Bilson", "Paul De Meo"],
     actors: [
       "Billy Campbell",
       "Jennifer Connelly",
@@ -5093,7 +5093,7 @@ let Vol5 = [
     name: "Love and Monsters",
     year: "2020",
     directors: ["Michael Matthews 2"],
-    writers: ["Matthew Robinson 1", "Brian Duffield"],
+    writers: ["Matthew Robinson", "Brian Duffield"],
     actors: [
       "Dylan O'Brien",
       "Jessica Henwick",
@@ -5315,8 +5315,8 @@ let Vol5 = [
   {
     name: "Rudo & Cursi",
     year: "2008",
-    directors: ["Carlos Cuaron 1"],
-    writers: ["Carlos Cuaron 1"],
+    directors: ["Carlos Cuaron"],
+    writers: ["Carlos Cuaron"],
     actors: [
       "Gael García Bernal",
       "Diego Luna",
@@ -5417,7 +5417,7 @@ let Vol5 = [
   {
     name: "State of Play",
     year: "2009",
-    directors: ["Kevin Macdonald 1"],
+    directors: ["Kevin Macdonald"],
     writers: [
       "Paul Abbott",
       "Tony Gilroy",
@@ -6074,7 +6074,7 @@ let Vol5 = [
   {
     name: "Remember Me",
     year: "2010",
-    directors: ["Allen Coulter 1"],
+    directors: ["Allen Coulter"],
     writers: ["Will Fetters"],
     actors: [
       "Robert Pattinson",
@@ -6236,8 +6236,8 @@ let Vol5 = [
   {
     name: "The To Do List",
     year: "2013",
-    directors: ["Maggie Carey 1"],
-    writers: ["Maggie Carey 1"],
+    directors: ["Maggie Carey"],
+    writers: ["Maggie Carey"],
     actors: [
       "Aubrey Plaza",
       "Johnny Simmons",
@@ -6978,7 +6978,7 @@ let Vol5 = [
     name: "F9",
     year: "2021",
     directors: ["Justin Lin"],
-    writers: ["Justin Lin", "Daniel Casey 1", "Alfredo Botello"],
+    writers: ["Justin Lin", "Daniel Casey", "Alfredo Botello"],
     actors: [
       "Vin Diesel",
       "Michelle Rodriguez",
@@ -7099,7 +7099,7 @@ let Vol5 = [
     name: "Brightburn",
     year: "2019",
     directors: ["David Yarovesky"],
-    writers: ["Mark Gunn", "Brian Gunn 1"],
+    writers: ["Mark Gunn", "Brian Gunn"],
     actors: [
       "Jackson A. Dunn",
       "Elizabeth Banks",
@@ -7303,7 +7303,7 @@ let Vol5 = [
     name: "Mortal Kombat",
     year: "2021",
     directors: ["Simon Mcquoid"],
-    writers: ["Oren Uziel", "Dave Callaham", "Greg Russo 1"],
+    writers: ["Oren Uziel", "Dave Callaham", "Greg Russo"],
     actors: [
       "Lewis Tan",
       "Jessica McNamee",
@@ -7426,7 +7426,7 @@ let Vol5 = [
     name: "47 Ronin",
     year: "2013",
     directors: ["Carl Rinsch"],
-    writers: ["Walter Hamada", "Chris Morgan 1", "Hossein Amini"],
+    writers: ["Walter Hamada", "Chris Morgan", "Hossein Amini"],
     actors: [
       "Keanu Reeves",
       "Hiroyuki Sanada",
@@ -8372,8 +8372,8 @@ let Vol5 = [
   {
     name: "Triangle",
     year: "2009",
-    directors: ["Christopher Smith 1"],
-    writers: ["Christopher Smith 1"],
+    directors: ["Christopher Smith"],
+    writers: ["Christopher Smith"],
     actors: [
       "Melissa George",
       "Liam Hemsworth",
@@ -8631,7 +8631,7 @@ let Vol5 = [
     name: "Stardust",
     year: "2007",
     directors: ["Matthew Vaughn"],
-    writers: ["Jane Goldman 1", "Matthew Vaughn"],
+    writers: ["Jane Goldman", "Matthew Vaughn"],
     actors: [
       "Claire Danes",
       "Charlie Cox",
