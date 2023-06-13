@@ -730,7 +730,7 @@ let movies = [
   },
   {
     name: "Ready or Not",
-    directors: ["Matt Bettinelli Olpin", "Tyler Gillett"],
+    directors: ["Matt Bettinelli Olpin & Tyler Gillett"],
     writers: ["Guy Busick", "R Christopher Murphy"],
     year: 2019,
     url: "https://boxd.it/kOf0",
@@ -3827,7 +3827,7 @@ let movies = [
   {
     name: "Scream",
     year: "2022",
-    directors: ["Matt Bettinelli Olpin", "Tyler Gillett"],
+    directors: ["Matt Bettinelli Olpin & Tyler Gillett"],
     writers: ["Guy Busick", "James Vanderbilt"],
     actors: [
       "Melissa Barrera",
@@ -4870,7 +4870,7 @@ let movies = [
   {
     name: "Scream VI",
     year: "2023",
-    directors: ["Tyler Gillett", "Matt Bettinelli Olpin"],
+    directors: ["Matt Bettinelli Olpin & Tyler Gillett"],
     writers: ["James Vanderbilt", "Guy Busick"],
     actors: [
       "Melissa Barrera",

@@ -1104,8 +1104,8 @@ let Vol3 = [
   {
     name: "Happy Death Day 2U",
     year: "2019",
-    directors: ["Christopher Landon 2"],
-    writers: ["Christopher Landon 2"],
+    directors: ["Christopher Landon"],
+    writers: ["Christopher Landon"],
     actors: [
       "Jessica Rothe",
       "Israel Broussard",
@@ -5979,7 +5979,7 @@ let Vol3 = [
   {
     name: "Alita: Battle Angel",
     year: "2019",
-    directors: ["Robert Rodriguez 1"],
+    directors: ["Robert Rodriguez"],
     writers: ["Laeta Kalogridis", "James Cameron"],
     actors: [
       "Rosa Salazar",
@@ -6825,7 +6825,7 @@ let Vol3 = [
   {
     name: "From Dusk Till Dawn",
     year: "1996",
-    directors: ["Robert Rodriguez 1"],
+    directors: ["Robert Rodriguez"],
     writers: ["Robert Kurtzman", "Quentin Tarantino"],
     actors: [
       "George Clooney",

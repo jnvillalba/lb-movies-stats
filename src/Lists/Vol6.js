@@ -3176,7 +3176,7 @@ let Vol6 = [
   },
 
   {
-    name: "El gerente",
+    name: "El Gerente",
     year: "2022",
     directors: ["Ariel Winograd"],
     writers: ["Patricio Vega"],
@@ -6309,7 +6309,7 @@ let Vol6 = [
     name: "Sonic the Hedgehog 2",
     year: "2022",
     directors: ["Jeff Fowler"],
-    writers: ["Josh Miller 3", "Patrick Casey", "John Whittington"],
+    writers: ["Josh Miller", "Patrick Casey", "John Whittington"],
     actors: [
       "James Marsden",
       "Ben Schwartz",
@@ -9340,7 +9340,7 @@ let Vol6 = [
     name: "Violent Night",
     year: "2022",
     directors: ["Tommy Wirkola"],
-    writers: ["Josh Miller 3", "Patrick Casey"],
+    writers: ["Josh Miller", "Patrick Casey"],
     actors: [
       "David Harbour",
       "John Leguizamo",

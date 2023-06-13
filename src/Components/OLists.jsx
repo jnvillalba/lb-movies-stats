@@ -9,7 +9,7 @@ const OLists = ({ title, lista }) => {
     lista.forEach((person) => {
       personPoster(person[0]);
     });
-  }, []);
+  }, [lista]);
 
   const personPoster = (name) => {
     let nombreCompleto = name;

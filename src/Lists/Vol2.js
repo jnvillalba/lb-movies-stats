@@ -1284,8 +1284,8 @@ let Vol2 = [
     {
         name: "Okja",
         year: "2017",
-        directors: ["Bong Joon Ho"],
-        writers: ["Jon Ronson", "Bong Joon Ho"],
+        directors: ["Bong Joon-Ho"],
+        writers: ["Jon Ronson", "Bong Joon-Ho"],
         actors: [
             "Tilda Swinton",
             "Ahn Seo-hyun",
@@ -4559,7 +4559,7 @@ let Vol2 = [
     {
         name: "Happy Death Day",
         year: "2017",
-        directors: ["Christopher Landon 2"],
+        directors: ["Christopher Landon"],
         writers: ["Scott Lobdell"],
         actors: [
             "Jessica Rothe",

@@ -693,8 +693,8 @@ let Vol5 = [
   {
     name: "Memories of Murder",
     year: "2003",
-    directors: ["Bong Joon Ho"],
-    writers: ["Shim Sung Bo", "Kim Kwang Rim", "Bong Joon Ho"],
+    directors: ["Bong Joon-Ho"],
+    writers: ["Shim Sung Bo", "Kim Kwang Rim", "Bong Joon-Ho"],
     actors: [
       "Song Kang-ho",
       "Kim Sang-kyung",

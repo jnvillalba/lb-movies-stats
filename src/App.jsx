@@ -20,9 +20,8 @@ function App() {
   const directoresRepetidos = encontrarRepetidos(movies, "directors");
   const escritoresRepetidos = encontrarRepetidos(movies, "writers");
 
-  let todas = movies.concat(Vol6, Vol5, Vol1, Vol2, Vol3);
+  let todas = movies.concat(Vol6, Vol5, Vol1, Vol2, Vol3, Vol4);
 
-  console.log(Vol4.length);
   return (
     <>
       <BrowserRouter>
