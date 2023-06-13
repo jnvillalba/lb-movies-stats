@@ -11,7 +11,8 @@ import { encontrarRepetidos } from "./Utils";
 import Vol5 from "./Lists/Vol5";
 import Vol1 from "./Lists/Vol1";
 import Vol2 from "./Lists/Vol2";
-
+import Vol3 from "./Lists/Vol3";
+import Vol4 from "./Lists/Vol4";
 function App() {
   //const lista_urls = movies.map((objeto) => objeto.url);
   const actoresRepetidos = encontrarRepetidos(movies, "actors");
@@ -19,9 +20,9 @@ function App() {
   const directoresRepetidos = encontrarRepetidos(movies, "directors");
   const escritoresRepetidos = encontrarRepetidos(movies, "writers");
 
-  let todas = movies.concat(Vol6, Vol5, Vol1, Vol2);
+  let todas = movies.concat(Vol6, Vol5, Vol1, Vol2, Vol3);
 
-  console.log(Vol2.length);
+  console.log(Vol4.length);
   return (
     <>
       <BrowserRouter>
@@ -30,6 +31,8 @@ function App() {
           <Route index element={<Home list={movies} />} />
           <Route exact path="/Vol6" element={<Home list={Vol6} />} />
           <Route exact path="/Vol5" element={<Home list={Vol5} />} />
+          <Route exact path="/Vol4" element={<Home list={Vol4} />} />
+          <Route exact path="/Vol3" element={<Home list={Vol3} />} />
           <Route exact path="/Vol2" element={<Home list={Vol2} />} />
           <Route exact path="/Vol1" element={<Home list={Vol1} />} />
           <Route exact path="/All" element={<Home list={todas} />} />
