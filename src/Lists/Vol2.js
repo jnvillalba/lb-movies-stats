@@ -2921,7 +2921,7 @@ let Vol2 = [
         ],
     },
     {
-        name: "The Lost Brother",
+        name: "El Otro Hermano",
         year: "2017",
         directors: ["Adrian Caetano"],
         writers: ["Nora Mazzitelli", "Adrian Caetano"],
