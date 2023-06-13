@@ -24,7 +24,12 @@ body {
     flex-wrap: wrap;
     margin: 6px;
 }
-
+.showMore{
+    color: #fff;
+    opacity: 0.4;
+    flex-wrap: wrap;
+    margin: 6px;
+}
 .dropdown-menu {
     --bs-dropdown-min-width: auto !important;
 }
@@ -38,7 +43,6 @@ body {
 @media (min-width: 768px) {
     .gaming-library .item {
         justify-content: flex-start !important;
-
     }
 
     .moviesList {

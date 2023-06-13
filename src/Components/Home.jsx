@@ -1,6 +1,7 @@
 import React from "react";
 import Category from "./Categoy";
 import { encontrarRepetidos } from "../Utils";
+import MoviesPerYear from "./MoviesPerYear";
 
 function Home({ list }) {
   const actoresRepetidos = encontrarRepetidos(list, "actors");
@@ -31,11 +32,9 @@ function Home({ list }) {
                 lista={actoresRepetidos}
                 filterList={list}
               />
-              <Category
-                title={"Years"}
+              <MoviesPerYear title={"Years"}
                 lista={añosRepetidos}
-                filterList={list}
-              />
+                filterList={list}/>
             </div>
           </div>
         </div>
