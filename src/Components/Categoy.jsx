@@ -9,7 +9,7 @@ const Categoy = ({ title, lista, filterList }) => {
     lista.forEach((p) => {
       personPoster(p[0]);
     });
-  }, []);
+  }, [filterList]);
 
   const personPoster = (name) => {
     

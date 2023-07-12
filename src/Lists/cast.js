@@ -40,6 +40,10 @@ let cast = [
     name: "Dolores Redondo",
     img: "https://upload.wikimedia.org/wikipedia/commons/5/57/Dolores_redondo.jpg",
   },
+  {
+    name: "Dolores Redondo",
+    img: "https://m.media-amazon.com/images/M/MV5BOGI4ZWE2NmEtMjE5MC00MzQyLTk4YTctN2NhN2Q0NDhhMWZmXkEyXkFqcGdeQXVyNzY1ODU1OTk@._V1_.jpg",
+  },
 ];
 
 export default cast;
