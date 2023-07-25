@@ -37,15 +37,17 @@ const Categoy = ({ title, lista, filterList }) => {
         console.error(error);
       });
   };
+  const localDefaultImage = "../assets/default-profile.png";
   const handleImg = (name) => {
     const postersList = Object.entries(posters).map(([name, url]) => ({
       name,
       url,
     }));
     let imgFind = postersList.find((x) => x.name === name);
-    let img = imgFind ? imgFind.url : localimg;
+    let img = imgFind ? imgFind.url : localimg(name) || localDefaultImage;
     return img;
   };
+  
 
   const localimg = (name) => {
     let localimg = cast.find((x) => x.name === name);

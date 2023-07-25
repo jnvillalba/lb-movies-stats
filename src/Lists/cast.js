@@ -8,10 +8,6 @@ let cast = [
     img: "https://resizing.flixster.com/JGhu7sG-woa5cW9wB0JI0xFq7xI=/218x280/v2/https://flxt.tmsimg.com/assets/195683_v9_ba.jpg",
   },
   {
-    name: "Jeff Wamester",
-    img: "http://www.cartoonsbay.rai.it/wp-content/uploads/2019/03/JEFF-WAMESTER-1-180x180.jpg",
-  },
-  {
     name: "Tom Wheeler",
     img: "https://resizing.flixster.com/IEBksZrY_2K1DftuLAQV_9VPS-E=/218x280/v2/https://flxt.tmsimg.com/assets/85522_v9_ba.jpg",
   },
@@ -41,7 +37,7 @@ let cast = [
     img: "https://upload.wikimedia.org/wikipedia/commons/5/57/Dolores_redondo.jpg",
   },
   {
-    name: "Dolores Redondo",
+    name: "Chris Matheson",
     img: "https://m.media-amazon.com/images/M/MV5BOGI4ZWE2NmEtMjE5MC00MzQyLTk4YTctN2NhN2Q0NDhhMWZmXkEyXkFqcGdeQXVyNzY1ODU1OTk@._V1_.jpg",
   },
 ];
