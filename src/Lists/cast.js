@@ -40,15 +40,14 @@ let cast = [
     name: "Chris Matheson",
     img: "https://m.media-amazon.com/images/M/MV5BOGI4ZWE2NmEtMjE5MC00MzQyLTk4YTctN2NhN2Q0NDhhMWZmXkEyXkFqcGdeQXVyNzY1ODU1OTk@._V1_.jpg",
   },
-];
+  {
+    name: "Jeff Wamester",
+    img: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/jeff-wamester-2013020-1675341271.jpg"}
+  ];
 
 export default cast;
 
 /*
-{
-    
-    name: "",
-    img: "",
-  },
+{name: "",img: "",},
 
 */
