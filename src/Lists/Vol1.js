@@ -511,7 +511,7 @@ let Vol1 = [
   {
     name: "Now You See Me 2",
     year: "2016",
-    directors: ["Jon M Chu 2"],
+    directors: ["Jon M Chu"],
     writers: ["Pete Chiarelli", "Ed Solomon"],
     actors: [
       "Jesse Eisenberg",
@@ -5711,8 +5711,8 @@ let Vol1 = [
   {
     name: "Spotlight",
     year: "2015",
-    directors: ["Tom Mccarthy 2"],
-    writers: ["Tom Mccarthy 2", "Josh Singer"],
+    directors: ["Tom Mccarthy"],
+    writers: ["Tom Mccarthy", "Josh Singer"],
     actors: [
       "Mark Ruffalo",
       "Michael Keaton",
@@ -7366,7 +7366,7 @@ let Vol1 = [
     name: "Logan",
     year: "2017",
     directors: ["James Mangold"],
-    writers: ["Scott Frank", "James Mangold", "Michael Green 3"],
+    writers: ["Scott Frank", "James Mangold", "Michael Green"],
     actors: [
       "Hugh Jackman",
       "Dafne Keen",

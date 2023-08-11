@@ -1167,7 +1167,7 @@ let Vol2 = [
         writers: [
             "John Francis Daley",
             "Jon Watts",
-            "Christopher Ford 2",
+            "Christopher Ford",
             "Chris Mckenna",
             "Jonathan M Goldstein",
             "Erik Sommers",
@@ -2155,7 +2155,7 @@ let Vol2 = [
             "Ben Garant",
             "Jay Scherick",
             "Mark Swift",
-            "Thomas Lennon 2",
+            "Thomas Lennon",
             "Damian Shannon",
             "David Ronn",
         ],
@@ -2292,7 +2292,7 @@ let Vol2 = [
     {
         name: "Going in Style",
         year: "2017",
-        directors: ["Zach Braff 2"],
+        directors: ["Zach Braff"],
         writers: ["Theodore Melfi", "Martin Brest", "Edward Cannon"],
         actors: [
             "Morgan Freeman",
@@ -3033,7 +3033,7 @@ let Vol2 = [
         name: "Blade Runner 2049",
         year: "2017",
         directors: ["Denis Villeneuve"],
-        writers: ["Michael Green 3", "Hampton Fancher"],
+        writers: ["Michael Green", "Hampton Fancher"],
         actors: [
             "Ryan Gosling",
             "Harrison Ford",
@@ -3246,7 +3246,7 @@ let Vol2 = [
         name: "American Pastoral",
         year: "2016",
         directors: ["Ewan Mcgregor"],
-        writers: ["John Romano 2"],
+        writers: ["John Romano"],
         actors: [
             "Ewan McGregor",
             "Jennifer Connelly",
@@ -4091,7 +4091,7 @@ let Vol2 = [
         name: "Million Dollar Arm",
         year: "2014",
         directors: ["Craig Gillespie"],
-        writers: ["Tom Mccarthy 2"],
+        writers: ["Tom Mccarthy"],
         actors: [
             "Jon Hamm",
             "Bill Paxton",
@@ -10547,7 +10547,7 @@ let Vol2 = [
         name: "Gerald's Game",
         year: "2017",
         directors: ["Mike Flanagan"],
-        writers: ["Mike Flanagan", "Jeff Howard 2"],
+        writers: ["Mike Flanagan", "Jeff Howard"],
         actors: [
             "Carla Gugino",
             "Bruce Greenwood",
@@ -10755,7 +10755,7 @@ let Vol2 = [
         writers: [
             "William Andrew Eatman",
             "Gus Van Sant",
-            "John Callahan 3",
+            "John Callahan",
             "Jack Gibson",
         ],
         actors: [

@@ -910,7 +910,7 @@ let Vol5 = [
   {
     name: "Crazy Rich Asians",
     year: "2018",
-    directors: ["Jon M Chu 2"],
+    directors: ["Jon M Chu"],
     writers: ["Adele Lim", "Kevin Kwan", "Pete Chiarelli"],
     actors: [
       "Constance Wu",
@@ -3840,7 +3840,7 @@ let Vol5 = [
     year: "2010",
     directors: ["Alejandro Gonzalez Inarritu"],
     writers: [
-      "Armando Bo 3",
+      "Armando Bo",
       "Nicolas Giacobone",
       "Alejandro Gonzalez Inarritu",
     ],
@@ -5092,7 +5092,7 @@ let Vol5 = [
   {
     name: "Love and Monsters",
     year: "2020",
-    directors: ["Michael Matthews 2"],
+    directors: ["Michael Matthews"],
     writers: ["Matthew Robinson", "Brian Duffield"],
     actors: [
       "Dylan O'Brien",
@@ -5203,7 +5203,7 @@ let Vol5 = [
     name: "Trumbo",
     year: "2015",
     directors: ["Jay Roach"],
-    writers: ["John Mcnamara 2"],
+    writers: ["John Mcnamara"],
     actors: [
       "Bryan Cranston",
       "Diane Lane",
@@ -6185,7 +6185,7 @@ let Vol5 = [
     name: "Digimon: The Movie",
     year: "2000",
     directors: ["Shigeyasu Yamauchi", "Mamoru Hosoda"],
-    writers: ["Jeff Nimoy 2", "Bob Buchholz"],
+    writers: ["Jeff Nimoy", "Bob Buchholz"],
     actors: [
       "Lara Jill Miller",
       "Joshua Seth",
@@ -6350,7 +6350,7 @@ let Vol5 = [
     name: "Jungle Cruise",
     year: "2021",
     directors: ["Jaume Collet Serra"],
-    writers: ["John Requa", "Glenn Ficarra", "Michael Green 3"],
+    writers: ["John Requa", "Glenn Ficarra", "Michael Green"],
     actors: [
       "Dwayne Johnson",
       "Emily Blunt",
@@ -7928,7 +7928,7 @@ let Vol5 = [
     year: "2021",
     directors: ["Malcolm D Lee"],
     writers: [
-      "Jesse Gordon 2",
+      "Jesse Gordon",
       "Celeste Ballard",
       "Terence Nance",
       "Tony Rettenmaier",
@@ -8449,7 +8449,7 @@ let Vol5 = [
   {
     name: "Injustice",
     year: "2021",
-    directors: ["Matt Peters 2"],
+    directors: ["Matt Peters"],
     writers: ["Tom Taylor 12", "Ernie Altbacker"],
     actors: [
       "Justin Hartley",
@@ -9300,7 +9300,7 @@ let Vol5 = [
     name: "Last Christmas",
     year: "2019",
     directors: ["Paul Feig"],
-    writers: ["Bryony Kimmings", "Greg Wise 2", "Emma Thompson"],
+    writers: ["Bryony Kimmings", "Greg Wise", "Emma Thompson"],
     actors: [
       "Emilia Clarke",
       "Henry Golding",

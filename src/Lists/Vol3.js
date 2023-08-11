@@ -56,7 +56,7 @@ let Vol3 = [
     name: "American Sniper",
     year: "2014",
     directors: ["Clint Eastwood"],
-    writers: ["Jason Hall 1", "Chris Kyle", "Jim Defelice", "Scott Mcewen"],
+    writers: ["Jason Hall", "Chris Kyle", "Jim Defelice", "Scott Mcewen"],
     actors: [
       "Bradley Cooper",
       "Sienna Miller",
@@ -240,8 +240,8 @@ let Vol3 = [
   {
     name: "Mary Poppins",
     year: "1964",
-    directors: ["Robert Stevenson 1"],
-    writers: ["Bill Walsh 2", "Don Dagradi"],
+    directors: ["Robert Stevenson"],
+    writers: ["Bill Walsh", "Don Dagradi"],
     actors: [
       "Julie Andrews",
       "Dick Van Dyke",
@@ -941,8 +941,8 @@ let Vol3 = [
   {
     name: "Widows",
     year: "2018",
-    directors: ["Steve Mcqueen 1"],
-    writers: ["Steve Mcqueen 1", "Gillian Flynn"],
+    directors: ["Steve Mcqueen"],
+    writers: ["Steve Mcqueen", "Gillian Flynn"],
     actors: [
       "Viola Davis",
       "Michelle Rodriguez",
@@ -1237,7 +1237,7 @@ let Vol3 = [
     name: "The Big Short",
     year: "2015",
     directors: ["Adam Mckay"],
-    writers: ["Charles Randolph 1", "Adam Mckay"],
+    writers: ["Charles Randolph", "Adam Mckay"],
     actors: [
       "Christian Bale",
       "Steve Carell",
@@ -1843,7 +1843,7 @@ let Vol3 = [
     name: "Last Action Hero",
     year: "1993",
     directors: ["John Mctiernan"],
-    writers: ["Shane Black", "Zak Penn", "Adam Leff", "David Arnott 1"],
+    writers: ["Shane Black", "Zak Penn", "Adam Leff", "David Arnott"],
     actors: [
       "Arnold Schwarzenegger",
       "Austin O'Brien",
@@ -2103,7 +2103,7 @@ let Vol3 = [
     name: "The Change-Up",
     year: "2011",
     directors: ["David Dobkin"],
-    writers: ["Scott Moore 1", "Jon Lucas"],
+    writers: ["Scott Moore", "Jon Lucas"],
     actors: [
       "Jason Bateman",
       "Ryan Reynolds",
@@ -2473,7 +2473,7 @@ let Vol3 = [
     name: "The Lego Movie 2: The Second Part",
     year: "2019",
     directors: ["Mike Mitchell"],
-    writers: ["Phil Lord", "Matt Fogel", "Christopher Miller 3"],
+    writers: ["Phil Lord", "Matt Fogel", "Christopher Miller"],
     actors: [
       "Chris Pratt",
       "Elizabeth Banks",
@@ -4088,8 +4088,8 @@ let Vol3 = [
   {
     name: "On Probation",
     year: "2005",
-    directors: ["Damian Szifron 1"],
-    writers: ["Nicolas Smudt", "Damian Szifron 1", "Agustin Rolandelli"],
+    directors: ["Damian Szifron"],
+    writers: ["Nicolas Smudt", "Damian Szifron", "Agustin Rolandelli"],
     actors: [
       "Diego Peretti",
       "Luis Luque",
@@ -4349,7 +4349,7 @@ let Vol3 = [
     writers: [
       "Erik Hansen 7",
       "Brent Maddock",
-      "Erik Hansen 1",
+      "Erik Hansen",
       "Gregory Hansen",
       "S S Wilson",
     ],
@@ -4417,7 +4417,7 @@ let Vol3 = [
     name: "The Fifth Estate",
     year: "2013",
     directors: ["Bill Condon"],
-    writers: ["Josh Singer 1"],
+    writers: ["Josh Singer"],
     actors: [
       "Benedict Cumberbatch",
       "Daniel Brühl",
@@ -4452,7 +4452,7 @@ let Vol3 = [
     ],
   },
   {
-    name: "Kill Bill: Vol. 1",
+    name: "Kill Bill: Vol.",
     year: "2003",
     directors: ["Quentin Tarantino"],
     writers: ["Quentin Tarantino"],
@@ -5364,7 +5364,7 @@ let Vol3 = [
     name: "Only You",
     year: "1994",
     directors: ["Norman Jewison"],
-    writers: ["Diane Drake 1"],
+    writers: ["Diane Drake"],
     actors: [
       "Marisa Tomei",
       "Robert Downey Jr.",
@@ -5484,7 +5484,7 @@ let Vol3 = [
     name: "John Wick: Chapter 3 - Parabellum",
     year: "2019",
     directors: ["Chad Stahelski"],
-    writers: ["Derek Kolstad", "Shay Hatten", "Marc Abrams", "Chris Collins 5"],
+    writers: ["Derek Kolstad", "Shay Hatten", "Marc Abrams", "Chris Collins"],
     actors: [
       "Keanu Reeves",
       "Halle Berry",
@@ -5710,7 +5710,7 @@ let Vol3 = [
     year: "1988",
     directors: ["Ivan Reitman"],
     writers: [
-      "William Osborne 1",
+      "William Osborne",
       "Herschel Weingrod",
       "Timothy Harris",
       "William Davies",
@@ -5775,7 +5775,7 @@ let Vol3 = [
     name: "Hellboy",
     year: "2019",
     directors: ["Neil Marshall"],
-    writers: ["Andrew Cosby 1"],
+    writers: ["Andrew Cosby"],
     actors: [
       "David Harbour",
       "Milla Jovovich",
@@ -5941,7 +5941,7 @@ let Vol3 = [
     name: "Secret in Their Eyes",
     year: "2015",
     directors: ["Billy Ray"],
-    writers: ["Billy Ray", "Juan Jose Campanella 1", "Eduardo Sacheri"],
+    writers: ["Billy Ray", "Juan Jose Campanella", "Eduardo Sacheri"],
     actors: [
       "Chiwetel Ejiofor",
       "Nicole Kidman",
@@ -6247,8 +6247,8 @@ let Vol3 = [
   {
     name: "The Red Sea Diving Resort",
     year: "2019",
-    directors: ["Gideon Raff 1"],
-    writers: ["Gideon Raff 1"],
+    directors: ["Gideon Raff"],
+    writers: ["Gideon Raff"],
     actors: [
       "Chris Evans",
       "Haley Bennett",
@@ -6320,7 +6320,7 @@ let Vol3 = [
     name: "Fast & Furious Presents: Hobbs & Shaw",
     year: "2019",
     directors: ["David Leitch"],
-    writers: ["Chris Morgan 1", "Drew Pearce"],
+    writers: ["Chris Morgan", "Drew Pearce"],
     actors: [
       "Dwayne Johnson",
       "Jason Statham",
@@ -7281,7 +7281,7 @@ let Vol3 = [
     name: "Yesterday",
     year: "2019",
     directors: ["Danny Boyle"],
-    writers: ["Richard Curtis", "Jack Barth 1"],
+    writers: ["Richard Curtis", "Jack Barth"],
     actors: [
       "Himesh Patel",
       "Lily James",
@@ -7392,7 +7392,7 @@ let Vol3 = [
   {
     name: "Dirty Dancing",
     year: "1987",
-    directors: ["Emile Ardolino 1"],
+    directors: ["Emile Ardolino"],
     writers: ["Eleanor Bergstein"],
     actors: [
       "Jennifer Grey",
@@ -7695,7 +7695,7 @@ let Vol3 = [
     name: "Grudge Match",
     year: "2013",
     directors: ["Peter Segal"],
-    writers: ["Tim Kelleher 1", "Rodney Rothman"],
+    writers: ["Tim Kelleher", "Rodney Rothman"],
     actors: [
       "Robert De Niro",
       "Sylvester Stallone",
@@ -8409,7 +8409,7 @@ let Vol3 = [
   {
     name: "Jackie",
     year: "2016",
-    directors: ["Pablo Larrain 1"],
+    directors: ["Pablo Larrain"],
     writers: ["Noah Oppenheim"],
     actors: [
       "Natalie Portman",
@@ -9218,7 +9218,7 @@ let Vol3 = [
     name: "Dolemite Is My Name",
     year: "2019",
     directors: ["Craig Brewer"],
-    writers: ["Scott Alexander 1", "Larry Karaszewski"],
+    writers: ["Scott Alexander", "Larry Karaszewski"],
     actors: [
       "Eddie Murphy",
       "Keegan-Michael Key",

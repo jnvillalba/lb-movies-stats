@@ -3541,7 +3541,7 @@ let Vol6 = [
     year: "2022",
     directors: ["Fletcher Moules"],
     writers: [
-      "Maurice Williams 2",
+      "Maurice Williams",
       "Ian Edelman",
       "Esa Lewis",
       "Kid Cudi",
@@ -3613,7 +3613,7 @@ let Vol6 = [
     name: "Werewolf by Night",
     year: "2022",
     directors: ["Michael Giacchino"],
-    writers: ["Peter Cameron 2", "Heather Quinn"],
+    writers: ["Peter Cameron", "Heather Quinn"],
     actors: [
       "Gael García Bernal",
       "Laura Donnelly",
@@ -4222,7 +4222,7 @@ let Vol6 = [
   {
     name: "Targeted",
     year: "2022",
-    directors: ["Ricardo Hornos", "Carlos Gil 2"],
+    directors: ["Ricardo Hornos", "Carlos Gil"],
     writers: ["Ricardo Hornos", "Adrian Garelik"],
     actors: [
       "Nicolás Francella",
@@ -6109,7 +6109,7 @@ let Vol6 = [
   {
     name: "Batman and Superman: Battle of the Super Sons",
     year: "2022",
-    directors: ["Matt Peters 2"],
+    directors: ["Matt Peters"],
     writers: ["Jeremy Adams"],
     actors: [
       "Jack Dylan Grazer",
@@ -6855,7 +6855,7 @@ let Vol6 = [
   {
     name: "Constantine: The House of Mystery",
     year: "2022",
-    directors: ["Matt Peters 2"],
+    directors: ["Matt Peters"],
     writers: ["Ernie Altbacker"],
     actors: [
       "Matt Ryan",
@@ -6969,7 +6969,7 @@ let Vol6 = [
     name: "Murder on the Orient Express",
     year: "2017",
     directors: ["Kenneth Branagh"],
-    writers: ["Agatha Christie", "Michael Green 3"],
+    writers: ["Agatha Christie", "Michael Green"],
     actors: [
       "Kenneth Branagh",
       "Tom Bateman",
@@ -7368,8 +7368,8 @@ let Vol6 = [
   {
     name: "Animal",
     year: "2018",
-    directors: ["Armando Bo 3"],
-    writers: ["Armando Bo 3", "Nicolas Giacobone"],
+    directors: ["Armando Bo"],
+    writers: ["Armando Bo", "Nicolas Giacobone"],
     actors: [
       "Guillermo Francella",
       "Carla Peterson",
@@ -7465,7 +7465,7 @@ let Vol6 = [
     name: "The Matrix Resurrections",
     year: "2021",
     directors: ["Lana Wachowski"],
-    writers: ["Aleksandar Hemon", "Lana Wachowski", "David Mitchell 3"],
+    writers: ["Aleksandar Hemon", "Lana Wachowski", "David Mitchell"],
     actors: [
       "Keanu Reeves",
       "Carrie-Anne Moss",
@@ -7813,7 +7813,7 @@ let Vol6 = [
       "Todd Phillips",
       "Scot Armstrong",
       "Stevie Long",
-      "John Obrien 2",
+      "John Obrien",
     ],
     actors: [
       "Ben Stiller",
@@ -8721,7 +8721,7 @@ let Vol6 = [
   {
     name: "Bloodshot",
     year: "2020",
-    directors: ["Dave Wilson 3"],
+    directors: ["Dave Wilson"],
     writers: ["Eric Heisserer", "Jeff Wadlow"],
     actors: [
       "Vin Diesel",

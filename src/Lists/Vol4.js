@@ -518,7 +518,7 @@ let Vol4 = [
   {
     name: "Live Twice, Love Once",
     year: "2019",
-    directors: ["Maria Ripoll 1"],
+    directors: ["Maria Ripoll"],
     writers: ["Maria Minguez"],
     actors: [
       "Inma Cuesta",
@@ -2488,7 +2488,7 @@ let Vol4 = [
     name: "Dolittle",
     year: "2020",
     directors: ["Stephen Gaghan"],
-    writers: ["Dan Gregor 1", "Stephen Gaghan", "Thomas Shepherd", "Doug Mand"],
+    writers: ["Dan Gregor", "Stephen Gaghan", "Thomas Shepherd", "Doug Mand"],
     actors: [
       "Robert Downey Jr.",
       "Antonio Banderas",
@@ -3141,7 +3141,7 @@ let Vol4 = [
     name: "Bad Boys for Life",
     year: "2020",
     directors: ["Adil El Arbi", "Bilall Fallah"],
-    writers: ["Chris Bremner", "Peter Craig", "Joe Carnahan 1"],
+    writers: ["Chris Bremner", "Peter Craig", "Joe Carnahan"],
     actors: [
       "Will Smith",
       "Martin Lawrence",
@@ -3755,8 +3755,8 @@ let Vol4 = [
   {
     name: "I Origins",
     year: "2014",
-    directors: ["Mike Cahill 1"],
-    writers: ["Mike Cahill 1"],
+    directors: ["Mike Cahill"],
+    writers: ["Mike Cahill"],
     actors: [
       "Michael Pitt",
       "Brit Marling",
@@ -3873,8 +3873,8 @@ let Vol4 = [
   {
     name: "Code 8",
     year: "2019",
-    directors: ["Jeff Chan 1"],
-    writers: ["Jeff Chan 1", "Chris Pare"],
+    directors: ["Jeff Chan"],
+    writers: ["Jeff Chan", "Chris Pare"],
     actors: [
       "Stephen Amell",
       "Robbie Amell",
@@ -4441,7 +4441,7 @@ let Vol4 = [
     name: "Beetlejuice",
     year: "1988",
     directors: ["Tim Burton"],
-    writers: ["Warren Skaaren", "Larry Wilson 1", "Michael Mcdowell"],
+    writers: ["Warren Skaaren", "Larry Wilson", "Michael Mcdowell"],
     actors: [
       "Alec Baldwin",
       "Geena Davis",
@@ -4578,7 +4578,7 @@ let Vol4 = [
   {
     name: "Justice League Dark: Apokolips War",
     year: "2020",
-    directors: ["Christina Sotta", "Matt Peters 2"],
+    directors: ["Christina Sotta", "Matt Peters"],
     writers: ["Ernie Altbacker", "Mairghread Scott"],
     actors: [
       "Matt Ryan",
@@ -5177,7 +5177,7 @@ let Vol4 = [
     name: "Onward",
     year: "2020",
     directors: ["Dan Scanlon"],
-    writers: ["Dan Scanlon", "Keith Bunin 1", "Jason Headley"],
+    writers: ["Dan Scanlon", "Keith Bunin", "Jason Headley"],
     actors: [
       "Tom Holland",
       "Chris Pratt",
@@ -5687,8 +5687,8 @@ let Vol4 = [
   {
     name: "The Trust",
     year: "2016",
-    directors: ["Benjamin Brewer 1", "Alex Brewer"],
-    writers: ["Benjamin Brewer 1", "Adam Hirsch"],
+    directors: ["Benjamin Brewer", "Alex Brewer"],
+    writers: ["Benjamin Brewer", "Adam Hirsch"],
     actors: [
       "Nicolas Cage",
       "Elijah Wood",
@@ -5726,8 +5726,8 @@ let Vol4 = [
   {
     name: "The F**k-It List",
     year: "2020",
-    directors: ["Michael Duggan 1"],
-    writers: ["Dan Mcdermott", "Michael Duggan 1"],
+    directors: ["Michael Duggan"],
+    writers: ["Dan Mcdermott", "Michael Duggan"],
     actors: [
       "Eli Brown",
       "Madison Iseman",
@@ -5938,8 +5938,8 @@ let Vol4 = [
   {
     name: "The Vast of Night",
     year: "2019",
-    directors: ["Andrew Patterson 1"],
-    writers: ["Andrew Patterson 1", "Craig W Sanger"],
+    directors: ["Andrew Patterson"],
+    writers: ["Andrew Patterson", "Craig W Sanger"],
     actors: [
       "Sierra McCormick",
       "Jake Horowitz",
@@ -6036,7 +6036,7 @@ let Vol4 = [
       "Craig Cox",
       "John Altschuler",
       "Dave Krinsky",
-      "Busy Philipps 1",
+      "Busy Philipps",
       "Jeff Cox",
     ],
     actors: [
@@ -7056,7 +7056,7 @@ let Vol4 = [
     year: "2017",
     directors: ["Michael Cuesta"],
     writers: [
-      "Michael Finch 1",
+      "Michael Finch",
       "Stephen Schiff",
       "Marshall Herskovitz",
       "Edward Zwick",
@@ -7517,7 +7517,7 @@ let Vol4 = [
     name: "1941",
     year: "1979",
     directors: ["Steven Spielberg"],
-    writers: ["Robert Zemeckis", "John Milius 1", "Bob Gale"],
+    writers: ["Robert Zemeckis", "John Milius", "Bob Gale"],
     actors: [
       "Dan Aykroyd",
       "Ned Beatty",
@@ -8078,7 +8078,7 @@ let Vol4 = [
   {
     name: "Time Trap",
     year: "2017",
-    directors: ["Mark Dennis", "Ben Foster 2"],
+    directors: ["Mark Dennis", "Ben Foster"],
     writers: ["Mark Dennis"],
     actors: [
       "Andrew Wilson",
@@ -8109,7 +8109,7 @@ let Vol4 = [
       "Eli Roth",
       "Guillermo Amoedo",
       "Michael Ronald Ross",
-      "Nicolas Lopez 1",
+      "Nicolas Lopez",
       "Anthony Overman",
     ],
     actors: [
@@ -8387,7 +8387,7 @@ let Vol4 = [
     name: "The Post",
     year: "2017",
     directors: ["Steven Spielberg"],
-    writers: ["Liz Hannah", "Josh Singer 1"],
+    writers: ["Liz Hannah", "Josh Singer"],
     actors: [
       "Meryl Streep",
       "Tom Hanks",
@@ -8508,7 +8508,7 @@ let Vol4 = [
   {
     name: "The Babysitter",
     year: "2017",
-    directors: ["Mcg 1"],
+    directors: ["Mcg"],
     writers: ["Brian Duffield"],
     actors: [
       "Judah Lewis",
@@ -8556,7 +8556,7 @@ let Vol4 = [
     name: "The Devil All the Time",
     year: "2020",
     directors: ["Antonio Campos"],
-    writers: ["Antonio Campos", "Paulo Campos 1"],
+    writers: ["Antonio Campos", "Paulo Campos"],
     actors: [
       "Tom Holland",
       "Bill Skarsgård",
@@ -8713,7 +8713,7 @@ let Vol4 = [
     name: "Kate & Leopold",
     year: "2001",
     directors: ["James Mangold"],
-    writers: ["James Mangold", "Steven Rogers 1"],
+    writers: ["James Mangold", "Steven Rogers"],
     actors: [
       "Meg Ryan",
       "Hugh Jackman",
@@ -9127,7 +9127,7 @@ let Vol4 = [
     name: "Spooks: The Greater Good",
     year: "2015",
     directors: ["Bharat Nalluri"],
-    writers: ["Sam Vincent 3", "Jonathan Brackley"],
+    writers: ["Sam Vincent", "Jonathan Brackley"],
     actors: [
       "Peter Firth",
       "Kit Harington",
@@ -10966,8 +10966,8 @@ let Vol4 = [
   {
     name: "Super Dark Times",
     year: "2017",
-    directors: ["Kevin Phillips 1"],
-    writers: ["Ben Collins 4", "Luke Piotrowski"],
+    directors: ["Kevin Phillips"],
+    writers: ["Ben Collins", "Luke Piotrowski"],
     actors: [
       "Owen Campbell",
       "Charlie Tahan",
