@@ -4347,7 +4347,7 @@ let Vol3 = [
     year: "1993",
     directors: ["Ron Underwood"],
     writers: [
-      "Erik Hansen 7",
+      "Erik Hansen",
       "Brent Maddock",
       "Erik Hansen",
       "Gregory Hansen",

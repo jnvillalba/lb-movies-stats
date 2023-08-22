@@ -8598,7 +8598,7 @@ let Vol2 = [
         name: "A.I. Artificial Intelligence",
         year: "2001",
         directors: ["Steven Spielberg"],
-        writers: ["Ian Watson 7", "Steven Spielberg"],
+        writers: ["Ian Watson", "Steven Spielberg"],
         actors: [
             "Haley Joel Osment",
             "Jude Law",

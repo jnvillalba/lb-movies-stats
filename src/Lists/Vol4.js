@@ -3499,7 +3499,7 @@ let Vol4 = [
       "Logan Fry",
       "Kenley Gaffke",
       "Christian Heep",
-      "Alex Hill 3",
+      "Alex Hill",
       "John Hoogenakker",
       "Matt Iwinski",
       "Sarah Kliban",
@@ -7191,7 +7191,7 @@ let Vol4 = [
     directors: ["Barry Sonnenfeld"],
     writers: [
       "Jeffrey Price",
-      "John Thomas 4",
+      "John Thomas",
       "Brent Maddock",
       "Jim Thomas",
       "S S Wilson",
@@ -10861,7 +10861,7 @@ let Vol4 = [
     name: "Soul",
     year: "2020",
     directors: ["Pete Docter"],
-    writers: ["Mike Jones 9", "Kemp Powers", "Pete Docter"],
+    writers: ["Mike Jones", "Kemp Powers", "Pete Docter"],
     actors: [
       "Jamie Foxx",
       "Tina Fey",
