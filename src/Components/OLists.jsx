@@ -108,7 +108,7 @@ const OLists = ({ title, lista }) => {
                     <div className="col-lg-8">
                       <ul className="moviesList">
                         {moviesList(director[0]).map((pelicula) => (
-                          <li key={pelicula.name}>
+                          <li key={pelicula.name + pelicula.year}>
                             {pelicula.name} ({pelicula.year})
                           </li>
                         ))}

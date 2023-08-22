@@ -42,8 +42,10 @@ let cast = [
   },
   {
     name: "Jeff Wamester",
-    img: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/jeff-wamester-2013020-1675341271.jpg"}
-  ];
+    img: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/jeff-wamester-2013020-1675341271.jpg",
+  },
+  { name: "Not Found", img: "../assets/default-profile.png" },
+];
 
 export default cast;
 

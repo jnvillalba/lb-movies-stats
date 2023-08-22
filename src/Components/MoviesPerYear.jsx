@@ -48,7 +48,7 @@ const MoviesPerYear = ({ lista, filterList }) => {
                 {moviesList(year)
                   .slice(0, showMoviesMap[year] ? undefined : 10)
                   .map((pelicula, index) => (
-                    <li key={pelicula.name}>
+                    <li key={pelicula.name + pelicula.year}>
                       {pelicula.name} ({pelicula.year})
                     </li>
                   ))}
