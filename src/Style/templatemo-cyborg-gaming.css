@@ -365,25 +365,6 @@ Most Popular Style
   font-weight: 400;
 }
 
-.most-popular .item ul {
-  float: right;
-  margin-top: 20px;
-}
-
-.most-popular .item ul li {
-  text-align: right;
-  color: #fff;
-  font-size: 14px;
-}
-
-.most-popular .item ul li:first-child i {
-  color: yellow;
-}
-
-.most-popular .item ul li:last-child i {
-  color: #ec6090;
-}
-
 .most-popular .main-button {
   text-align: center;
   margin-bottom: -53px;
@@ -428,75 +409,12 @@ Gaming Library Style
   max-width: 150px;
 }
 
-/*
-.gaming-library .item ul li {
-  margin-top: 15px;
-}
-
-.gaming-library .item ul li img {
-  margin-top: -30px;
-}
-
-.gaming-library .item ul li {
-  display: inline-block;
-  width: 17%;
-}
-
-.gaming-library .item ul li:first-child {
-  width: 110px;
-}
-
-.gaming-library .item ul li:last-child {
-  width: 15%;
-  text-align: right;
-}
-
-.gaming-library .item ul li h4 {
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
-.gaming-library .item ul li span {
-  color: #666;
-  font-size: 14px;
-}
-*/
 .gaming-library .main-button {
   text-align: center;
   margin-bottom: -53px;
 }
 
-/* 
----------------------------------------------
-Start Stream Style
---------------------------------------------- 
-*/
 
-.start-stream .heading-section {
-  margin-top: 60px;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.start-stream .item {
-  padding: 30px;
-  border: 1px solid #444;
-  border-radius: 23px;
-}
-
-.start-stream .item h4 {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.start-stream .main-button {
-  text-align: center;
-  margin-top: 30px;
-}
-
-/*
 --------------------------------------------- Responsive Style --------------------------------------------- 
 */
 body {
@@ -529,7 +447,7 @@ body {
 
 
   body .page-content {
-    padding: 0px 15px;
+    padding: 5px 15px;
   }
 
   .main-banner {
