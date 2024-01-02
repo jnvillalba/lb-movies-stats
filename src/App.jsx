@@ -10,11 +10,11 @@ import Vol1 from "./Lists/Vol1";
 import Vol2 from "./Lists/Vol2";
 import Vol3 from "./Lists/Vol3";
 import Vol4 from "./Lists/Vol4";
+import Vol8 from "./Lists/Vol8";
 
 const Home = lazy(() => import("./Components/Home"));
 const YearsMovies = lazy(() => import("./Components/YearsMovies"));
 const OLists = lazy(() => import("./Components/OLists"));
-
 
 function App() {
   const actoresRepetidos = encontrarRepetidos(movies, "actors");
@@ -22,7 +22,7 @@ function App() {
   const directoresRepetidos = encontrarRepetidos(movies, "directors");
   const escritoresRepetidos = encontrarRepetidos(movies, "writers");
 
-  let todas = movies.concat(Vol6, Vol5, Vol1, Vol2, Vol3, Vol4);
+  let todas = Vol8.concat(movies, Vol6, Vol5, Vol1, Vol2, Vol3, Vol4);
 
   return (
     <>
@@ -30,7 +30,8 @@ function App() {
         <NavBar />
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            <Route index element={<Home list={movies} />} />
+            <Route index element={<Home list={Vol8} />} />
+            <Route exact path="/Vol7" element={<Home list={movies} />} />
             <Route exact path="/Vol6" element={<Home list={Vol6} />} />
             <Route exact path="/Vol5" element={<Home list={Vol5} />} />
             <Route exact path="/Vol4" element={<Home list={Vol4} />} />
@@ -47,7 +48,9 @@ function App() {
             <Route
               exact
               path="/Directors"
-              element={<OLists title={"Directors"} lista={directoresRepetidos} />}
+              element={
+                <OLists title={"Directors"} lista={directoresRepetidos} />
+              }
             />
             <Route
               exact
