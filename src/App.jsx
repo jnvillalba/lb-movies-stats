@@ -17,13 +17,11 @@ const YearsMovies = lazy(() => import("./Components/YearsMovies"));
 const OLists = lazy(() => import("./Components/OLists"));
 
 function App() {
-  const actoresRepetidos = encontrarRepetidos(movies, "actors");
-  const añosRepetidos = encontrarRepetidos(movies, "year");
-  const directoresRepetidos = encontrarRepetidos(movies, "directors");
-  const escritoresRepetidos = encontrarRepetidos(movies, "writers");
-
   let todas = Vol8.concat(movies, Vol6, Vol5, Vol1, Vol2, Vol3, Vol4);
-
+  const actoresRepetidos = encontrarRepetidos(todas, "actors");
+  const añosRepetidos = encontrarRepetidos(todas, "year");
+  const directoresRepetidos = encontrarRepetidos(todas, "directors");
+  const escritoresRepetidos = encontrarRepetidos(todas, "writers");
   return (
     <>
       <BrowserRouter>

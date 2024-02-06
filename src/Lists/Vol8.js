@@ -1256,6 +1256,31 @@ let Vol8 = [
       "Dave Portnoy",
     ],
   },
+  {
+    name: "Zama",
+    year: "2017",
+    directors: ["Lucrecia Martel"],
+    writers: ["Lucrecia Martel"],
+    actors: [
+      "Daniel Giménez Cacho",
+      "Lola Dueñas",
+      "Matheus Nachtergaele",
+      "Juan Minujín",
+      "Nahuel Cano",
+      "Mariana Nunes",
+      "Carlos Defeo",
+      "Rafael Spregelburd",
+      "Daniel Veronese",
+      "Germán de Silva",
+      "Willy Lemos",
+      "Vando Villamil",
+      "Marcelo Sein",
+      "Gustavo Böhm",
+      "Massamba Seye",
+      "Edgar Acosta",
+      "Ricardo Merkin",
+    ],
+  },
 ];
 
 export default Vol8;
