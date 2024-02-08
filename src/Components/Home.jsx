@@ -9,7 +9,7 @@ function Home({ list }) {
   const directoresRepetidos = encontrarRepetidos(list, "directors");
   const escritoresRepetidos = encontrarRepetidos(list, "writers");
   const repetidos = encontrarRepetidos(list, "name");
-  console.log(repetidos)
+  console.log(repetidos);
   return (
     <>
       <div className="container">
@@ -22,19 +22,23 @@ function Home({ list }) {
                 lista={directoresRepetidos}
                 filterList={list}
               />
-              <Category
-                title={"Writers"}
-                lista={escritoresRepetidos}
-                filterList={list}
-              />
+              {escritoresRepetidos && (
+                <Category
+                  title={"Writers"}
+                  lista={escritoresRepetidos}
+                  filterList={list}
+                />
+              )}
               <Category
                 title={"Actors"}
                 lista={actoresRepetidos}
                 filterList={list}
               />
-              <MoviesPerYear title={"Years"}
+              <MoviesPerYear
+                title={"Years"}
                 lista={añosRepetidos}
-                filterList={list}/>
+                filterList={list}
+              />
             </div>
           </div>
         </div>
