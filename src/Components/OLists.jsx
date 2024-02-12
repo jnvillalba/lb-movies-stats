@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import movies from "../Lists/movies";
 import { Link } from "react-router-dom";
-import cast from '../Lists/cast'
+import cast from "../Lists/cast";
+import Vol8 from "../Lists/Vol8";
 const OLists = ({ title, lista }) => {
   const [posters, setPosters] = useState({});
 
@@ -37,30 +37,33 @@ const OLists = ({ title, lista }) => {
       });
   };
   const handleImg = (name) => {
-
-    const postersList = Object.entries(posters).map(([name, url]) => ({ name, url }));
+    const postersList = Object.entries(posters).map(([name, url]) => ({
+      name,
+      url,
+    }));
     let imgFind = postersList.find((x) => x.name === name);
-    let img = imgFind ? imgFind.url :"" ;
+    let img = imgFind ? imgFind.url : "";
     return img;
   };
 
   const localimg = (name) => {
     let localimg = cast.find((x) => x.name === name);
-    let img = localimg ? localimg.img: "" ;
-    console.log()
+    let img = localimg ? localimg.img : "";
+    console.log();
     return img;
   };
 
   const moviesList = (name) => {
     switch (title) {
       case "Actors":
-        return movies.filter((x) => x.actors.includes(name));
+        return Vol8.filter((x) => x.actors.includes(name));
       case "Directors":
-        return movies.filter((x) => x.directors.includes(name));
+        return Vol8.filter((x) => x.directors.includes(name));
+
       case "Writers":
-        return movies.filter((x) => x.writers.includes(name));
+        return Vol8.filter((x) => x.writers.includes(name));
       case "Years":
-        return movies.filter((x) => x.year == name);
+        return Vol8.filter((x) => x.year == name);
       default:
         return [];
     }

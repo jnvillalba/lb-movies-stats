@@ -9,7 +9,7 @@ function Home({ list }) {
   const directoresRepetidos = encontrarRepetidos(list, "directors");
   const escritoresRepetidos = encontrarRepetidos(list, "writers");
   const repetidos = encontrarRepetidos(list, "name");
-  console.log(repetidos);
+  repetidos.length > 1 && alert(repetidos);
   return (
     <>
       <div className="container">
@@ -22,7 +22,7 @@ function Home({ list }) {
                 lista={directoresRepetidos}
                 filterList={list}
               />
-              {escritoresRepetidos && (
+              {escritoresRepetidos.length > 0 && (
                 <Category
                   title={"Writers"}
                   lista={escritoresRepetidos}
