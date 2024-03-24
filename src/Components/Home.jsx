@@ -1,6 +1,6 @@
 import React from "react";
-import Category from "./Categoy";
 import { encontrarRepetidos } from "../Utils";
+import Category from "./Categoy";
 import MoviesPerYear from "./MoviesPerYear";
 
 function Home({ list }) {
@@ -8,8 +8,8 @@ function Home({ list }) {
   const añosRepetidos = encontrarRepetidos(list, "year");
   const directoresRepetidos = encontrarRepetidos(list, "directors");
   const escritoresRepetidos = encontrarRepetidos(list, "writers");
-  const repetidos = encontrarRepetidos(list, "name");
-  repetidos.length > 1 && alert(repetidos);
+  // const repetidos = encontrarRepetidos(list, "name");
+
   return (
     <>
       <div className="container">
