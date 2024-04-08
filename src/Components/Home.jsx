@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { encontrarRepetidos, yearsRepetidos } from "../Utils";
 import Category from "./Categoy";
 import MoviesPerYear from "./MoviesPerYear";
 
 function Home({ list }) {
-  const actoresRepetidos = encontrarRepetidos(list, "actors");
-  const añosRepetidos = yearsRepetidos(list, "year");
-  const directoresRepetidos = encontrarRepetidos(list, "directors");
-  const escritoresRepetidos = encontrarRepetidos(list, "writers");
+  const actoresRepetidos = useMemo(
+    () => encontrarRepetidos(list, "actors"),
+    [list]
+  );
+  const añosRepetidos = useMemo(() => yearsRepetidos(list, "year"), [list]);
+  const directoresRepetidos = useMemo(
+    () => encontrarRepetidos(list, "directors"),
+    [list]
+  );
+  const escritoresRepetidos = useMemo(
+    () => encontrarRepetidos(list, "writers"),
+    [list]
+  );
+
   // const repetidos = encontrarRepetidos(list, "name");
 
   return (
