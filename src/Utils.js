@@ -1,4 +1,4 @@
-export function obtenerRepetidos(lista, propiedad) {
+export function yearsRepetidos(lista, propiedad) {
   const contador = lista
     .flatMap((objeto) => objeto[propiedad])
     .reduce(
@@ -14,5 +14,19 @@ export function obtenerRepetidos(lista, propiedad) {
 }
 
 export function encontrarRepetidos(lista, propiedad) {
-  return obtenerRepetidos(lista, propiedad);
+  const contador = {};
+  for (const objeto of lista) {
+    const valores = objeto[propiedad];
+    for (const valor of valores) {
+      contador[valor] = (contador[valor] || 0) + 1;
+    }
+  }
+  const repetidos = [];
+  for (const [valor, repeticiones] of Object.entries(contador)) {
+    if (repeticiones > 1) {
+      repetidos.push([valor, repeticiones]);
+    }
+  }
+  repetidos.sort((a, b) => b[1] - a[1]);
+  return repetidos;
 }

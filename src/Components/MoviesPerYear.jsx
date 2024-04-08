@@ -5,20 +5,13 @@ const MoviesPerYear = ({ lista, filterList }) => {
   const [showMoviesMap, setShowMoviesMap] = useState({});
 
   const moviesList = (name) => {
-    return filterList.filter((x) => x.year == name);
-  };
-
-  const handleClick = (year) => {
-    setShowMoviesMap((prevShowMoviesMap) => ({
-      ...prevShowMoviesMap,
-      [year]: !prevShowMoviesMap[year]
-    }));
+    return filterList.filter((x) => x.year === name);
   };
 
   const handleShowMore = (year) => {
     setShowMoviesMap((prevShowMoviesMap) => ({
       ...prevShowMoviesMap,
-      [year]: !prevShowMoviesMap[year]
+      [year]: !prevShowMoviesMap[year],
     }));
   };
 
@@ -62,7 +55,6 @@ const MoviesPerYear = ({ lista, filterList }) => {
                 </div>
               )}
             </div>
-            
           </div>
         ))}
       </div>

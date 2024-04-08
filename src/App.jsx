@@ -1,16 +1,16 @@
 import React, { Suspense, lazy } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { encontrarRepetidos } from "./Utils";
-import movies from "./Lists/movies";
-import Vol6 from "./Lists/Vol6";
-import Vol5 from "./Lists/Vol5";
 import Vol1 from "./Lists/Vol1";
 import Vol2 from "./Lists/Vol2";
 import Vol3 from "./Lists/Vol3";
 import Vol4 from "./Lists/Vol4";
+import Vol5 from "./Lists/Vol5";
+import Vol6 from "./Lists/Vol6";
 import Vol8 from "./Lists/Vol8";
+import movies from "./Lists/movies";
+import { encontrarRepetidos, yearsRepetidos } from "./Utils";
 
 const Home = lazy(() => import("./Components/Home"));
 const YearsMovies = lazy(() => import("./Components/YearsMovies"));
@@ -18,7 +18,7 @@ const OLists = lazy(() => import("./Components/OLists"));
 
 function App() {
   const actoresRepetidos = encontrarRepetidos(Vol8, "actors");
-  const añosRepetidos = encontrarRepetidos(Vol8, "year");
+  const añosRepetidos = yearsRepetidos(Vol8, "year");
   const directoresRepetidos = encontrarRepetidos(Vol8, "directors");
   const escritoresRepetidos = encontrarRepetidos(Vol8, "writers");
 

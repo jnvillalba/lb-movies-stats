@@ -1,11 +1,11 @@
 import React from "react";
-import { encontrarRepetidos } from "../Utils";
+import { encontrarRepetidos, yearsRepetidos } from "../Utils";
 import Category from "./Categoy";
 import MoviesPerYear from "./MoviesPerYear";
 
 function Home({ list }) {
   const actoresRepetidos = encontrarRepetidos(list, "actors");
-  const añosRepetidos = encontrarRepetidos(list, "year");
+  const añosRepetidos = yearsRepetidos(list, "year");
   const directoresRepetidos = encontrarRepetidos(list, "directors");
   const escritoresRepetidos = encontrarRepetidos(list, "writers");
   // const repetidos = encontrarRepetidos(list, "name");
