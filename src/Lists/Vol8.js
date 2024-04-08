@@ -4270,7 +4270,7 @@ let Vol8 = [
     ],
   },
   {
-    name: "Co",
+    name: "Comodines",
     year: "1997",
     directors: ["Daniel Barone", "Jorge Nisco"],
     writers: ["Mario Segade", "Ricardo Piglia", "Gustavo Belatti"],
