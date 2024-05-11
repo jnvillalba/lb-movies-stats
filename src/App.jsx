@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Details from "./Components/Details";
 import NavBar from "./Components/NavBar";
 import Vol1 from "./Lists/Vol1";
 import Vol2 from "./Lists/Vol2";
@@ -23,6 +24,7 @@ function App() {
   const escritoresRepetidos = encontrarRepetidos(Vol8, "writers");
 
   let todas = Vol8.concat(movies, Vol6, Vol5, Vol1, Vol2, Vol3, Vol4);
+  let last = Vol8.slice(-5);
   return (
     <>
       <BrowserRouter>
@@ -60,6 +62,11 @@ function App() {
               exact
               path="/Actors"
               element={<OLists title={"Actors"} lista={actoresRepetidos} />}
+            />
+            <Route
+              exact
+              path="/Last"
+              element={<Details title={"Last"} lista={last} />}
             />
             <Route exact path="*" element={<Home />} />
           </Routes>
