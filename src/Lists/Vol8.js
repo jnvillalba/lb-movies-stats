@@ -5908,6 +5908,32 @@ let Vol8 = [
       "Ron Roggé",
     ],
   },
+  {
+    name: "Clear History",
+    year: "2013",
+    directors: ["Greg Mottola"],
+    writers: ["David Mandel", "Jeff Schaffer", "Alec Berg", "Larry David"],
+    actors: [
+      "Larry David",
+      "Jon Hamm",
+      "Kate Hudson",
+      "Eva Mendes",
+      "Danny McBride",
+      "Michael Keaton",
+      "Liev Schreiber",
+      "Bill Hader",
+      "Philip Baker Hall",
+      "Amy Ryan",
+      "J.B. Smoove",
+      "Rick Malambri",
+      "Amy Landecker",
+      "Mike Cerrone",
+      "Lenny Clarke",
+      "Peter Farrelly",
+      "Conan O'Brien",
+      "Paul Scheer",
+    ],
+  },
 ];
 
 export default Vol8;
