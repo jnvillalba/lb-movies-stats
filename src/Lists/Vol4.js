@@ -1088,7 +1088,7 @@ let Vol4 = [
     ],
   },
   {
-    name: "Eye for an Eye",
+    name: "Quien a hierro mata",
     year: "2019",
     directors: ["Paco Plaza"],
     writers: ["Juan Galinanes", "Jorge Guerricaechevarria"],

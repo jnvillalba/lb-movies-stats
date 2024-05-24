@@ -5934,6 +5934,30 @@ let Vol8 = [
       "Paul Scheer",
     ],
   },
+  {
+    name: "Claudia",
+    year: "2019",
+    directors: ["Sebastian De Caro"],
+    writers: ["Sebastian De Caro"],
+    actors: [
+      "Dolores Fonzi",
+      "Laura Paredes",
+      "Julieta Cayetina",
+      "Julián Kartun",
+      "Paula Baldini",
+      "Gastón Cocchiarale",
+      "Jorge Prado",
+      "Santiago Pedrero",
+      "Stephanie Petresky",
+      "Santiago Gobernori",
+      "Valeria Correa",
+      "Pilar Gamboa",
+      "Walter Donado",
+      "Andrea Pietra",
+      "Lali Espósito",
+      "Pablo Guisa Koestinger",
+    ],
+  },
 ];
 
 export default Vol8;
