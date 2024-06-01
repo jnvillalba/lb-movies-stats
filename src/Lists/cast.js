@@ -44,6 +44,14 @@ let cast = [
     name: "Jeff Wamester",
     img: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/jeff-wamester-2013020-1675341271.jpg",
   },
+  {
+    name: "James Krieg",
+    img: "https://resizing.flixster.com/tiQHXysq-g7Yuh1TQMIccJ9J2JY=/218x280/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/221171_v9_aa.jpg",
+  },
+  {
+    name: "Joaquin Marques Borchex",
+    img: "https://i.pinimg.com/280x280_RS/2b/e2/10/2be210517b7a1e5cfe0749e391be6e03.jpg",
+  },
   { name: "Not Found", img: "../assets/default-profile.png" },
 ];
 

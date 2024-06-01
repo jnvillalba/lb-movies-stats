@@ -5,7 +5,6 @@ import Details from "./Details";
 const Years = () => {
   const { id } = useParams();
   const moviesID = Vol8.filter((objeto) => objeto.year === id);
-  console.log(moviesID);
   return <Details title={`${id}`} lista={moviesID} />;
 };
 

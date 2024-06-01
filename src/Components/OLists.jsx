@@ -39,7 +39,6 @@ const OLists = ({ title, lista }) => {
   const localimg = (name) => {
     let localimg = cast.find((x) => x.name === name);
     let img = localimg ? localimg.img : "";
-    console.log();
     return img;
   };
 
@@ -53,6 +52,7 @@ const OLists = ({ title, lista }) => {
       case "Writers":
         return Vol8.filter((x) => x.writers.includes(name));
       case "Years":
+        // eslint-disable-next-line eqeqeq
         return Vol8.filter((x) => x.year == name);
       default:
         return [];

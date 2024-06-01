@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import cast from "../Lists/cast";
 
 const Details = ({ title, lista }) => {
@@ -26,7 +26,6 @@ const Movie = ({ movie }) => {
   const localimg = (name) => {
     let localimg = cast.find((x) => x.name === name);
     let img = localimg ? localimg.img : "";
-    console.log(cast);
     return img;
   };
   const [poster, setPoster] = useState();

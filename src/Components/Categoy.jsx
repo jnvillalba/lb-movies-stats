@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import cast from "../Lists/cast";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import cast from "../Lists/cast";
 
 const Categoy = ({ title, lista, filterList }) => {
   const localDefaultImage = "../assets/default-profile.png";
@@ -9,7 +9,7 @@ const Categoy = ({ title, lista, filterList }) => {
     lista.forEach((p) => {
       personPoster(p[0]);
     });
-  }, [filterList]);
+  }, [filterList, lista]);
 
   const personPoster = async (name) => {
     try {
@@ -60,6 +60,7 @@ const Categoy = ({ title, lista, filterList }) => {
       case "Writers":
         return filterList.filter((x) => x.writers.includes(name));
       case "Years":
+        // eslint-disable-next-line eqeqeq
         return filterList.filter((x) => x.year == name);
       default:
         return [];
