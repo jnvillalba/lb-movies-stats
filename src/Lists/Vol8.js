@@ -9348,6 +9348,30 @@ let Vol8 = [
       "Jennifer Woodward",
     ],
   },
+  {
+    name: "Misery",
+    year: "1990",
+    directors: ["Rob Reiner"],
+    writers: ["William Goldman"],
+    actors: [
+      "James Caan",
+      "Kathy Bates",
+      "Richard Farnsworth",
+      "Frances Sternhagen",
+      "Lauren Bacall",
+      "Graham Jarvis",
+      "Jerry Potter",
+      "Thomas Brunelle",
+      "June Christopher",
+      "Julie Payne",
+      "Archie Hahn",
+      "Gregory Snegoff",
+      "Wendy Bowers",
+      "Rob Reiner",
+      "J.T. Walsh",
+      "Jay Dee Witney",
+    ],
+  },
 ];
 
 export default Vol8;
