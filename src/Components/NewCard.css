@@ -1,0 +1,71 @@
+.new-card-container {
+  margin: 10px;
+  display: flex;
+}
+
+.new-card {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+}
+
+.new-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.new-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.new-card-number {
+  margin: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  align-self: flex-end;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-bottom: auto;
+}
+
+.new-card-title {
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 5px 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.new-card-title:hover,
+.new-card-number:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.new-card-expanded {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 0 15px 15px 0;
+  width: 100%;
+}

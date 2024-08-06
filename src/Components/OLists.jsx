@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Vol8 from "../Lists/Vol8";
 import cast from "../Lists/cast";
+import NewCard from "./NewCard";
 const OLists = ({ title, lista }) => {
   const [posters, setPosters] = useState({});
 
@@ -64,7 +64,7 @@ const OLists = ({ title, lista }) => {
         <div className="col-lg-12">
           <div className="page-content">
             <div className="gaming-library">
-              <div className="col-lg-12">
+              <div className="row">
                 <div className="heading-section">
                   <h4 className="cat-title" align="center">
                     <em>{title}</em>
@@ -72,42 +72,13 @@ const OLists = ({ title, lista }) => {
                 </div>
 
                 {lista.map((director) => (
-                  <div className="item" key={director[0]}>
-                    {title !== "Years" && (
-                      <div className="col-lg-2">
-                        <img
-                          className="templatemo-item"
-                          src={localimg(director[0]) || handleImg(director[0])}
-                          width={100}
-                          height={100}
-                          alt={director[0]}
-                        />
-                      </div>
-                    )}
-                    <div className="col-lg-2">
-                      {title !== "Years" ? (
-                        <h4 align="center">{director[0]}</h4>
-                      ) : (
-                        <h4 align="center">
-                          <Link to={`/${director[0]}`}> {director[0]}</Link>
-                        </h4>
-                      )}
-                    </div>
-                    <div className="col-lg-2">
-                      <h4 align="center" className="counter">
-                        {director[1]}
-                      </h4>
-                    </div>
-                    <div className="col-lg-8">
-                      <ul className="moviesList">
-                        {moviesList(director[0]).map((pelicula) => (
-                          <li key={pelicula.name + pelicula.year}>
-                            {pelicula.name} ({pelicula.year})
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  <NewCard
+                    key={director[0]}
+                    src={localimg(director[0]) || handleImg(director[0])}
+                    title={director[0]}
+                    year={director[1]}
+                    list={moviesList(director[0])}
+                  ></NewCard>
                 ))}
               </div>
             </div>
