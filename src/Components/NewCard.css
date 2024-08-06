@@ -1,6 +1,7 @@
 .new-card-container {
   margin: 10px;
   display: flex;
+  overflow: hidden;
 }
 
 .new-card {
@@ -8,6 +9,9 @@
   display: inline-block;
   width: 220px;
   height: 220px;
+  position: relative;
+  overflow: hidden;
+  transition: border-radius 0.3s;
 }
 
 .new-card-image {
@@ -16,8 +20,12 @@
   object-fit: cover;
   border-radius: 15px;
   cursor: pointer;
+  transition: border-radius 0.3s;
 }
 
+.new-card.expanded .new-card-image {
+  border-radius: 15px 0 0 15px;
+}
 .new-card-overlay {
   position: absolute;
   top: 0;
@@ -39,7 +47,6 @@
   color: white;
   padding: 5px 10px;
   border-radius: 15px;
-  cursor: pointer;
   font-size: 0.8rem;
   margin-bottom: auto;
 }
@@ -68,4 +75,5 @@
   padding: 10px;
   border-radius: 0 15px 15px 0;
   width: 100%;
+  overflow: hidden;
 }

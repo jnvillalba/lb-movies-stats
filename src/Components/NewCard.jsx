@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NewCard.css";
 
 const NewCard = ({ src, title, year, list }) => {
@@ -11,17 +12,23 @@ const NewCard = ({ src, title, year, list }) => {
 
   return (
     <motion.div
-      className="new-card-container"
+      className={`new-card-container ${isOpen ? "expanded" : ""}`}
       animate={{
-        width: isOpen ? "100%" : "200px",
+        width: isOpen ? "auto" : "220px",
+        height: isOpen ? "auto" : "220px",
       }}
       transition={{ type: "spring", stiffness: 100 }}
     >
-      <div className="new-card" onClick={toggleOpen}>
+      <div
+        className={`new-card ${isOpen ? "expanded" : ""}`}
+        onClick={toggleOpen}
+      >
         <img src={src} alt={title} className="new-card-image" />
         <div className="new-card-overlay">
           <div className="new-card-number">{year}</div>
-          <div className="new-card-title">{title}</div>
+          <Link to={`/${title}`} className="new-card-title">
+            {title}
+          </Link>
         </div>
       </div>
       {isOpen && (

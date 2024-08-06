@@ -60,25 +60,23 @@ const OLists = ({ title, lista }) => {
   };
   return (
     <div className="container">
-      <div className="row">
-        <div className="page-content">
-          <div className="row">
-            <div className="heading-section">
-              <h4 className="cat-title" align="center">
-                <em>{title}</em>
-              </h4>
-            </div>
-
-            {lista.map((director) => (
-              <NewCard
-                key={director[0]}
-                src={localimg(director[0]) || handleImg(director[0])}
-                title={director[0]}
-                year={director[1]}
-                list={moviesList(director[0])}
-              ></NewCard>
-            ))}
+      <div className="page-content">
+        <div className="row justify-content-center">
+          <div className="heading-section">
+            <h4 className="cat-title" align="center">
+              <em>{title}</em>
+            </h4>
           </div>
+
+          {lista.map((director) => (
+            <NewCard
+              key={director[0]}
+              src={localimg(director[0]) || handleImg(director[0])}
+              title={director[0]}
+              year={director[1]}
+              list={moviesList(director[0])}
+            ></NewCard>
+          ))}
         </div>
       </div>
     </div>
