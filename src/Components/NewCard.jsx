@@ -15,7 +15,7 @@ const NewCard = ({ src, title, year, list }) => {
       className={`new-card-container ${isOpen ? "expanded" : ""}`}
       animate={{
         width: isOpen ? "auto" : "220px",
-        height: isOpen ? "auto" : "220px",
+        height: "220px",
       }}
       transition={{ type: "spring", stiffness: 100 }}
     >

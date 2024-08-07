@@ -79,9 +79,22 @@ p {
   color: #fff;
 }
 
-.templatemo-item {
-  max-width: 80px;
-  border-radius: 23px;
+.year-counter {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+}
+
+.main-button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .main-button a {
@@ -116,56 +129,6 @@ p {
   font-style: normal;
 }
 
-/* 
----------------------------------------------
-Most Popular Style
---------------------------------------------- 
-*/
-
-.most-popular {
-  margin-top: 60px;
-  padding: 30px;
-  background-color: #1f2122;
-  border-radius: 23px;
-}
-
-.most-popular .item {
-  background-color: #27292a;
-  padding: 30px 15px;
-  border-radius: 23px;
-  margin-bottom: 30px;
-}
-
-.most-popular .item .item {
-  padding: 0px;
-  border-radius: 0px;
-  background-color: transparent;
-  margin-bottom: 0px;
-}
-
-.most-popular .item img {
-  border-radius: 23px;
-}
-
-.most-popular .item h4 {
-  font-size: 15px;
-  margin-top: 20px;
-  margin-bottom: 0px;
-  display: inline-block;
-}
-
-.most-popular .item span {
-  color: #666;
-  display: block;
-  margin-top: 7px;
-  font-weight: 400;
-}
-
-.most-popular .main-button {
-  text-align: center;
-  margin-bottom: -53px;
-}
-
 /*
 ---------------------------------------------
   Responsive
@@ -186,75 +149,29 @@ body {
     flex-direction: column !important;
   }
 
-  .gaming-library {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: start !important;
-    flex-direction: column !important;
-  }
-
-  .item {
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
   body .page-content {
     padding: 5px 15px;
   }
 
-  .main-banner {
-    text-align: center;
-  }
-
-  .main-banner h4 {
-    font-size: 35px;
-  }
-
-  .gaming-library {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .most-popular .item .inner-item {
-    margin-bottom: 20px;
-  }
-
   .heading-section h4 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 990) {
-  h2 {
-    padding-top: 20px;
-    margin-top: 20px;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-direction: column !important;
-  }
-
-  .gaming-library .item {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    border-bottom: 1px solid #27292a;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    align-content: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 25px;
+    width: 220px;
   }
 
   body .page-content {
-    padding: 0px 15px;
+    margin: 10px;
   }
 
-  .background-header {
-    display: inline-block;
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
 
-  .heading-section h4 {
-    font-size: 20px;
+  .moviesList {
+    white-space: break-spaces;
   }
 }

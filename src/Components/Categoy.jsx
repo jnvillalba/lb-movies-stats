@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import cast from "../Lists/cast";
+import NewCard from "./NewCard";
 
 const Categoy = ({ title, lista, filterList }) => {
   const localDefaultImage = "../assets/default-profile.png";
@@ -68,57 +69,26 @@ const Categoy = ({ title, lista, filterList }) => {
   };
   return (
     <div className="gaming-library">
-      <div className="col-lg-12">
-        <div className="heading-section">
-          <h4 className="cat-title" align="center">
-            <em>{title}</em>
-          </h4>
-        </div>
+      <div className="heading-section">
+        <h4 className="cat-title" align="center">
+          <em>{title}</em>
+        </h4>
+      </div>
 
-        {lista.slice(0, 9).map((director) => (
-          <div className="item" key={director[0]}>
-            {title !== "Years" && (
-              <div className="col-lg-2">
-                <img
-                  className="templatemo-item"
-                  src={localimg(director[0]) || handleImg(director[0])}
-                  width={100}
-                  height={100}
-                  alt={director[0]}
-                />
-              </div>
-            )}
-            <div className="col-lg-2">
-              {title !== "Years" ? (
-                <h4 align="center">{director[0]}</h4>
-              ) : (
-                <h4 align="center">
-                  <Link to={`/${director[0]}`}> {director[0]}</Link>
-                </h4>
-              )}
-            </div>
-            <div className="col-lg-2">
-              <h4 align="center" className="counter">
-                {director[1]}
-              </h4>
-            </div>
-            <div className="col-lg-6">
-              <ul className="moviesList">
-                {moviesList(director[0]).map((pelicula) => (
-                  <li key={pelicula.name + pelicula.year}>
-                    {pelicula.name} ({pelicula.year})
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      <div className="row justify-content-center">
+        {lista.slice(0, 12).map((director) => (
+          <NewCard
+            key={director[0]}
+            src={localimg(director[0]) || handleImg(director[0])}
+            title={director[0]}
+            year={director[1]}
+            list={moviesList(director[0])}
+          ></NewCard>
         ))}
       </div>
 
-      <div className="col-lg-12">
-        <div className="main-button">
-          <Link to={`/${title}`}> View All </Link>
-        </div>
+      <div className="main-button">
+        <Link to={`/${title}`}> View All </Link>
       </div>
     </div>
   );

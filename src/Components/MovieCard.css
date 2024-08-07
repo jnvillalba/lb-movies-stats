@@ -1,0 +1,31 @@
+.movie-card-container {
+  margin: 5px;
+  display: flex;
+  overflow: hidden;
+}
+
+.movie-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.movie-card.expanded .movie-card-image {
+  border-radius: 15px 0 0 15px;
+}
+
+.movie-card-title:hover,
+.movie-card-number:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.movie-card-expanded {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 0 15px 15px 0;
+  width: 100%;
+  overflow: hidden;
+}

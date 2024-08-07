@@ -61,13 +61,12 @@ const OLists = ({ title, lista }) => {
   return (
     <div className="container">
       <div className="page-content">
+        <div className="heading-section">
+          <h4 className="cat-title" align="center">
+            <em>{title}</em>
+          </h4>
+        </div>
         <div className="row justify-content-center">
-          <div className="heading-section">
-            <h4 className="cat-title" align="center">
-              <em>{title}</em>
-            </h4>
-          </div>
-
           {lista.map((director) => (
             <NewCard
               key={director[0]}

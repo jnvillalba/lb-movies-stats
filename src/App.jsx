@@ -24,7 +24,7 @@ function App() {
   const escritoresRepetidos = encontrarRepetidos(Vol8, "writers");
 
   let todas = Vol8.concat(movies, Vol6, Vol5, Vol1, Vol2, Vol3, Vol4);
-  let last = Vol8.slice(-5).reverse();
+  let last = Vol8.slice(-6).reverse();
   return (
     <>
       <BrowserRouter>

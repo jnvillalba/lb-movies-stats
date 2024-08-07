@@ -17,26 +17,23 @@ const MoviesPerYear = ({ lista, filterList }) => {
 
   return (
     <div className="gaming-library">
-      <div className="col-lg-12">
-        <div className="heading-section">
-          <h4 className="cat-title" align="center">
-            <em>Years</em>
-          </h4>
-        </div>
-
+      <h4 className="cat-title" align="center">
+        <em>Years</em>
+      </h4>
+      <div className="year-counter">
         {lista.slice(0, 9).map(([year, count]) => (
           <div className="item" key={year}>
-            <div className="col-lg-2">
+            <div className="mx-5">
               <h4 align="center">
                 <Link to={`/${year}`}>{year}</Link>
               </h4>
             </div>
-            <div className="col-lg-2">
+            <div className="">
               <h4 align="center" className="counter">
                 {count}
               </h4>
             </div>
-            <div className="col-lg-6 mobile">
+            <div className="">
               <ul className="moviesList">
                 {moviesList(year)
                   .slice(0, showMoviesMap[year] ? undefined : 10)
@@ -48,7 +45,9 @@ const MoviesPerYear = ({ lista, filterList }) => {
               </ul>
               {moviesList(year).length > 10 && (
                 <div
-                  className={`showMore ${showMoviesMap[year] ? "active" : ""}`}
+                  className={`mx-5 showMore ${
+                    showMoviesMap[year] ? "active" : ""
+                  }`}
                   onClick={() => handleShowMore(year)}
                 >
                   {showMoviesMap[year] ? "Mostrar menos" : "Mostrar más"}
