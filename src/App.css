@@ -1,38 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Assistant');
-
+@import url("https://fonts.googleapis.com/css?family=Assistant");
+@import "~bootstrap/dist/css/bootstrap.min.css";
 body {
-    background: gray;
-    font-family: Assistant, sans-serif
+  background: gray;
+  font-family: Assistant, sans-serif;
 }
 
 .rounded-circle {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
-.moviesList  {
-    width: 100%;
-    display: flex;
-    color: #fff;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 1rem;
+.moviesList {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 1rem;
 }
 
-.moviesList li  {
-    width: 100%;
-   
+.moviesList li {
+  width: 100%;
 }
 
-.showMore{
-    color: #fff;
-    opacity: 0.4;
-    flex-wrap: wrap;
-    margin: 6px;
-    cursor: pointer;
-    
+.showMore {
+  color: #fff;
+  opacity: 0.4;
+  flex-wrap: wrap;
+  margin: 6px;
+  cursor: pointer;
 }
 .dropdown-menu {
-    --bs-dropdown-min-width: auto !important;
+  --bs-dropdown-min-width: auto !important;
 }
-

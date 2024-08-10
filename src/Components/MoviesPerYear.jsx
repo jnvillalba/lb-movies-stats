@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import HeadingSection from "./HeadingSection";
 
 const MoviesPerYear = ({ lista, filterList }) => {
   const [showMoviesMap, setShowMoviesMap] = useState({});
@@ -17,9 +18,8 @@ const MoviesPerYear = ({ lista, filterList }) => {
 
   return (
     <div className="gaming-library">
-      <h4 className="cat-title" align="center">
-        <em>Years</em>
-      </h4>
+      <HeadingSection title={"Years"} />
+
       <div className="year-counter">
         {lista.slice(0, 9).map(([year, count]) => (
           <div className="item" key={year}>
@@ -57,7 +57,6 @@ const MoviesPerYear = ({ lista, filterList }) => {
           </div>
         ))}
       </div>
-
       <div className="col-lg-12">
         <div className="main-button">
           <Link to="/Years">View All</Link>

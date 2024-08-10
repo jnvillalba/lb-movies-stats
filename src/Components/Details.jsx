@@ -1,4 +1,5 @@
 import React from "react";
+import HeadingSection from "./HeadingSection";
 import MovieCard from "./MovieCard";
 
 const Details = ({ title, lista }) => {
@@ -6,9 +7,7 @@ const Details = ({ title, lista }) => {
     <div className="container">
       <div className="page-content">
         <div className="row justify-content-center">
-          <h4 className="cat-title" align="center">
-            {title}
-          </h4>
+          <HeadingSection title={title} />
 
           {lista.map((movie, i) => (
             <MovieCard key={i} movie={movie} />

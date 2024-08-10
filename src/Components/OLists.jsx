@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Vol8 from "../Lists/Vol8";
 import cast from "../Lists/cast";
+import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard";
 const OLists = ({ title, lista }) => {
   const [posters, setPosters] = useState({});
@@ -61,11 +62,7 @@ const OLists = ({ title, lista }) => {
   return (
     <div className="container">
       <div className="page-content">
-        <div className="heading-section">
-          <h4 className="cat-title" align="center">
-            <em>{title}</em>
-          </h4>
-        </div>
+        <HeadingSection title={title} />
         <div className="row justify-content-center">
           {lista.map((director) => (
             <NewCard

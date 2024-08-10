@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import cast from "../Lists/cast";
+import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard";
 
 const Categoy = ({ title, lista, filterList }) => {
@@ -68,13 +69,8 @@ const Categoy = ({ title, lista, filterList }) => {
     }
   };
   return (
-    <div className="gaming-library">
-      <div className="heading-section">
-        <h4 className="cat-title" align="center">
-          <em>{title}</em>
-        </h4>
-      </div>
-
+    <div className="page-content">
+      <HeadingSection title={title} />
       <div className="row justify-content-center">
         {lista.slice(0, 12).map((director) => (
           <NewCard

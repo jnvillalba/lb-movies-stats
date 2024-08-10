@@ -1,27 +1,46 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./NewCard.css";
 
 const NewCard = ({ src, title, year, list }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [size, setSize] = useState({ width: "220px", height: "220px" });
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const updateSize = () => {
+      if (window.innerWidth <= 768) {
+        setSize({ width: "160px", height: "160px" });
+      } else {
+        setSize({ width: "220px", height: "220px" });
+      }
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <motion.div
       className={`new-card-container ${isOpen ? "expanded" : ""}`}
       animate={{
-        width: isOpen ? "auto" : "220px",
-        height: "220px",
+        width: isOpen ? "auto" : size.width,
+        height: isOpen ? "auto" : size.height,
       }}
       transition={{ type: "spring", stiffness: 100 }}
     >
       <div
         className={`new-card ${isOpen ? "expanded" : ""}`}
         onClick={toggleOpen}
+        style={{
+          width: isOpen ? "auto" : size.width,
+          height: isOpen ? "auto" : size.height,
+        }}
       >
         <img src={src} alt={title} className="new-card-image" />
         <div className="new-card-overlay">

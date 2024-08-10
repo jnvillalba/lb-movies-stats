@@ -23,34 +23,30 @@ function Home({ list }) {
   return (
     <>
       <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="page-content">
-              <h2>Movies: {list.length}</h2>
-              <Category
-                title={"Directors"}
-                lista={directoresRepetidos}
-                filterList={list}
-              />
-              {escritoresRepetidos.length > 0 && (
-                <Category
-                  title={"Writers"}
-                  lista={escritoresRepetidos}
-                  filterList={list}
-                />
-              )}
-              <Category
-                title={"Actors"}
-                lista={actoresRepetidos}
-                filterList={list}
-              />
-              <MoviesPerYear
-                title={"Years"}
-                lista={añosRepetidos}
-                filterList={list}
-              />
-            </div>
-          </div>
+        <div className="row px-3 px-lg-0">
+          <h2 className="mt-1">Movies: {list.length}</h2>
+          <Category
+            title={"Directors"}
+            lista={directoresRepetidos}
+            filterList={list}
+          />
+          {escritoresRepetidos.length > 0 && (
+            <Category
+              title={"Writers"}
+              lista={escritoresRepetidos}
+              filterList={list}
+            />
+          )}
+          <Category
+            title={"Actors"}
+            lista={actoresRepetidos}
+            filterList={list}
+          />
+          <MoviesPerYear
+            title={"Years"}
+            lista={añosRepetidos}
+            filterList={list}
+          />
         </div>
       </div>
     </>
