@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import cast from "../Lists/cast";
+import cast from "../../Lists/cast";
 import "./MovieCard.css";
 
 const MovieCard = ({ movie }) => {

@@ -30,7 +30,7 @@ const NewCard = ({ src, title, year, list }) => {
       className={`new-card-container ${isOpen ? "expanded" : ""}`}
       animate={{
         width: isOpen ? "auto" : size.width,
-        height: isOpen ? "auto" : size.height,
+        height: isOpen ? "" : size.height,
       }}
       transition={{ type: "spring", stiffness: 100 }}
     >
@@ -39,7 +39,7 @@ const NewCard = ({ src, title, year, list }) => {
         onClick={toggleOpen}
         style={{
           width: isOpen ? "auto" : size.width,
-          height: isOpen ? "auto" : size.height,
+          height: isOpen ? "" : size.height,
         }}
       >
         <img src={src} alt={title} className="new-card-image" />
@@ -58,13 +58,13 @@ const NewCard = ({ src, title, year, list }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <ul className="new-card-list">
+          <ol className="new-card-list">
             {list.map((pelicula) => (
               <li key={pelicula.name + pelicula.year}>
                 {pelicula.name} ({pelicula.year})
               </li>
             ))}
-          </ul>
+          </ol>
         </motion.div>
       )}
     </motion.div>

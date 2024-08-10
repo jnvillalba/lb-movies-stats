@@ -17,7 +17,7 @@ const MoviesPerYear = ({ lista, filterList }) => {
   };
 
   return (
-    <div className="gaming-library">
+    <div className="page-content">
       <HeadingSection title={"Years"} />
 
       <div className="year-counter">

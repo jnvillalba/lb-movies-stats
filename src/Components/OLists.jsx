@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Vol8 from "../Lists/Vol8";
 import cast from "../Lists/cast";
 import HeadingSection from "./HeadingSection";
-import NewCard from "./NewCard";
+import NewCard from "./NewCard/NewCard";
 const OLists = ({ title, lista }) => {
   const [posters, setPosters] = useState({});
 
@@ -52,9 +52,6 @@ const OLists = ({ title, lista }) => {
 
       case "Writers":
         return Vol8.filter((x) => x.writers.includes(name));
-      case "Years":
-        // eslint-disable-next-line eqeqeq
-        return Vol8.filter((x) => x.year == name);
       default:
         return [];
     }

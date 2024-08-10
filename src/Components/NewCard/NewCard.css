@@ -83,4 +83,7 @@
     margin: 5px;
     padding: 0px;
   }
+  .expanded {
+    min-height: -webkit-fill-available;
+  }
 }

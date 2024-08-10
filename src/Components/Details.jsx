@@ -1,6 +1,6 @@
 import React from "react";
 import HeadingSection from "./HeadingSection";
-import MovieCard from "./MovieCard";
+import MovieCard from "./MovieCard/MovieCard.jsx";
 
 const Details = ({ title, lista }) => {
   return (

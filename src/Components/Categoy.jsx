@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import cast from "../Lists/cast";
 import HeadingSection from "./HeadingSection";
-import NewCard from "./NewCard";
+import NewCard from "./NewCard/NewCard";
 
 const Categoy = ({ title, lista, filterList }) => {
   const localDefaultImage = "../assets/default-profile.png";

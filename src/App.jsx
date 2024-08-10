@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Details from "./Components/Details";
 import NavBar from "./Components/NavBar";
+import ViewAllYears from "./Components/ViewAllYears";
 import Vol1 from "./Lists/Vol1";
 import Vol2 from "./Lists/Vol2";
 import Vol3 from "./Lists/Vol3";
@@ -46,7 +47,7 @@ function App() {
             <Route
               exact
               path="/Years"
-              element={<OLists title={"Years"} lista={añosRepetidos} />}
+              element={<ViewAllYears title={"Years"} lista={añosRepetidos} />}
             />
             <Route
               exact
