@@ -9,10 +9,7 @@ const YearCard = ({ title, counter, list }) => {
   };
 
   return (
-    <div
-      className="card m-2 bg-dark text-light shadow"
-      style={{ width: "45%", height: "fit-content" }}
-    >
+    <div className="card m-2 bg-dark text-light shadow year-card">
       <div
         className="card-header d-flex justify-content-between align-items-center"
         onClick={toggleListVisibility}
