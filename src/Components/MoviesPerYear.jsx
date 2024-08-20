@@ -12,7 +12,7 @@ const MoviesPerYear = ({ lista, filterList }) => {
       <HeadingSection title={"Years"} />
 
       <div className="d-flex flex-wrap justify-content-center">
-        {lista.slice(0, 9).map(([year, count]) => (
+        {lista.slice(0, 10).map(([year, count]) => (
           <YearCard
             key={year}
             title={year}

@@ -50,6 +50,7 @@ const MovieCard = ({ movie }) => {
       animate={{
         width: isOpen ? "auto" : "350px",
         height: "450px",
+        minWidth: "350px",
       }}
       transition={{ type: "spring", stiffness: 100 }}
     >

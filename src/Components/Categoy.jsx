@@ -1,73 +1,71 @@
-import React, { useEffect, useState } from "react";
+import { throttle } from "lodash";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import cast from "../Lists/cast";
+import { handleImg, personPoster } from "../Utils/posterUtils";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
 
 const Categoy = ({ title, lista, filterList }) => {
-  const localDefaultImage = "../assets/default-profile.png";
+  const localDefaultImage =
+    "https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg";
   const [posters, setPosters] = useState({});
+  const observerRef = useRef();
+
+  // Función para cargar imágenes usando throttle
+  const fetchPostersThrottled = useCallback(
+    throttle(async (batch) => {
+      const promises = batch.map((p) => personPoster(p[0], setPosters));
+      await Promise.allSettled(promises);
+    }, 1000), // 1 segundo entre lotes
+    []
+  );
+
   useEffect(() => {
-    lista.forEach((p) => {
-      personPoster(p[0]);
+    const batchSize = 12;
+    for (let i = 0; i < lista.length; i += batchSize) {
+      const batch = lista.slice(i, i + batchSize);
+      fetchPostersThrottled(batch);
+    }
+  }, [fetchPostersThrottled, lista]);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const director = entry.target.getAttribute("data-director");
+          if (!posters[director] || posters[director] === localDefaultImage) {
+            personPoster(director, setPosters);
+          }
+          observerRef.current.unobserve(entry.target);
+        }
+      });
     });
-  }, [filterList, lista]);
 
-  const personPoster = async (name) => {
-    try {
-      const formattedName = name.toLowerCase().replace(" ", "+");
+    const elements = document.querySelectorAll(".lazy-load");
+    elements.forEach((element) => observerRef.current.observe(element));
 
-      const apiUrl = `https://api.themoviedb.org/3/search/person?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${formattedName}`;
+    return () => observerRef.current.disconnect();
+  }, [posters]);
 
-      const response = await fetch(apiUrl);
-      const json = await response.json();
-
-      if (json.results.length > 0) {
-        setPosters((prevState) => ({
-          ...prevState,
-          [name]: `http://image.tmdb.org/t/p/w500/${json.results[0].profile_path}`,
-        }));
-      } else {
-        setPosters((prevState) => ({
-          ...prevState,
-          [name]: "Not Found",
-        }));
+  const moviesList = useCallback(
+    (name) => {
+      switch (title) {
+        case "Actors":
+          return filterList.filter((x) => x.actors.includes(name));
+        case "Directors":
+          return filterList.filter((x) => x.directors.includes(name));
+        case "Writers":
+          return filterList.filter((x) => x.writers.includes(name));
+        case "Years":
+          // eslint-disable-next-line eqeqeq
+          return filterList.filter((x) => x.year == name);
+        default:
+          return [];
       }
-    } catch (error) {
-      console.error("Error al buscar el póster:", error);
-    }
-  };
-  const handleImg = (name) => {
-    const postersList = Object.entries(posters).map(([name, url]) => ({
-      name,
-      url,
-    }));
-    let imgFind = postersList.find((x) => x.name === name);
-    let img = imgFind ? imgFind.url : localimg(name) || localDefaultImage;
-    return img;
-  };
+    },
+    [filterList, title]
+  );
 
-  const localimg = (name) => {
-    let localimg = cast.find((x) => x.name === name);
-    let img = localimg ? localimg.img : "";
-    return img;
-  };
-
-  const moviesList = (name) => {
-    switch (title) {
-      case "Actors":
-        return filterList.filter((x) => x.actors.includes(name));
-      case "Directors":
-        return filterList.filter((x) => x.directors.includes(name));
-      case "Writers":
-        return filterList.filter((x) => x.writers.includes(name));
-      case "Years":
-        // eslint-disable-next-line eqeqeq
-        return filterList.filter((x) => x.year == name);
-      default:
-        return [];
-    }
-  };
   return (
     <div className="page-content">
       <HeadingSection title={title} />
@@ -75,11 +73,13 @@ const Categoy = ({ title, lista, filterList }) => {
         {lista.slice(0, 12).map((director) => (
           <NewCard
             key={director[0]}
-            src={localimg(director[0]) || handleImg(director[0])}
+            src={handleImg(director[0], posters, localDefaultImage)}
             title={director[0]}
             year={director[1]}
             list={moviesList(director[0])}
-          ></NewCard>
+            className="lazy-load"
+            data-director={director[0]}
+          />
         ))}
       </div>
 

@@ -1,6 +1,7 @@
 .movie-card-container {
   margin: 5px;
   display: flex;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -10,6 +11,15 @@
   object-fit: fill;
   border-radius: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .movie-card-image {
+    max-width: 300px;
+  }
+  .expanded {
+    min-height: -webkit-fill-available;
+  }
 }
 
 .movie-card.expanded .movie-card-image {

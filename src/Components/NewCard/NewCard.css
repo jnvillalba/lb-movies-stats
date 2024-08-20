@@ -26,6 +26,7 @@
 .new-card.expanded .new-card-image {
   border-radius: 15px 0 0 15px;
 }
+
 .new-card-overlay {
   position: absolute;
   top: 0;
@@ -85,5 +86,8 @@
   }
   .expanded {
     min-height: -webkit-fill-available;
+  }
+  .new-card-list {
+    padding-left: 20px !important;
   }
 }
