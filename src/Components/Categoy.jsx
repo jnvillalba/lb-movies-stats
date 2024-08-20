@@ -11,15 +11,17 @@ const Categoy = ({ title, lista, filterList }) => {
   const [posters, setPosters] = useState({});
   const observerRef = useRef();
 
-  // Función para cargar imágenes usando throttle
   const fetchPostersThrottled = useCallback(
-    throttle(async (batch) => {
-      const promises = batch.map((p) => personPoster(p[0], setPosters));
-      await Promise.allSettled(promises);
-    }, 1000), // 1 segundo entre lotes
-    []
-  );
+    async (batch) => {
+      const throttledFetch = throttle(async () => {
+        const promises = batch.map((p) => personPoster(p[0], setPosters));
+        await Promise.allSettled(promises);
+      }, 1000);
 
+      throttledFetch();
+    },
+    [setPosters]
+  );
   useEffect(() => {
     const batchSize = 12;
     for (let i = 0; i < lista.length; i += batchSize) {
