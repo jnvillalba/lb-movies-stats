@@ -14,7 +14,7 @@ import Vol5 from "./Lists/Vol5";
 import Vol6 from "./Lists/Vol6";
 import Vol8 from "./Lists/Vol8";
 import movies from "./Lists/movies";
-import { encontrarRepetidos, yearsRepetidos } from "./Utils";
+import { encontrarRepetidos, yearsRepetidos } from "./Utils/Utils.js";
 
 const Home = lazy(() => import("./Components/Home"));
 const YearsMovies = lazy(() => import("./Components/YearsMovies"));

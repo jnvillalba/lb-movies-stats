@@ -27,7 +27,7 @@ export const personPoster = async (name, setPosters) => {
       imageCache.set(name, posterUrl); // Almacenar en cache
     }
   } catch (error) {
-    console.error("Error al buscar el póster:", error);
+    console.error("Error al buscar el póster:", name);
   }
 };
 

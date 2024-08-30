@@ -5,7 +5,7 @@ import { handleImg, personPoster } from "../Utils/posterUtils";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
 
-const Categoy = ({ title, lista, filterList }) => {
+const Category = ({ title, lista, filterList }) => {
   const localDefaultImage =
     "https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg";
   const [posters, setPosters] = useState({});
@@ -92,4 +92,4 @@ const Categoy = ({ title, lista, filterList }) => {
   );
 };
 
-export default Categoy;
+export default Category;

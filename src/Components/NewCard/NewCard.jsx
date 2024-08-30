@@ -28,6 +28,7 @@ const NewCard = ({ src, title, year, list }) => {
   return (
     <motion.div
       className={`new-card-container ${isOpen ? "expanded px-2" : ""}`}
+      initial={{ width: size.width, height: size.height }}
       animate={{
         width: isOpen ? "auto" : size.width,
         height: isOpen ? "" : size.height,
