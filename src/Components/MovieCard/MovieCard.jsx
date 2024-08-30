@@ -6,11 +6,25 @@ import "./MovieCard.css";
 const MovieCard = ({ movie }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [poster, setPoster] = useState();
+  const [size, setSize] = useState({ width: "220px", height: "220px" });
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const updateSize = () => {
+      if (window.innerWidth <= 768) {
+        setSize({ width: "160px", height: "225" });
+      } else {
+        setSize({ width: "350px", height: "450px" });
+      }
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
   const localimg = (name) => {
     let localimg = cast.find((x) => x.name === name);
     let img = localimg ? localimg.img : "";
@@ -47,16 +61,20 @@ const MovieCard = ({ movie }) => {
   return (
     <motion.div
       className={`movie-card-container ${isOpen ? "expanded" : ""}`}
+      initial={{ width: size.width, height: size.height }}
       animate={{
-        width: isOpen ? "auto" : "350px",
-        height: "450px",
-        minWidth: "350px",
+        width: isOpen ? "auto" : size.width,
+        height: isOpen ? "" : size.height,
       }}
       transition={{ type: "spring", stiffness: 100 }}
     >
       <div
         className={`movie-card ${isOpen ? "expanded" : ""}`}
         onClick={toggleOpen}
+        style={{
+          width: isOpen ? "auto" : size.width,
+          height: isOpen ? "" : size.height,
+        }}
       >
         <img
           src={localimg(movie.name) || poster}
@@ -82,7 +100,7 @@ const MovieCard = ({ movie }) => {
           <p className="mt-2">
             <em>Cast:</em>
           </p>
-          {movie.actors.slice(0, 7).map((actor, i) => (
+          {movie.actors.slice(0, 10).map((actor, i) => (
             <p className="px-2" key={i}>
               {actor}
             </p>
