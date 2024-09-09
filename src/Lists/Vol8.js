@@ -10910,6 +10910,27 @@ let Vol8 = [
       "Adriana Varela",
     ],
   },
+  {
+    name: "Una noche con Sabrina Love",
+    year: "2000",
+    directors: ["Alejandro Agresti"],
+    writers: ["Alejandro Agresti"],
+    actors: [
+      "Cecilia Roth",
+      "Tomás Fonzi",
+      "Fabián Vena",
+      "Giancarlo Giannini",
+      "Norma Aleandro",
+      "Julieta Cardinali",
+      "Mario Paolucci",
+      "Luis Margani",
+      "Oscar Alegre",
+      "Charly García",
+      "Andy Muschietti",
+      "Sergio Poves Campos",
+      "Marcos Woinsky",
+    ],
+  },
 ];
 
 export default Vol8;
