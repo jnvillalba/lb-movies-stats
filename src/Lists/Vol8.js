@@ -11491,6 +11491,22 @@ let Vol8 = [
       "Kendall Coyne Schofield",
     ],
   },
+  {
+    name: "Killer Heat",
+    year: "2024",
+    directors: ["Philippe Lacote"],
+    writers: ["Matt Charman", "Roberto Bentivegna"],
+    actors: [
+      "Richard Madden",
+      "Joseph Gordon-Levitt",
+      "Shailene Woodley",
+      "Babou Ceesay",
+      "Clare Holman",
+      "Abbey Lee",
+      "Manos Gavras",
+      "Argyris Gaganis",
+    ],
+  },
 ];
 
 export default Vol8;
