@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Assistant");
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
 body {
   background: gray;
   font-family: Assistant, sans-serif;
@@ -30,17 +31,40 @@ body {
   margin: 6px;
   cursor: pointer;
 }
+
 .dropdown-menu {
   --bs-dropdown-min-width: auto !important;
 }
 
-.blinking {
-  color: #ffff;
-  animation: blink-animation 1.5s steps(5, start) infinite;
+
+/* From Uiverse.io by Fernando-sv */
+.loader {
+  border: 4px solid rgba(0, 0, 0, .1);
+  border-left-color: transparent;
+  border-radius: 50%;
 }
 
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
+.loader {
+  border: 4px solid rgba(0, 0, 0, .1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, .1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
