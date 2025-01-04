@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Vol8 from "../Lists/Vol8";
+import Vol9 from "../Lists/Vol9";
 import cast from "../Lists/cast";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
@@ -46,12 +46,12 @@ const OLists = ({ title, lista }) => {
   const moviesList = (name) => {
     switch (title) {
       case "Actors":
-        return Vol8.filter((x) => x.actors.includes(name));
+        return Vol9.filter((x) => x.actors.includes(name));
       case "Directors":
-        return Vol8.filter((x) => x.directors.includes(name));
+        return Vol9.filter((x) => x.directors.includes(name));
 
       case "Writers":
-        return Vol8.filter((x) => x.writers.includes(name));
+        return Vol9.filter((x) => x.writers.includes(name));
       default:
         return [];
     }
