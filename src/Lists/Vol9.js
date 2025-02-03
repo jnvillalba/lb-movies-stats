@@ -909,6 +909,24 @@ let Vol9 = [
       "Luis Rubio",
     ],
   },
+  {
+    name: "El peso de la ley",
+    year: "2017",
+    directors: ["Fernan Miras"],
+    writers: ["Fernan Miras", "Roberto Gispert"],
+    actors: [
+      "Paola Barrientos",
+      "María Onetto",
+      "Darío Grandinetti",
+      "Daniel Lambertini",
+      "Fernán Mirás",
+      "Darío Barassi",
+      "Daniel La Rosa",
+      "Pacha Rosso",
+      "Julio Feld",
+      "Jorgelina Aruzzi",
+    ],
+  },
 ];
 
 export default Vol9;
