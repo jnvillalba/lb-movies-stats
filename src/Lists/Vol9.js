@@ -1786,7 +1786,7 @@ let Vol9 = [
     ],
   },
   {
-    name: "The Lion's Share",
+    name: "La parte del león",
     year: "1978",
     directors: ["Adolfo Aristarain"],
     writers: ["Adolfo Aristarain"],
