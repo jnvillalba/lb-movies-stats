@@ -1842,7 +1842,6 @@ let Vol9 = [
       "Eugenia Varas",
       "Mariano Llinás",
       "Alejandro Zucco",
-      "Liliana Cuomo",
     ],
   },
   {

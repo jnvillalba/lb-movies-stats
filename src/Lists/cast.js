@@ -64,6 +64,10 @@ let cast = [
     name: "Rita Cortese",
     img: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Rita-Cortese.jpg",
   },
+  {
+    name: "Joe Russo",
+    img: "https://m.media-amazon.com/images/M/MV5BMTc2NzY1NTY5OF5BMl5BanBnXkFtZTgwNjY3ODczNjM@._V1_FMjpg_UY2048_.jpg",
+  },
   { name: "Not Found", img: "../assets/default-profile.png" },
 ];
 
