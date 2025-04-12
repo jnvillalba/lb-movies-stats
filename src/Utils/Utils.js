@@ -1,6 +1,6 @@
-export function yearsRepetidos(lista, propiedad) {
+export function yearsRepetidos(lista) {
   const contador = lista
-    .flatMap((objeto) => objeto[propiedad])
+    .flatMap((objeto) => objeto["year"])
     .reduce(
       (contador, item) => (
         // eslint-disable-next-line no-sequences
@@ -30,4 +30,12 @@ export function encontrarRepetidos(lista, propiedad) {
   }
   repetidos.sort((a, b) => b[1] - a[1]);
   return repetidos;
+}
+export function calculateAllDuplicates(volumen) {
+  return {
+    actors: encontrarRepetidos(volumen, "actors"),
+    year: yearsRepetidos(volumen),
+    directors: encontrarRepetidos(volumen, "directors"),
+    writers: encontrarRepetidos(volumen, "writers"),
+  };
 }

@@ -15,7 +15,7 @@ function Home({ list }) {
     return medirTiempo(encontrarRepetidos, list, "actors");
   }, [list]);
 
-  const añosRepetidos = useMemo(() => yearsRepetidos(list, "year"), [list]);
+  const añosRepetidos = useMemo(() => yearsRepetidos(list), [list]);
 
   const directoresRepetidos = useMemo(
     () => encontrarRepetidos(list, "directors"),
