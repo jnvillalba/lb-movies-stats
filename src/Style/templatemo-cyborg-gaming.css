@@ -165,10 +165,6 @@ img {
     gap: var(--spacing-md);
   }
 
-  .moviesList {
-    white-space: break-spaces;
-  }
-
   li {
     font-size: var(--font-size-small);
   }

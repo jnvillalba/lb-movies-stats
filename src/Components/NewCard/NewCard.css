@@ -85,12 +85,15 @@
     margin: 5px;
     padding: 0px;
   }
+
   .expanded {
     min-height: -webkit-fill-available;
   }
+
   .new-card-list {
     padding-left: 20px !important;
   }
+
   .new-card-expanded {
     max-height: 320px;
   }
