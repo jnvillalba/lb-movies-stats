@@ -19,6 +19,7 @@ function Home({ list }) {
 
   const directoresRepetidos = useMemo(
     () => encontrarRepetidos(list, "directors"),
+
     [list]
   );
 

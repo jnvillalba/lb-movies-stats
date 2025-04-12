@@ -3,6 +3,7 @@ export function yearsRepetidos(lista, propiedad) {
     .flatMap((objeto) => objeto[propiedad])
     .reduce(
       (contador, item) => (
+        // eslint-disable-next-line no-sequences
         (contador[item] = (contador[item] || 0) + 1), contador
       ),
       {}

@@ -33,7 +33,7 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar />
-        <Suspense fallback={<div class="loader"></div>}>
+        <Suspense fallback={<div className="loader"></div>}>
           <Routes>
             <Route index element={<Home list={Vol9} />} />
             <Route exact path="/Vol8" element={<Home list={Vol8} />} />

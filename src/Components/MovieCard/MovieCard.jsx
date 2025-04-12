@@ -25,14 +25,16 @@ const MovieCard = ({ movie }) => {
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
   }, []);
-  const localimg = (name) => {
-    let localimg = cast.find((x) => x.name === name);
-    let img = localimg ? localimg.img : "";
-    return img;
-  };
 
   useEffect(() => {
     const moviePoster = (name) => {
+      console.log(name);
+      let localimg = cast.find((x) => x.name === name);
+      if (localimg) {
+        let img = localimg ? localimg.img : "";
+        setPoster(img);
+        return;
+      }
       if (movie.img) {
         setPoster(movie.img);
       } else {
@@ -76,11 +78,7 @@ const MovieCard = ({ movie }) => {
           height: isOpen ? "" : size.height,
         }}
       >
-        <img
-          src={localimg(movie.name) || poster}
-          alt={poster}
-          className="movie-card-image"
-        />
+        <img src={poster} alt={poster} className="movie-card-image" />
       </div>
       {isOpen && (
         <motion.div
