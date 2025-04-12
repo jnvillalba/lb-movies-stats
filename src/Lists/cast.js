@@ -52,6 +52,18 @@ let cast = [
     name: "Joaquin Marques Borchex",
     img: "https://i.pinimg.com/280x280_RS/2b/e2/10/2be210517b7a1e5cfe0749e391be6e03.jpg",
   },
+  {
+    name: "Justin Benson",
+    img: "https://upload.wikimedia.org/wikipedia/commons/1/14/Justin_Benson%2C_Festival_de_Sitges_2017.jpg",
+  },
+  {
+    name: "John Cusack",
+    img: "https://es.web.img2.acsta.net/c_310_420/pictures/15/07/01/17/15/528770.jpg",
+  },
+  {
+    name: "Rita Cortese",
+    img: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Rita-Cortese.jpg",
+  },
   { name: "Not Found", img: "../assets/default-profile.png" },
 ];
 
