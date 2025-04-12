@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import cast from "../../Lists/cast";
 import "./MovieCard.css";
 
 const MovieCard = ({ movie }) => {
@@ -28,13 +27,6 @@ const MovieCard = ({ movie }) => {
 
   useEffect(() => {
     const moviePoster = (name) => {
-      console.log(name);
-      let localimg = cast.find((x) => x.name === name);
-      if (localimg) {
-        let img = localimg ? localimg.img : "";
-        setPoster(img);
-        return;
-      }
       if (movie.img) {
         setPoster(movie.img);
       } else {

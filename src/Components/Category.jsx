@@ -1,13 +1,15 @@
 import { throttle } from "lodash";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { handleImg, personPoster } from "../Utils/posterUtils";
+import {
+  handleImg,
+  localDefaultImage,
+  personPoster,
+} from "../Utils/posterUtils";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
 
 const Category = ({ title, lista, filterList }) => {
-  const localDefaultImage =
-    "https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg";
   const [posters, setPosters] = useState({});
   const observerRef = useRef();
 
@@ -35,6 +37,7 @@ const Category = ({ title, lista, filterList }) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const director = entry.target.getAttribute("data-director");
+
           if (!posters[director] || posters[director] === localDefaultImage) {
             personPoster(director, setPosters);
           }
