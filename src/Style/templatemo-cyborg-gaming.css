@@ -1,115 +1,132 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  /* Colores principales */
+  --color-background: #1f2122;
+  --color-surface: #27292a;
+  --color-text-primary: #fff;
+  --color-text-secondary: #ccc;
+  --color-text-tertiary: #666;
+  --color-primary: #ff8000;
+  --color-primary-hover: #40bcf4;
+  --color-link: #ccc;
+  --color-link-hover: #00e054;
+
+  /* Tipografía */
+  --font-family-base: "Poppins", sans-serif;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-medium: 15px;
+  --font-size-large: 34px;
+
+  /* Espaciado */
+  --spacing-xs: 10px;
+  --spacing-sm: 15px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 50px;
+
+  /* Border radius */
+  --border-radius-sm: 23px;
+  --border-radius-md: 25px;
+}
+
+/* Reset y estilos generales */
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family-base);
   font-weight: 400;
-  background-color: #1e1e1e;
-  font-size: 16px;
+  background-color: var(--color-background);
+  font-size: var(--font-size-base);
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
+/* Enlaces */
 a {
-  color: #ccc;
+  color: var(--color-link);
   text-decoration: none !important;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #f99;
+  color: var(--color-link-hover);
 }
 
+/* Tipografía */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  color: #fff;
+  margin: 0;
+  color: var(--color-text-primary);
   font-weight: 700;
 }
 
 p {
-  font-size: 15px;
-  line-height: 30px;
-  color: #fff;
+  font-size: var(--font-size-medium);
+  line-height: var(--spacing-lg);
+  color: var(--color-text-tertiary);
+  margin-bottom: 0;
 }
 
+/* Imágenes */
 img {
   width: 100%;
-  overflow: hidden;
+  height: auto;
+  display: block;
 }
 
-/* 
----------------------------------------------
-Global Styles
---------------------------------------------- 
-*/
-html,
-body {
-  background: #1f2122;
-  font-family: "Poppins", sans-serif;
-}
-
-.page-content {
-  margin-top: 20px;
-  padding: 10px 15px;
-
-  background-color: #27292a;
-  border-radius: 23px;
-}
-
-p {
-  font-size: 15px;
-  color: #666;
-  line-height: 30px;
-  margin-bottom: 0px;
-}
-
+/* Selección de texto */
 ::selection {
-  background: #e75e8d;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 ::-moz-selection {
-  background: #e75e8d;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
+/* Estructura de página */
+.page-content {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-sm);
+}
+
+/* Componentes */
 .year-card {
   width: 45%;
   height: fit-content;
 }
 
-@media (max-width: 768px) {
-  .year-card {
-    width: 100%;
-  }
-}
-
 .item {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: var(--spacing-xl);
   align-items: center;
 }
 
 .main-button {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: var(--spacing-xs);
 }
 
 .main-button a {
-  font-size: 14px;
-  color: #fff;
-  background-color: #e75e8d;
+  font-size: var(--font-size-small);
+  color: var(--color-text-primary);
+  background-color: var(--color-primary);
   padding: 12px 30px;
   display: inline-block;
-  border-radius: 25px;
+  border-radius: var(--border-radius-md);
   font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 0.5px;
@@ -119,39 +136,33 @@ p {
 }
 
 .main-button a:hover {
-  background-color: #fff;
-  color: #e75e8d;
+  background-color: var(--color-text-primary);
+  color: var(--color-primary-hover);
 }
 
 .heading-section h4 {
-  font-size: 34px;
+  font-size: var(--font-size-large);
   text-decoration: none;
 }
 
-/*
----------------------------------------------
-  Responsive
-  Style
----------------------------------------------
-*/
-body {
-  overflow-x: hidden;
-}
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .year-card {
+    width: 100%;
+  }
 
-@media (max-width: 767px) {
   h2 {
-    padding-top: 20px;
-    margin-top: 20px;
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     flex-direction: column !important;
   }
+
   .item {
-    display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    gap: var(--spacing-md);
   }
 
   .moviesList {
@@ -159,6 +170,6 @@ body {
   }
 
   li {
-    font-size: 14px;
+    font-size: var(--font-size-small);
   }
 }
