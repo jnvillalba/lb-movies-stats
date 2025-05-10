@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./MovieCard.css";
 
 const MovieCard = ({ movie }) => {
@@ -33,6 +33,12 @@ const MovieCard = ({ movie }) => {
         if (name.includes("Black Mirror:")) {
           setPoster(
             "https://m.media-amazon.com/images/M/MV5BMGRjZDBjODMtMWQ1Zi00MWRkLTk5YTMtMDU1NTNkMzhkM2QwXkEyXkFqcGc@._V1_FMjpg_UX426_.jpg"
+          );
+          return;
+        }
+        if (name.includes("El Eternauta")) {
+          setPoster(
+            "https://m.media-amazon.com/images/M/MV5BYWUyZjBhOTctOGU0Ni00ZDE1LWE4NjUtNjM0NjAzYTEwMmRiXkEyXkFqcGc@._V1_FMjpg_UY8508_.jpg"
           );
           return;
         }
