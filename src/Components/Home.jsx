@@ -4,16 +4,16 @@ import Category from "./Category.jsx";
 import MoviesPerYear from "./MoviesPerYear";
 
 function Home({ list }) {
-  const [filterType, setFilterType] = useState("all"); // Estado para manejar el filtro
+  const [filterType, setFilterType] = useState("All"); // Estado para manejar el filtro
 
   // Filtrar la lista según el tipo seleccionado
   const filteredList = useMemo(() => {
     if (filterType === "TV") {
       return list.filter((item) => item.type === "TV");
-    } else if (filterType === "movie") {
-      return list.filter((item) => !item.type); // Filtrar los que no tienen la propiedad type
+    } else if (filterType === "Movies") {
+      return list.filter((item) => !item.type);
     }
-    return list; // Si no hay filtro, devolver la lista original
+    return list;
   }, [list, filterType]);
 
   const medirTiempo = (func, ...args) => {
@@ -42,19 +42,23 @@ function Home({ list }) {
     [filteredList]
   );
 
+  const filters = [
+    { value: "All", label: "All" },
+    { value: "TV", label: "TV" },
+    { value: "Movies", label: "Movie" },
+  ];
+
   return (
     <div className="container">
       <div className="row px-3 px-lg-0">
-        <div className="mt-1 d-flex justify-content-between align-items-center">
-          <h2 className="mt-1">Movies: {filteredList.length}</h2>
+        <div className="mt-3 d-flex justify-content-between align-items-center">
+          <h2>
+            {filterType}: {filteredList.length}
+          </h2>
 
           {/* Botones para filtrar */}
           <div>
-            {[
-              { value: "all", label: "All" },
-              { value: "TV", label: "TV" },
-              { value: "movie", label: "Movie" },
-            ].map((option, index, arr) => (
+            {filters.map((option, index, arr) => (
               <button
                 key={option.value}
                 className={`btn btn-sm ${

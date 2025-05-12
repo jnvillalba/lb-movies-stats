@@ -107,13 +107,6 @@ img {
   height: fit-content;
 }
 
-.item {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-xl);
-  align-items: center;
-}
-
 .main-button {
   display: flex;
   justify-content: center;
@@ -149,20 +142,6 @@ img {
 @media (max-width: 768px) {
   .year-card {
     width: 100%;
-  }
-
-  h2 {
-    padding-top: var(--spacing-md);
-    margin-top: var(--spacing-md);
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-direction: column !important;
-  }
-
-  .item {
-    flex-direction: column;
-    gap: var(--spacing-md);
   }
 
   li {
