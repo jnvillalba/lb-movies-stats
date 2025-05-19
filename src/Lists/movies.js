@@ -216,7 +216,7 @@ let movies = [
     ],
   },
   {
-    name: "The Method",
+    name: "El Método",
     directors: ["Marcelo Pineyro"],
     writers: ["Mateo Gil", "Jordi Galceran", "Marcelo Pineyro"],
     year: 2005,
