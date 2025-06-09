@@ -143,7 +143,7 @@ let Vol9 = [
     ],
   },
   {
-    name: "The Last Suit",
+    name: "El último traje",
     year: "2017",
     directors: ["Pablo Solarz"],
     writers: ["Pablo Solarz"],
