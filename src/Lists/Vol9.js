@@ -4181,6 +4181,7 @@ let Vol9 = [
     ],
   },
   {
+    tvName: "El Eternauta",
     type: "TV",
     season: 1,
     name: "El Eternauta",
