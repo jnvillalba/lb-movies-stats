@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./NewCard.css";
 
@@ -59,7 +59,13 @@ const NewCard = ({ src, title, year, list }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <ol className="new-card-list">
+          <ol
+            className="new-card-list"
+            style={{
+              width: isOpen ? "160px" : size.width,
+              height: isOpen ? "" : size.height,
+            }}
+          >
             {list.map((pelicula) => (
               <li key={pelicula.name + pelicula.year}>
                 {pelicula.name} ({pelicula.year})

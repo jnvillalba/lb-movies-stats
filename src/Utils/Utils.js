@@ -1,7 +1,6 @@
 export function yearsRepetidos(lista) {
   // Primero agrupamos las series de TV por tvName y season
   const tvShows = lista.filter((item) => item.type === "TV");
-
   const uniqueShows = new Map();
 
   tvShows.forEach((show) => {
@@ -33,45 +32,36 @@ export function yearsRepetidos(lista) {
 }
 
 export function encontrarRepetidos(lista, propiedad) {
+  // Primero agrupamos las series de TV por tvName y season
   const tvShows = lista.filter((item) => item.type === "TV");
   const uniqueShows = new Map();
 
   tvShows.forEach((show) => {
     const key = `${show.tvName}-${show.season}`;
     if (!uniqueShows.has(key)) {
-      uniqueShows.set(key, {
-        ...show,
-        [propiedad]: [...(show[propiedad] || [])],
-      });
-    } else {
-      const prev = uniqueShows.get(key);
-      prev[propiedad] = Array.from(
-        new Set([...prev[propiedad], ...(show[propiedad] || [])])
-      );
-      uniqueShows.set(key, prev);
+      uniqueShows.set(key, show);
     }
   });
 
+  // Creamos una nueva lista donde las series de TV están agrupadas
   const processedList = [
-    ...lista.filter((item) => !item.type),
-    ...Array.from(uniqueShows.values()),
+    ...lista.filter((item) => !item.type), // Películas
+    ...Array.from(uniqueShows.values()), // Series agrupadas
   ];
 
-  const contador = {};
-  for (const objeto of processedList) {
-    const valores = objeto[propiedad];
-    for (const valor of valores) {
-      contador[valor] = (contador[valor] || 0) + 1;
-    }
-  }
-  const repetidos = [];
-  for (const [valor, repeticiones] of Object.entries(contador)) {
-    if (repeticiones > 1) {
-      repetidos.push([valor, repeticiones]);
-    }
-  }
-  repetidos.sort((a, b) => b[1] - a[1]);
-  return repetidos;
+  const contador = processedList
+    .flatMap((objeto) => objeto[propiedad])
+    .reduce(
+      (contador, valor) => (
+        // eslint-disable-next-line no-sequences
+        (contador[valor] = (contador[valor] || 0) + 1), contador
+      ),
+      {}
+    );
+
+  return Object.entries(contador)
+    .filter(([_, repeticiones]) => repeticiones > 1)
+    .sort((a, b) => b[1] - a[1]);
 }
 
 export function calculateAllDuplicates(volumen) {
