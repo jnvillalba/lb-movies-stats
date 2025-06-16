@@ -72,30 +72,29 @@ const Category = ({ title, lista, filterList }) => {
   );
 
   return (
-    <div className="page-content">
-      <HeadingSection title={title} size={lista.length} />
-      {lista.length > 0 && (
-        <>
-          <div className="row justify-content-center">
-            {lista.slice(0, 12).map((director) => (
-              <NewCard
-                key={director[0]}
-                src={handleImg(director[0], posters, localDefaultImage)}
-                title={director[0]}
-                year={director[1]}
-                list={moviesList(director[0])}
-                className="lazy-load"
-                data-director={director[0]}
-              />
-            ))}
-          </div>
+    lista.length > 0 && (
+      <div className="page-content">
+        <HeadingSection title={title} size={lista.length} />
 
-          <div className="main-button">
-            <Link to={`/${title}`}> View All </Link>
-          </div>
-        </>
-      )}
-    </div>
+        <div className="row justify-content-center">
+          {lista.slice(0, 12).map((director) => (
+            <NewCard
+              key={director[0]}
+              src={handleImg(director[0], posters, localDefaultImage)}
+              title={director[0]}
+              year={director[1]}
+              list={moviesList(director[0])}
+              className="lazy-load"
+              data-director={director[0]}
+            />
+          ))}
+        </div>
+
+        <div className="main-button">
+          <Link to={`/${title}`}> View All </Link>
+        </div>
+      </div>
+    )
   );
 };
 
