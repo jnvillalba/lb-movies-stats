@@ -30,6 +30,13 @@ const MovieCard = ({ movie }) => {
       if (movie.img) {
         setPoster(movie.img);
       } else {
+        if (name.includes("Love, Death & Robots")) {
+          setPoster(
+            "https://m.media-amazon.com/images/M/MV5BMTc1MjIyNDI3Nl5BMl5BanBnXkFtZTgwMjQ1OTI0NzM@._V1_FMjpg_UY2048_.jpg"
+          );
+          return;
+        }
+
         if (name.includes("Black Mirror:")) {
           setPoster(
             "https://m.media-amazon.com/images/M/MV5BMGRjZDBjODMtMWQ1Zi00MWRkLTk5YTMtMDU1NTNkMzhkM2QwXkEyXkFqcGc@._V1_FMjpg_UX426_.jpg"

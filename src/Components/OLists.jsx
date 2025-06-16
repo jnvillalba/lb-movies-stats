@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Vol9 from "../Lists/Vol9";
 import {
   localDefaultImage,
@@ -39,7 +39,7 @@ const OLists = ({ title, lista }) => {
   return (
     <div className="container">
       <div className="page-content">
-        <HeadingSection title={title} />
+        <HeadingSection title={title} size={lista.length} />
         <div className="row justify-content-center">
           {lista.map((director) => (
             <NewCard

@@ -1,9 +1,10 @@
-import React from "react";
-
-const HeadingSection = ({ title }) => {
+const HeadingSection = ({ title, size }) => {
   return (
     <div className="heading-section text-lg-center">
-      <h4>{title}</h4>
+      <h4>
+        {title}
+        {size ? `: ${size}` : ""}
+      </h4>
     </div>
   );
 };
