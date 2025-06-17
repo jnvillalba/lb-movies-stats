@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar";
@@ -25,6 +25,7 @@ function App() {
   // Define volumes with their data for easier mapping
   const volumeData = [
     { path: "/", list: Vol9, name: "Vol9" },
+    { path: "/Vol9", list: Vol9, name: "Vol9" },
     { path: "/Vol8", list: Vol8, name: "Vol8" },
     { path: "/Vol7", list: movies, name: "Movies" },
     { path: "/Vol6", list: Vol6, name: "Vol6" },

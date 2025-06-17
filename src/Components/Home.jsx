@@ -23,9 +23,10 @@ function Home({ list }) {
     return resultado;
   };
 
-  const actoresRepetidos = useMemo(() => {
-    return medirTiempo(encontrarRepetidos, filteredList, "actors");
-  }, [filteredList]);
+  const actoresRepetidos = useMemo(
+    () => encontrarRepetidos(filteredList, "actors"),
+    [filteredList]
+  );
 
   const añosRepetidos = useMemo(
     () => yearsRepetidos(filteredList),
