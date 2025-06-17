@@ -3,21 +3,54 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./NewCard.css";
 
+const CONFIG = {
+  breakpoint: 768,
+  sizes: {
+    desktop: { width: 220, height: 220 },
+    mobile: { width: 160, height: 160 },
+  },
+  expandedWidth: {
+    card: 110,
+    list: 200,
+  },
+  animations: {
+    spring: { type: "spring", stiffness: 100 },
+    fade: { duration: 0.5 },
+  },
+};
+
 const NewCard = ({ src, title, year, list }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [size, setSize] = useState({ width: "220px", height: "220px" });
+  const [isMobile, setIsMobile] = useState(false);
 
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
+  const getDimensions = () => {
+    const size = isMobile ? CONFIG.sizes.mobile : CONFIG.sizes.desktop;
+    return {
+      width: `${size.width}px`,
+      height: `${size.height}px`,
+    };
   };
+
+  const getExpandedStyles = (type) => {
+    if (!isOpen) return getDimensions();
+
+    const styles = { height: "" };
+    if (type === "card") {
+      styles.width = `${CONFIG.expandedWidth.card}px`;
+    } else if (type === "list") {
+      styles.width = `${CONFIG.expandedWidth.list}px`;
+    } else {
+      styles.width = "auto";
+    }
+
+    return styles;
+  };
+
+  const toggleOpen = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     const updateSize = () => {
-      if (window.innerWidth <= 768) {
-        setSize({ width: "160px", height: "160px" });
-      } else {
-        setSize({ width: "220px", height: "220px" });
-      }
+      setIsMobile(window.innerWidth <= CONFIG.breakpoint);
     };
 
     updateSize();
@@ -25,23 +58,19 @@ const NewCard = ({ src, title, year, list }) => {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
+  const baseDimensions = getDimensions();
+
   return (
     <motion.div
       className={`new-card-container ${isOpen ? "expanded px-2" : ""}`}
-      initial={{ width: size.width, height: size.height }}
-      animate={{
-        width: isOpen ? "auto" : size.width,
-        height: isOpen ? "" : size.height,
-      }}
-      transition={isOpen ? { duration: 0 } : { type: "spring", stiffness: 100 }}
+      initial={baseDimensions}
+      animate={getExpandedStyles("container")}
+      transition={isOpen ? { duration: 0 } : CONFIG.animations.spring}
     >
       <div
         className={`new-card ${isOpen ? "expanded" : ""}`}
         onClick={toggleOpen}
-        style={{
-          width: isOpen ? "110px" : size.width,
-          height: isOpen ? "" : size.height,
-        }}
+        style={getExpandedStyles("card")}
       >
         <img src={src} alt={title} className="new-card-image" />
         <div className="new-card-overlay">
@@ -51,23 +80,18 @@ const NewCard = ({ src, title, year, list }) => {
           </Link>
         </div>
       </div>
+
       {isOpen && (
         <motion.div
           className="new-card-expanded"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={CONFIG.animations.fade}
         >
-          <ol
-            className="new-card-list"
-            style={{
-              width: isOpen ? "200px" : size.width,
-              height: isOpen ? "" : size.height,
-            }}
-          >
+          <ol className="new-card-list" style={getExpandedStyles("list")}>
             {list.map((pelicula) => (
-              <li key={pelicula.name + pelicula.year}>
+              <li key={`${pelicula.name}-${pelicula.year}`}>
                 {pelicula.name} ({pelicula.year})
               </li>
             ))}
