@@ -74,7 +74,7 @@ const Category = ({ title, lista, filterList }) => {
   return (
     lista.length > 0 && (
       <div className="page-content">
-        <HeadingSection title={title} size={lista.length} />
+        <HeadingSection title={title} />
 
         <div className="row justify-content-center">
           {lista.slice(0, 12).map((director) => (
