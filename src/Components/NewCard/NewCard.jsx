@@ -33,13 +33,13 @@ const NewCard = ({ src, title, year, list }) => {
         width: isOpen ? "auto" : size.width,
         height: isOpen ? "" : size.height,
       }}
-      transition={{ type: "spring", stiffness: 100 }}
+      transition={isOpen ? { duration: 0 } : { type: "spring", stiffness: 100 }}
     >
       <div
         className={`new-card ${isOpen ? "expanded" : ""}`}
         onClick={toggleOpen}
         style={{
-          width: isOpen ? "auto" : size.width,
+          width: isOpen ? "110px" : size.width,
           height: isOpen ? "" : size.height,
         }}
       >
@@ -62,7 +62,7 @@ const NewCard = ({ src, title, year, list }) => {
           <ol
             className="new-card-list"
             style={{
-              width: isOpen ? "160px" : size.width,
+              width: isOpen ? "200px" : size.width,
               height: isOpen ? "" : size.height,
             }}
           >
