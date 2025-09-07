@@ -25,7 +25,7 @@ export const personPoster = async (name, setPosters) => {
       [name]: localImage,
     }));
     imageCache.set(name, localImage); // Almacenar en cache
-    return; // Terminamos la función aquí si se encuentra una imagen local
+    return;
   }
 
   // Si no hay imagen local, procedemos con la búsqueda en la API
@@ -41,16 +41,38 @@ export const personPoster = async (name, setPosters) => {
 
     const { results } = await response.json();
 
-    if (results.length > 0 && results[0].profile_path) {
-      const posterUrl = `http://image.tmdb.org/t/p/w500/${results[0].profile_path}`;
+    // Buscar el primer profile_path válido
+    let validProfilePath = null;
+    for (let i = 0; i < results.length; i++) {
+      if (results[i].profile_path) {
+        validProfilePath = results[i].profile_path;
+        break;
+      }
+    }
+
+    if (validProfilePath) {
+      const posterUrl = `http://image.tmdb.org/t/p/w500/${validProfilePath}`;
       setPosters((prevState) => ({
         ...prevState,
         [name]: posterUrl,
       }));
       imageCache.set(name, posterUrl); // Almacenar en cache
+    } else {
+      // Si ninguno tiene profile_path, usar localDefaultImage y cachear
+      setPosters((prevState) => ({
+        ...prevState,
+        [name]: localDefaultImage,
+      }));
+      imageCache.set(name, localDefaultImage);
     }
   } catch (error) {
     console.error("Error al buscar el póster:", name);
+    // En caso de error, usar localDefaultImage y cachear
+    setPosters((prevState) => ({
+      ...prevState,
+      [name]: localDefaultImage,
+    }));
+    imageCache.set(name, localDefaultImage);
   }
 };
 
