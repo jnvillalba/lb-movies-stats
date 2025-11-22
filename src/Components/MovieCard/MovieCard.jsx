@@ -14,7 +14,7 @@ const MovieCard = ({ movie }) => {
   useEffect(() => {
     const updateSize = () => {
       if (window.innerWidth <= 768) {
-        setSize({ width: "160px", height: "225" });
+        setSize({ width: "150", height: "215" });
       } else {
         setSize({ width: "350px", height: "450px" });
       }

@@ -7,7 +7,7 @@ const CONFIG = {
   breakpoint: 768,
   sizes: {
     desktop: { width: 220, height: 220 },
-    mobile: { width: 160, height: 160 },
+    mobile: { width: 150, height: 150 },
   },
   expandedWidth: {
     card: 110,
