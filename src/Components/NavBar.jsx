@@ -6,7 +6,7 @@ const NavBar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const volumes = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+  const volumes = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
   const navLinks = [
     { path: "/Last", label: "Last" },
