@@ -1,5 +1,4 @@
-import React from "react";
-import Vol9 from "../Lists/Vol9";
+import Vol10 from "../Lists/Vol10";
 import HeadingSection from "./HeadingSection";
 import YearCard from "./YearCard/YearCard";
 
@@ -8,7 +7,7 @@ const ViewAllYears = ({ title, lista }) => {
     switch (title) {
       case "Years":
         // eslint-disable-next-line eqeqeq
-        return Vol9.filter((x) => x.year == name);
+        return Vol10.filter((x) => x.year == name);
       default:
         return [];
     }

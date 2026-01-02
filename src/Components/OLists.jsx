@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Vol9 from "../Lists/Vol9";
+import Vol10 from "../Lists/Vol10";
 import {
   localDefaultImage,
   localimg,
@@ -26,11 +26,11 @@ const OLists = ({ title, lista }) => {
   const moviesList = (name) => {
     switch (title) {
       case "Actors":
-        return Vol9.filter((x) => x.actors.includes(name));
+        return Vol10.filter((x) => x.actors.includes(name));
       case "Directors":
-        return Vol9.filter((x) => x.directors.includes(name));
+        return Vol10.filter((x) => x.directors.includes(name));
       case "Writers":
-        return Vol9.filter((x) => x.writers.includes(name));
+        return Vol10.filter((x) => x.writers.includes(name));
       default:
         return [];
     }

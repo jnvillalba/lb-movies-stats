@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import movies from "./Lists/movies";
+import Vol10 from "./Lists/Vol0.js";
 import Vol1 from "./Lists/Vol1";
 import Vol2 from "./Lists/Vol2";
 import Vol3 from "./Lists/Vol3";
@@ -24,7 +25,8 @@ const ViewAllYears = lazy(() => import("./Components/ViewAllYears"));
 function App() {
   // Define volumes with their data for easier mapping
   const volumeData = [
-    { path: "/", list: Vol9, name: "Vol9" },
+    { path: "/", list: Vol10, name: "Vol10" },
+    { path: "/Vol10", list: Vol10, name: "Vol10" },
     { path: "/Vol9", list: Vol9, name: "Vol9" },
     { path: "/Vol8", list: Vol8, name: "Vol8" },
     { path: "/Vol7", list: movies, name: "Movies" },
@@ -37,14 +39,14 @@ function App() {
   ];
 
   // Extract repetitions once
-  const duplicates = calculateAllDuplicates(Vol9);
+  const duplicates = calculateAllDuplicates(Vol10);
 
   // Create combined list of all volumes
   const todas = volumeData
     .flatMap((volume) => volume.list)
     .sort((a, b) => a.year - b.year);
 
-  const last = Vol9.slice(-6).reverse();
+  const last = Vol10.slice(-6).reverse();
 
   const categoryRoutes = [
     {
@@ -91,7 +93,7 @@ function App() {
           <Route exact path="/:id" element={<YearsMovies />} />
 
           {/* Fallback route */}
-          <Route path="*" element={<Home list={Vol9} />} />
+          <Route path="*" element={<Home list={Vol10} />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
