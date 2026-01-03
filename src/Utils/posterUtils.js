@@ -92,3 +92,33 @@ export const handleImg = (name, posters, localDefaultImage) => {
 
   return poster;
 };
+
+// --- Movie posters ---
+// Casos especiales para posters de películas/series.
+// Para agregar uno nuevo, agregá un objeto { includes, url } o { test, url }.
+const specialMoviePosterRules = [
+  {
+    includes: "Love, Death & Robots",
+    url: "https://m.media-amazon.com/images/M/MV5BMTc1MjIyNDI3Nl5BMl5BanBnXkFtZTgwMjQ1OTI0NzM@._V1_FMjpg_UY2048_.jpg",
+  },
+  {
+    includes: "Black Mirror:",
+    url: "https://m.media-amazon.com/images/M/MV5BMGRjZDBjODMtMWQ1Zi00MWRkLTk5YTMtMDU1NTNkMzhkM2QwXkEyXkFqcGc@._V1_FMjpg_UX426_.jpg",
+  },
+  {
+    includes: "El Eternauta",
+    url: "https://m.media-amazon.com/images/M/MV5BYWUyZjBhOTctOGU0Ni00ZDE1LWE4NjUtNjM0NjAzYTEwMmRiXkEyXkFqcGc@._V1_FMjpg_UY8508_.jpg",
+  },
+];
+
+export const resolveSpecialMoviePoster = (name) => {
+  if (!name) return undefined;
+
+  const rule = specialMoviePosterRules.find((r) => {
+    if (typeof r.test === "function") return r.test(name);
+    if (typeof r.includes === "string") return name.includes(r.includes);
+    return false;
+  });
+
+  return rule?.url;
+};

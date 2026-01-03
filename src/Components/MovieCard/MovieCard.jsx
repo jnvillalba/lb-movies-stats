@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { resolveSpecialMoviePoster } from "../../Utils/posterUtils";
 import "./MovieCard.css";
 
 const MovieCard = ({ movie }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [poster, setPoster] = useState();
-  const [size, setSize] = useState({ width: "220px", height: "220px" });
+  const [size, setSize] = useState({ width: "150px", height: "180px" });
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -14,7 +15,7 @@ const MovieCard = ({ movie }) => {
   useEffect(() => {
     const updateSize = () => {
       if (window.innerWidth <= 768) {
-        setSize({ width: "150", height: "215" });
+        setSize({ width: "150px", height: "180px" });
       } else {
         setSize({ width: "350px", height: "450px" });
       }
@@ -26,50 +27,43 @@ const MovieCard = ({ movie }) => {
   }, []);
 
   useEffect(() => {
-    const moviePoster = (name) => {
+    let cancelled = false;
+
+    const moviePoster = async (name) => {
       if (movie.img) {
         setPoster(movie.img);
-      } else {
-        if (name.includes("Love, Death & Robots")) {
-          setPoster(
-            "https://m.media-amazon.com/images/M/MV5BMTc1MjIyNDI3Nl5BMl5BanBnXkFtZTgwMjQ1OTI0NzM@._V1_FMjpg_UY2048_.jpg"
-          );
-          return;
-        }
+        return;
+      }
 
-        if (name.includes("Black Mirror:")) {
-          setPoster(
-            "https://m.media-amazon.com/images/M/MV5BMGRjZDBjODMtMWQ1Zi00MWRkLTk5YTMtMDU1NTNkMzhkM2QwXkEyXkFqcGc@._V1_FMjpg_UX426_.jpg"
-          );
-          return;
-        }
-        if (name.includes("El Eternauta")) {
-          setPoster(
-            "https://m.media-amazon.com/images/M/MV5BYWUyZjBhOTctOGU0Ni00ZDE1LWE4NjUtNjM0NjAzYTEwMmRiXkEyXkFqcGc@._V1_FMjpg_UY8508_.jpg"
-          );
-          return;
-        }
+      const specialPoster = resolveSpecialMoviePoster(name);
+      if (specialPoster) {
+        setPoster(specialPoster);
+        return;
+      }
 
-        fetch(
+      try {
+        const response = await fetch(
           `https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${name}`
-        )
-          .then((response) => response.json())
-          .then((json) => {
-            if (json.results.length > 0) {
-              setPoster(
-                `http://image.tmdb.org/t/p/w500/${json.results[0].poster_path}`
-              );
-            } else {
-              setPoster("Not Found");
-            }
-          })
-          .catch((error) => {
-            console.error(error);
-          });
+        );
+        const json = await response.json();
+        if (cancelled) return;
+
+        if (json.results?.length > 0) {
+          setPoster(
+            `http://image.tmdb.org/t/p/w500/${json.results[0].poster_path}`
+          );
+        } else {
+          setPoster("Not Found");
+        }
+      } catch (error) {
+        console.error(error);
       }
     };
 
     moviePoster(movie.name);
+    return () => {
+      cancelled = true;
+    };
   }, [movie.name, movie.img]);
 
   return (
