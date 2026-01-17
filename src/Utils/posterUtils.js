@@ -95,7 +95,6 @@ export const handleImg = (name, posters, localDefaultImage) => {
 
 // --- Movie posters ---
 // Casos especiales para posters de películas/series.
-// Para agregar uno nuevo, agregá un objeto { includes, url } o { test, url }.
 const specialMoviePosterRules = [
   {
     includes: "Love, Death & Robots",
@@ -108,6 +107,10 @@ const specialMoviePosterRules = [
   {
     includes: "El Eternauta",
     url: "https://m.media-amazon.com/images/M/MV5BYWUyZjBhOTctOGU0Ni00ZDE1LWE4NjUtNjM0NjAzYTEwMmRiXkEyXkFqcGc@._V1_FMjpg_UY8508_.jpg",
+  },
+  {
+    includes: "Pluribus",
+    url: "https://m.media-amazon.com/images/M/MV5BOWNlM2E1MDMtYmI5MS00NDQ1LWI3NTctM2VlNjQ5OTAxYTNmXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
   },
 ];
 
