@@ -4235,9 +4235,9 @@ let Vol9 = [
       "Danny Ashok",
       "Jyuddah Jaymes",
       "Willem van der Vegt",
-      "Sanjeev Kohli",
+
       "Declan Baxter",
-      "Sarah Lam",
+
       "Attila Árpa",
       "Bálint Adorjáni",
       "Katrina Anne Ward",
@@ -4256,7 +4256,7 @@ let Vol9 = [
       "Heather Choo",
       "Claudia Heinz",
       "Sanjay Prabhakar",
-      "Zsolt Szentirmai",
+
       "Zsolt Szentirmai",
       "Péter Jankovics",
       "Narantsogt Tsogtsaikhan",
@@ -8991,7 +8991,7 @@ let Vol9 = [
       "Courtney Coleman",
       "Christina Souza",
       "Emery Ho‘okano-Briel",
-      "Justin Martin",
+
       "Isabelle Du",
       "Elle Hipa",
       "Arianna Jordan Ignacio Acidera",
@@ -9040,7 +9040,6 @@ let Vol9 = [
       "Genesis Molina",
       "Alexander David Johnson",
       "Justin Martin",
-      "Mike Mitchell",
     ],
   },
   {
@@ -11689,7 +11688,6 @@ let Vol9 = [
       "Derek Jue",
       "Sean Maley",
       "Diane Darnell",
-      "Diana Davidson",
       "Lolita Rios",
       "Stephen Zacks",
       "Jauna D'Amico",
@@ -13151,7 +13149,6 @@ let Vol9 = [
       "Sara Arrington",
       "Kenneth Fok",
       "Nicole Sherwin",
-      "Stephen Bishop",
       "Sherry Stone",
       "Sebastian Roché",
       "Trayan Milenov-Troy",

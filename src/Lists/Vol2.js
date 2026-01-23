@@ -384,7 +384,6 @@ let Vol2 = [
       "Cindy Engle",
       "Amy Gieske",
       "Philip Greene",
-      "Philip Greene",
       "Doug Henderson",
       "Ken Holliday",
       "Sidmar Holloman",

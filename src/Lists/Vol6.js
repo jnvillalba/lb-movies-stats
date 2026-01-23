@@ -3413,7 +3413,6 @@ let Vol6 = [
       "Oleg Kim",
       "Irina Aylyarova",
       "Martin Harris",
-      "Karel Heřmánek",
       "Michelle Twarowska",
       "Michel Carliez",
       "Grace Russo",
@@ -6446,7 +6445,6 @@ let Vol6 = [
       "Donna Marie Sludds",
       "David McSavage",
       "Pat Mooney",
-      "Anna Murphy",
       "Sam McGillicuddy",
       "Rory O'Neill",
       "Nancy Quinney",
@@ -6901,7 +6899,6 @@ let Vol6 = [
       "Woody Fu",
       "Maximilian Lee Piazza",
       "Martin Lee",
-      "Greg Swartz",
       "Maven Morgan",
       "Giovanni Daniel Pollina",
       "P.J. Byrne",
@@ -9890,7 +9887,7 @@ let Vol6 = [
       "Paul Worley",
     ],
   },
-  
+
 ];
 
 export default Vol6;
