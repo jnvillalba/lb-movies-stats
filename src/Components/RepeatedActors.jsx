@@ -3,9 +3,6 @@ const RepeatedActors = ({ data }) => {
   return (
     <div className="container mt-4">
       <h2 className="text-white mb-4">Data Integrity Errors</h2>
-      <p className="text-secondary">
-        Checking for actors listed multiple times within the same movie logic.
-      </p>
       
       {data.length === 0 ? (
         <div className="alert alert-success" role="alert">
