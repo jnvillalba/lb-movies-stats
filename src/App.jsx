@@ -15,7 +15,7 @@ import Vol5 from "./Lists/Vol5";
 import Vol6 from "./Lists/Vol6";
 import Vol8 from "./Lists/Vol8";
 import Vol9 from "./Lists/Vol9.js";
-import { calculateAllDuplicates, encontrarRepetidos } from "./Utils/Utils.js";
+import { calculateAllDuplicates } from "./Utils/Utils.js";
 
 // Lazy-loaded components
 const Home = lazy(() => import("./Components/Home"));
@@ -48,20 +48,30 @@ function App() {
     .flatMap((volume) => volume.list)
     .sort((a, b) => a.year - b.year);
 
-  // Calculate global repeated actors
-  const globalRepeatedActors = encontrarRepetidos(todas, "actors"); // Returns [[name, count], ...]
+  // Calculate data errors (actors duplicated within the SAME movie)
+  const dataErrors = todas.reduce((acc, movie) => {
+    if (!movie.actors) return acc;
 
-  // Map to detailed data
-  const repeatedActorsData = globalRepeatedActors.map(([name, count]) => {
-    const actorMovies = todas.filter((movie) =>
-      movie.actors && movie.actors.includes(name)
-    );
-    return {
-      name,
-      count,
-      movies: actorMovies,
-    };
-  });
+    const counts = {};
+    const duplicates = [];
+
+    movie.actors.forEach((actor) => {
+      counts[actor] = (counts[actor] || 0) + 1;
+      if (counts[actor] === 2) {
+        duplicates.push(actor);
+      }
+    });
+
+    if (duplicates.length > 0) {
+      acc.push({
+        movieName: movie.name,
+        year: movie.year,
+        duplicates: duplicates,
+      });
+    }
+
+    return acc;
+  }, []);
 
   const last = Vol10.slice(-6).reverse();
 
@@ -86,7 +96,7 @@ function App() {
     { path: "/All", element: <Home list={todas} /> },
     {
       path: "/RepeatedActors",
-      element: <RepeatedActors data={repeatedActorsData} />,
+      element: <RepeatedActors data={dataErrors} />,
     },
   ];
 
