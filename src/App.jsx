@@ -4,6 +4,7 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar";
+import RepeatedActors from "./Components/RepeatedActors";
 import movies from "./Lists/movies";
 import Vol1 from "./Lists/Vol1";
 import Vol10 from "./Lists/Vol10.js";
@@ -14,7 +15,8 @@ import Vol5 from "./Lists/Vol5";
 import Vol6 from "./Lists/Vol6";
 import Vol8 from "./Lists/Vol8";
 import Vol9 from "./Lists/Vol9.js";
-import { calculateAllDuplicates } from "./Utils/Utils.js";
+import { calculateAllDuplicates, encontrarRepetidos } from "./Utils/Utils.js";
+
 // Lazy-loaded components
 const Home = lazy(() => import("./Components/Home"));
 const YearsMovies = lazy(() => import("./Components/YearsMovies"));
@@ -46,6 +48,21 @@ function App() {
     .flatMap((volume) => volume.list)
     .sort((a, b) => a.year - b.year);
 
+  // Calculate global repeated actors
+  const globalRepeatedActors = encontrarRepetidos(todas, "actors"); // Returns [[name, count], ...]
+
+  // Map to detailed data
+  const repeatedActorsData = globalRepeatedActors.map(([name, count]) => {
+    const actorMovies = todas.filter((movie) =>
+      movie.actors && movie.actors.includes(name)
+    );
+    return {
+      name,
+      count,
+      movies: actorMovies,
+    };
+  });
+
   const last = Vol10.slice(-6).reverse();
 
   const categoryRoutes = [
@@ -67,6 +84,10 @@ function App() {
     },
     { path: "/Last", element: <Details title="Last" lista={last} /> },
     { path: "/All", element: <Home list={todas} /> },
+    {
+      path: "/RepeatedActors",
+      element: <RepeatedActors data={repeatedActorsData} />,
+    },
   ];
 
   return (

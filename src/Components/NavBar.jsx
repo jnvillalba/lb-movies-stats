@@ -15,6 +15,7 @@ const NavBar = () => {
     { path: "/Writers", label: "Writers" },
     { path: "/Actors", label: "Actors" },
     { path: "/Years", label: "Years" },
+    { path: "/RepeatedActors", label: "Admin" },
   ];
 
   return (
