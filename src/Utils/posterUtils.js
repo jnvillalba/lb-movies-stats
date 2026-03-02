@@ -36,7 +36,7 @@ export const personPoster = async (name, setPosters) => {
     const response = await fetch(apiUrl);
     if (!response.ok)
       throw new Error(
-        "Error en la respuesta de la API buscando poster para " + name
+        "Error en la respuesta de la API buscando poster para " + name,
       );
 
     const { results } = await response.json();
@@ -111,6 +111,10 @@ const specialMoviePosterRules = [
   {
     includes: "Pluribus",
     url: "https://m.media-amazon.com/images/M/MV5BOWNlM2E1MDMtYmI5MS00NDQ1LWI3NTctM2VlNjQ5OTAxYTNmXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
+  },
+  {
+    includes: "Dr. House",
+    url: "https://m.media-amazon.com/images/M/MV5BMDZmZGRiYTEtMjRhYy00N2FkLTkzYjAtMWJhNWRiZDAzODA2XkEyXkFqcGc@._V1_FMjpg_UX1057_.jpg",
   },
 ];
 
