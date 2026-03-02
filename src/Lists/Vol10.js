@@ -3127,7 +3127,7 @@ let Vol10 = [
   {
     type: "TV",
     tvName: "Dr. House",
-    season: 8,
+    season: 0,
     name: "Dr. House",
     year: "2004",
     directors: [
@@ -3212,6 +3212,18 @@ let Vol10 = [
       "Fred Durst",
       "Tyson Ritter",
       "Patrick Stump",
+      "Skylar Astin ",
+      "Meagan Good",
+      "Michael B. Jordan",
+      "Dave Matthews",
+      "Lin Manuel Miranda",
+      "Mira Sorvino",
+      "Michelle Trachtenberg",
+      "Sela Ward",
+      "Katheryn Winnick",
+      "Robin Tunney",
+      "Ryan Hurst",
+      "Steve Urkel",
     ],
   },
 ];
