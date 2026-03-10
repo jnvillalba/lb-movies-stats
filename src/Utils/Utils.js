@@ -19,14 +19,13 @@ export function yearsRepetidos(lista) {
   const contador = processedList
     .flatMap((objeto) => objeto["year"])
     .reduce(
-      (contador, item) => (
+      (contador, item) =>
         // eslint-disable-next-line no-sequences
-        (contador[item] = (contador[item] || 0) + 1), contador
-      ),
-      {}
+        ((contador[item] = (contador[item] || 0) + 1), contador),
+      {},
     );
   const repetidos = Object.entries(contador).filter(
-    ([_, repeticiones]) => repeticiones > 1
+    ([_, repeticiones]) => repeticiones > 1,
   );
   return repetidos.sort((a, b) => b[1] - a[1]);
 }
@@ -52,16 +51,24 @@ export function encontrarRepetidos(lista, propiedad) {
   const contador = processedList
     .flatMap((objeto) => objeto[propiedad])
     .reduce(
-      (contador, valor) => (
+      (contador, valor) =>
         // eslint-disable-next-line no-sequences
-        (contador[valor] = (contador[valor] || 0) + 1), contador
-      ),
-      {}
+        ((contador[valor] = (contador[valor] || 0) + 1), contador),
+      {},
     );
 
-  return Object.entries(contador)
+  const repetidos = Object.entries(contador)
     .filter(([_, repeticiones]) => repeticiones > 1)
     .sort((a, b) => b[1] - a[1]);
+
+  const isTvOnly = lista.every((item) => item.type === "TV");
+  if (repetidos.length === 0 && isTvOnly) {
+    return Object.entries(contador)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 12);
+  }
+
+  return repetidos;
 }
 
 export function calculateAllDuplicates(volumen) {
