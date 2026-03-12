@@ -64,7 +64,7 @@ export function encontrarRepetidos(lista, propiedad) {
   const isTvOnly = lista.every((item) => item.type === "TV");
   if (repetidos.length === 0 && isTvOnly) {
     return Object.entries(contador)
-      .sort((a, b) => b[1] - a[1])
+      .sort(() => Math.random() - 0.5)
       .slice(0, 12);
   }
 
