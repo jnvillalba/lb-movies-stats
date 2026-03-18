@@ -2,6 +2,9 @@
   "name": "lb-movies-stats",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.3.21",
