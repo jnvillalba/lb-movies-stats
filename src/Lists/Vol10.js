@@ -3272,8 +3272,23 @@ let Vol10 = [
     season: 4,
     name: "Invencible",
     year: "2026",
-    directors: ["Dan Duncan", "Stephanie Gonzaga", "Shaun O'Neil"],
-    writers: ["Robert Kirkman", "Cory Walker", "Ryan Ottley", "Helen Leigh"],
+    directors: [
+      "Dan Duncan",
+      "Shaun O'Neil",
+      "Sol Choi",
+
+      "Stephanie Gonzaga",
+
+      "Jason Zurek",
+    ],
+    writers: [
+      "Robert Kirkman",
+      "Cory Walker",
+      "Ryan Ottley",
+      "Helen Leigh",
+      "Simon Racioppa",
+      "Ross Stracke",
+    ],
     actors: [
       "Steven Yeun",
       "Sandra Oh",
