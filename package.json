@@ -24,12 +24,6 @@
     "build": "vite build",
     "test": "echo \"No hay tests configurados\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
