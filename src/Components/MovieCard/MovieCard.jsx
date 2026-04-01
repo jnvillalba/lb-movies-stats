@@ -6,6 +6,7 @@ import "./MovieCard.css";
 
 const MovieCard = memo(({ movie }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const { data: poster } = useQuery({
     queryKey: ["movie-poster", movie.name],
@@ -15,12 +16,22 @@ const MovieCard = memo(({ movie }) => {
 
   const finalPoster = movie.img || poster;
 
-  const toggleOpen = useCallback(() => setIsOpen((prev) => !prev), []);
+  const toggleOpen = useCallback(() => {
+    setIsOpen((prev) => {
+      const next = !prev;
+      if (next) setIsExpanded(true);
+      return next;
+    });
+  }, []);
+
+  const handleExitComplete = useCallback(() => {
+    setIsExpanded(false);
+  }, []);
 
   return (
-    <div className={`movie-card-container ${isOpen ? "expanded" : ""}`}>
+    <div className={`movie-card-container ${isExpanded ? "expanded" : ""}`}>
       <div
-        className={`movie-card ${isOpen ? "expanded" : ""}`}
+        className={`movie-card ${isExpanded ? "expanded" : ""}`}
         onClick={toggleOpen}
       >
         <img
@@ -30,7 +41,7 @@ const MovieCard = memo(({ movie }) => {
           loading="lazy"
         />
       </div>
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={handleExitComplete}>
         {isOpen && (
           <motion.div
             className="movie-card-expanded"
