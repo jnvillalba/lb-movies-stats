@@ -24,21 +24,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
-  .movie-card-container {
-    --card-w: 150px;
-    --card-h: 180px;
-  }
-
-  .movie-card-image {
-    max-width: 300px;
-  }
-  .expanded {
-    min-height: -webkit-fill-available;
-    overflow-y: auto;
-  }
-}
-
 .movie-card.expanded .movie-card-image {
   border-radius: 15px 0 0 15px;
   overflow-y: auto;
@@ -56,4 +41,42 @@
   border-radius: 0 15px 15px 0;
   width: 100%;
   overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .movie-card-container {
+    --card-h: 180px;
+    width: calc(50% - 10px);
+    padding: 0;
+  }
+
+  .movie-card-container.expanded {
+    width: 100%;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .movie-card {
+    width: 100%;
+  }
+
+  .movie-card.expanded {
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .movie-card.expanded .movie-card-image {
+    object-fit: fill;
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+  }
+
+  .movie-card-expanded {
+    flex: 1;
+    width: auto;
+    font-size: 0.85rem;
+    border-radius: 0 10px 10px 0;
+    max-height: 300px;
+  }
 }
