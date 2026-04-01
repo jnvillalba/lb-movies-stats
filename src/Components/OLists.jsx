@@ -1,5 +1,5 @@
 import Vol10 from "../Lists/Vol10";
-import { useLazyPosters } from "../hooks/useLazyPosters";
+import { usePersonPosters } from "../hooks/usePersonPosters";
 import { handleImg } from "../Utils/posterUtils";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
@@ -13,7 +13,7 @@ import NewCard from "./NewCard/NewCard";
  * @param {Array}  lista  - [name, count] tuples
  */
 const OLists = ({ title, lista }) => {
-  const { posters } = useLazyPosters(lista);
+  const { posters } = usePersonPosters(lista);
 
   const getMoviesForItem = (name) => {
     switch (title) {

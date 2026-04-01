@@ -5,8 +5,7 @@ export const localDefaultImage =
 
 /**
  * Returns the locally-stored image URL for a given person name, or an empty
- * string if none exists. Fixed: internal variable no longer shadows the
- * function name.
+ * string if none exists.
  *
  * @param {string} name
  * @returns {string}
@@ -16,86 +15,65 @@ export const localimg = (name) => {
   return match?.img ?? "";
 };
 
-// ─── Image Cache ──────────────────────────────────────────────────────────────
-// Stores resolved URLs so we never hit the network twice for the same name.
-const imageCache = new Map();
-
-// Stores in-flight promises to prevent duplicate concurrent requests for the
-// same person (race condition fix).
-const pendingRequests = new Map();
-
 /**
  * Fetches the TMDB poster URL for a person by name.
- * Pure function — returns a Promise<string> instead of calling setState
- * directly. The caller decides what to do with the result.
- *
- * Includes:
- *  - Local image priority over API
- *  - Module-level result cache (no repeat network calls)
- *  - In-flight deduplication (no duplicate concurrent requests)
- *  - HTTPS image URLs
- *  - Proper multi-word name encoding
+ * Pure async function — caching, deduplication, and persistence are all
+ * handled by React Query. This function just does the fetch.
  *
  * @param {string} name
  * @returns {Promise<string>} Resolved poster URL, falls back to localDefaultImage.
  */
 export async function fetchPersonPoster(name) {
-  // 1. Return local image immediately — no network needed.
+  // Return local image immediately — no network needed.
   const localImage = localimg(name);
-  if (localImage) {
-    imageCache.set(name, localImage);
-    return localImage;
-  }
+  if (localImage) return localImage;
 
-  // 2. Return cached result if we've already resolved it.
-  if (imageCache.has(name)) return imageCache.get(name);
-
-  // 3. Return the in-flight promise if a request is already running.
-  if (pendingRequests.has(name)) return pendingRequests.get(name);
-
-  // 4. Fetch from TMDB.
   const formattedName = encodeURIComponent(name.toLowerCase());
   const apiKey = import.meta.env.VITE_TMDB_API_KEY;
   const apiUrl = `https://api.themoviedb.org/3/search/person?api_key=${apiKey}&query=${formattedName}`;
 
-  const promise = fetch(apiUrl)
-    .then((res) => {
-      if (!res.ok) throw new Error(`TMDB API error for "${name}"`);
-      return res.json();
-    })
-    .then(({ results }) => {
-      const hit = results.find((r) => r.profile_path);
-      const url = hit
-        ? `https://image.tmdb.org/t/p/w500/${hit.profile_path}`
-        : localDefaultImage;
-      imageCache.set(name, url);
-      return url;
-    })
-    .catch(() => {
-      // On any error fall back to the default avatar and cache it so we don't
-      // keep retrying on every render.
-      imageCache.set(name, localDefaultImage);
-      return localDefaultImage;
-    })
-    .finally(() => {
-      pendingRequests.delete(name);
-    });
+  const res = await fetch(apiUrl);
+  if (!res.ok) throw new Error(`TMDB API error for "${name}"`);
+  const { results } = await res.json();
 
-  pendingRequests.set(name, promise);
-  return promise;
+  const hit = results.find((r) => r.profile_path);
+  return hit
+    ? `https://image.tmdb.org/t/p/w500/${hit.profile_path}`
+    : localDefaultImage;
 }
 
 /**
- * Returns the best available image URL for a name:
- * cache → posters state → default.
- * No longer needs localDefaultImage as a parameter (it's a module constant).
+ * Fetches the TMDB poster URL for a movie by title.
+ * Pure async function — caching, deduplication, and persistence are all
+ * handled by React Query.
+ *
+ * @param {string} name
+ * @returns {Promise<string>} Resolved poster URL, or "Not Found" if no match.
+ */
+export async function fetchMoviePoster(name) {
+  const specialPoster = resolveSpecialMoviePoster(name);
+  if (specialPoster) return specialPoster;
+
+  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+  const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(name)}`;
+
+  const res = await fetch(apiUrl);
+  if (!res.ok) throw new Error(`TMDB API error for "${name}"`);
+  const { results } = await res.json();
+
+  return results?.[0]?.poster_path
+    ? `https://image.tmdb.org/t/p/w500/${results[0].poster_path}`
+    : "Not Found";
+}
+
+/**
+ * Returns the best available image URL for a name from the posters map.
  *
  * @param {string} name
  * @param {Record<string, string>} posters - Current posters state from the hook.
  * @returns {string}
  */
 export const handleImg = (name, posters) => {
-  if (imageCache.has(name)) return imageCache.get(name);
   return posters[name] || localDefaultImage;
 };
 

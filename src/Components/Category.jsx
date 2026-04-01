@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useLazyPosters } from "../hooks/useLazyPosters";
+import { usePersonPosters } from "../hooks/usePersonPosters";
 import { handleImg } from "../Utils/posterUtils";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
@@ -18,7 +18,7 @@ import NewCard from "./NewCard/NewCard";
  *                                      the filter logic.
  */
 const Category = ({ title, lista, getMoviesForItem }) => {
-  const { posters } = useLazyPosters(lista);
+  const { posters } = usePersonPosters(lista);
 
   return (
     lista.length > 0 && (
