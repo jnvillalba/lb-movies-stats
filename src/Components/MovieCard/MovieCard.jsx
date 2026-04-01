@@ -43,7 +43,7 @@ const MovieCard = ({ movie }) => {
 
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${name}`
+          `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_TMDB_API_KEY}&query=${name}`
         );
         const json = await response.json();
         if (cancelled) return;
