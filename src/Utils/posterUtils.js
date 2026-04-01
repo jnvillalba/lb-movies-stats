@@ -1,100 +1,106 @@
-// src/utils/posterUtils.js
-
 import cast from "../Lists/cast";
-
-// Cache para las imágenes ya obtenidas
-const imageCache = new Map();
 
 export const localDefaultImage =
   "https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg";
 
+/**
+ * Returns the locally-stored image URL for a given person name, or an empty
+ * string if none exists. Fixed: internal variable no longer shadows the
+ * function name.
+ *
+ * @param {string} name
+ * @returns {string}
+ */
 export const localimg = (name) => {
-  let localimg = cast.find((x) => x.name === name);
-  let img = localimg ? localimg.img : "";
-  return img;
+  const match = cast.find((x) => x.name === name);
+  return match?.img ?? "";
 };
 
-export const personPoster = async (name, setPosters) => {
-  // Primero verificamos si existe una imagen local
+// ─── Image Cache ──────────────────────────────────────────────────────────────
+// Stores resolved URLs so we never hit the network twice for the same name.
+const imageCache = new Map();
+
+// Stores in-flight promises to prevent duplicate concurrent requests for the
+// same person (race condition fix).
+const pendingRequests = new Map();
+
+/**
+ * Fetches the TMDB poster URL for a person by name.
+ * Pure function — returns a Promise<string> instead of calling setState
+ * directly. The caller decides what to do with the result.
+ *
+ * Includes:
+ *  - Local image priority over API
+ *  - Module-level result cache (no repeat network calls)
+ *  - In-flight deduplication (no duplicate concurrent requests)
+ *  - HTTPS image URLs
+ *  - Proper multi-word name encoding
+ *
+ * @param {string} name
+ * @returns {Promise<string>} Resolved poster URL, falls back to localDefaultImage.
+ */
+export async function fetchPersonPoster(name) {
+  // 1. Return local image immediately — no network needed.
   const localImage = localimg(name);
-
-  // Si existe una imagen local, la usamos en lugar de buscar en la API
   if (localImage) {
-    setPosters((prevState) => ({
-      ...prevState,
-      [name]: localImage,
-    }));
-    imageCache.set(name, localImage); // Almacenar en cache
-    return;
+    imageCache.set(name, localImage);
+    return localImage;
   }
 
-  // Si no hay imagen local, procedemos con la búsqueda en la API
-  const formattedName = name.toLowerCase().replace(" ", "+");
-  const apiUrl = `https://api.themoviedb.org/3/search/person?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${formattedName}`;
+  // 2. Return cached result if we've already resolved it.
+  if (imageCache.has(name)) return imageCache.get(name);
 
-  try {
-    const response = await fetch(apiUrl);
-    if (!response.ok)
-      throw new Error(
-        "Error en la respuesta de la API buscando poster para " + name,
-      );
+  // 3. Return the in-flight promise if a request is already running.
+  if (pendingRequests.has(name)) return pendingRequests.get(name);
 
-    const { results } = await response.json();
+  // 4. Fetch from TMDB.
+  const formattedName = encodeURIComponent(name.toLowerCase());
+  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+  const apiUrl = `https://api.themoviedb.org/3/search/person?api_key=${apiKey}&query=${formattedName}`;
 
-    // Buscar el primer profile_path válido
-    let validProfilePath = null;
-    for (let i = 0; i < results.length; i++) {
-      if (results[i].profile_path) {
-        validProfilePath = results[i].profile_path;
-        break;
-      }
-    }
-
-    if (validProfilePath) {
-      const posterUrl = `http://image.tmdb.org/t/p/w500/${validProfilePath}`;
-      setPosters((prevState) => ({
-        ...prevState,
-        [name]: posterUrl,
-      }));
-      imageCache.set(name, posterUrl); // Almacenar en cache
-    } else {
-      // Si ninguno tiene profile_path, usar localDefaultImage y cachear
-      setPosters((prevState) => ({
-        ...prevState,
-        [name]: localDefaultImage,
-      }));
+  const promise = fetch(apiUrl)
+    .then((res) => {
+      if (!res.ok) throw new Error(`TMDB API error for "${name}"`);
+      return res.json();
+    })
+    .then(({ results }) => {
+      const hit = results.find((r) => r.profile_path);
+      const url = hit
+        ? `https://image.tmdb.org/t/p/w500/${hit.profile_path}`
+        : localDefaultImage;
+      imageCache.set(name, url);
+      return url;
+    })
+    .catch(() => {
+      // On any error fall back to the default avatar and cache it so we don't
+      // keep retrying on every render.
       imageCache.set(name, localDefaultImage);
-    }
-  } catch (error) {
-    console.error("Error al buscar el póster:", name);
-    // En caso de error, usar localDefaultImage y cachear
-    setPosters((prevState) => ({
-      ...prevState,
-      [name]: localDefaultImage,
-    }));
-    imageCache.set(name, localDefaultImage);
-  }
+      return localDefaultImage;
+    })
+    .finally(() => {
+      pendingRequests.delete(name);
+    });
+
+  pendingRequests.set(name, promise);
+  return promise;
+}
+
+/**
+ * Returns the best available image URL for a name:
+ * cache → posters state → default.
+ * No longer needs localDefaultImage as a parameter (it's a module constant).
+ *
+ * @param {string} name
+ * @param {Record<string, string>} posters - Current posters state from the hook.
+ * @returns {string}
+ */
+export const handleImg = (name, posters) => {
+  if (imageCache.has(name)) return imageCache.get(name);
+  return posters[name] || localDefaultImage;
 };
 
-export const handleImg = (name, posters, localDefaultImage) => {
-  // Si la imagen ya está cacheada y no es igual a la default, usarla
-
-  if (imageCache.has(name) && imageCache.get(name) !== localDefaultImage) {
-    return imageCache.get(name);
-  }
-
-  const poster = posters[name] || localDefaultImage;
-
-  // Cachear el resultado si no es la imagen predeterminada
-  if (poster !== localDefaultImage) {
-    imageCache.set(name, poster);
-  }
-
-  return poster;
-};
-
-// --- Movie posters ---
-// Casos especiales para posters de películas/series.
+// ─── Special Movie Poster Rules ───────────────────────────────────────────────
+// Hard-coded overrides for titles that don't resolve well via TMDB search.
 const specialMoviePosterRules = [
   {
     includes: "Love, Death & Robots",
@@ -118,6 +124,13 @@ const specialMoviePosterRules = [
   },
 ];
 
+/**
+ * Returns a hard-coded poster URL for movies/shows that need special handling,
+ * or undefined if no rule matches.
+ *
+ * @param {string | undefined} name
+ * @returns {string | undefined}
+ */
 export const resolveSpecialMoviePoster = (name) => {
   if (!name) return undefined;
 

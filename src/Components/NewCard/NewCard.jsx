@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useIsMobile } from "../../hooks/useIsMobile";
 import "./NewCard.css";
 
 const CONFIG = {
@@ -21,7 +22,8 @@ const CONFIG = {
 
 const NewCard = ({ src, title, year, list }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // Single shared listener via hook — no more N listeners for N cards
+  const isMobile = useIsMobile(CONFIG.breakpoint);
 
   const getDimensions = () => {
     const size = isMobile ? CONFIG.sizes.mobile : CONFIG.sizes.desktop;
@@ -47,16 +49,6 @@ const NewCard = ({ src, title, year, list }) => {
   };
 
   const toggleOpen = () => setIsOpen(!isOpen);
-
-  useEffect(() => {
-    const updateSize = () => {
-      setIsMobile(window.innerWidth <= CONFIG.breakpoint);
-    };
-
-    updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
 
   const baseDimensions = getDimensions();
 

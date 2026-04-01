@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Vol10 from "./Lists/Vol10.js";
@@ -39,8 +39,8 @@ function App() {
       <Suspense fallback={<div className="loader"></div>}>
         <Routes>
           {/* Default route — Vol10 is already loaded */}
-          <Route path="/" element={<Home list={Vol10} />} />
-          <Route path="/Vol10" element={<Home list={Vol10} />} />
+          <Route index element={<Home list={Vol10} />} />
+          <Route path="Vol10" element={<Home list={Vol10} />} />
 
           {/* Volume routes — data loaded on demand */}
           <Route path="/Vol9" element={<Vol9Page />} />
@@ -67,8 +67,8 @@ function App() {
           {/* Dynamic year route */}
           <Route path="/:id" element={<YearsMovies />} />
 
-          {/* Fallback */}
-          <Route path="*" element={<Home list={Vol10} />} />
+          {/* Fallback — redirect unknown paths to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

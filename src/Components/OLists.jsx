@@ -1,29 +1,21 @@
-import { useEffect, useState } from "react";
 import Vol10 from "../Lists/Vol10";
-import {
-  localDefaultImage,
-  localimg,
-  personPoster,
-} from "../Utils/posterUtils";
+import { useLazyPosters } from "../hooks/useLazyPosters";
+import { handleImg } from "../Utils/posterUtils";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
 
+/**
+ * Renders the full "View All" list for a category (Directors, Actors, Writers).
+ * Replaced the manual sequential fetch + inline handleImg with useLazyPosters
+ * for consistency with Category and better performance (parallel fetching).
+ *
+ * @param {string} title  - "Directors" | "Actors" | "Writers"
+ * @param {Array}  lista  - [name, count] tuples
+ */
 const OLists = ({ title, lista }) => {
-  const [posters, setPosters] = useState({});
+  const { posters } = useLazyPosters(lista);
 
-  useEffect(() => {
-    const updatePosters = async () => {
-      for (const person of lista) {
-        await personPoster(person[0], setPosters);
-      }
-    };
-    updatePosters();
-  }, [lista]);
-
-  const handleImg = (name) =>
-    localimg(name) || posters[name] || localDefaultImage;
-
-  const moviesList = (name) => {
+  const getMoviesForItem = (name) => {
     switch (title) {
       case "Actors":
         return Vol10.filter((x) => x.actors.includes(name));
@@ -41,14 +33,14 @@ const OLists = ({ title, lista }) => {
       <div className="page-content">
         <HeadingSection title={title} size={lista.length} />
         <div className="row justify-content-center">
-          {lista.map((director) => (
+          {lista.map((item) => (
             <NewCard
-              key={director[0]}
-              src={handleImg(director[0])}
-              title={director[0]}
-              year={director[1]}
-              list={moviesList(director[0])}
-            ></NewCard>
+              key={item[0]}
+              src={handleImg(item[0], posters)}
+              title={item[0]}
+              year={item[1]}
+              list={getMoviesForItem(item[0])}
+            />
           ))}
         </div>
       </div>

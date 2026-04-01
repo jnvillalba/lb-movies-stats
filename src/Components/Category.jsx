@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLazyPosters } from "../hooks/useLazyPosters";
-import { handleImg, localDefaultImage } from "../Utils/posterUtils";
+import { handleImg } from "../Utils/posterUtils";
 import HeadingSection from "./HeadingSection";
 import NewCard from "./NewCard/NewCard";
 
@@ -8,8 +8,11 @@ import NewCard from "./NewCard/NewCard";
  * Renders a top-N category section (Directors, Actors, Writers…) with lazy-
  * loaded person posters.
  *
+ * Expects lista already sliced to the desired length by the parent — no
+ * internal slicing to avoid doing the same work twice.
+ *
  * @param {string}   title            - Section heading and "View All" route key.
- * @param {Array}    lista            - [name, count] tuples (already sliced to 12).
+ * @param {Array}    lista            - [name, count] tuples (pre-sliced by parent).
  * @param {Function} getMoviesForItem - (name: string) => Movie[] — injected by the
  *                                      caller so this component stays decoupled from
  *                                      the filter logic.
@@ -23,10 +26,10 @@ const Category = ({ title, lista, getMoviesForItem }) => {
         <HeadingSection title={title} />
 
         <div className="row justify-content-center">
-          {lista.slice(0, 12).map((item) => (
+          {lista.map((item) => (
             <NewCard
               key={item[0]}
-              src={handleImg(item[0], posters, localDefaultImage)}
+              src={handleImg(item[0], posters)}
               title={item[0]}
               year={item[1]}
               list={getMoviesForItem(item[0])}
