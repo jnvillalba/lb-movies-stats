@@ -16,12 +16,6 @@ function Home({ list }) {
     return list;
   }, [list, filterType]);
 
-  const medirTiempo = (func, ...args) => {
-    console.time("Tiempo de ejecución");
-    const resultado = func(...args);
-    console.timeEnd("Tiempo de ejecución");
-    return resultado;
-  };
 
   const actoresRepetidos = useMemo(
     () => encontrarRepetidos(filteredList, "actors"),

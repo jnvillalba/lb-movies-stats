@@ -11,46 +11,51 @@ import NewCard from "./NewCard/NewCard";
 
 const Category = ({ title, lista, filterList }) => {
   const [posters, setPosters] = useState({});
-  const observerRef = useRef();
 
-  const fetchPostersThrottled = useCallback(
-    async (batch) => {
-      const throttledFetch = throttle(async () => {
-        const promises = batch.map((p) => personPoster(p[0], setPosters));
-        await Promise.allSettled(promises);
-      }, 1000);
+  // Mirror latest posters in a ref so the IntersectionObserver closure
+  // can read current values without being in the dependency array
+  const postersRef = useRef(posters);
+  useEffect(() => {
+    postersRef.current = posters;
+  }, [posters]);
 
-      throttledFetch();
-    },
-    [setPosters]
-  );
+  // Throttled fetch created ONCE per component instance (not per call)
+  const throttledBatchFetch = useRef(
+    throttle(async (batch, setter) => {
+      const promises = batch.map((p) => personPoster(p[0], setter));
+      await Promise.allSettled(promises);
+    }, 1000)
+  ).current;
+
+
+  // Batch-fetch posters for all visible items when lista changes
   useEffect(() => {
     const batchSize = 12;
     for (let i = 0; i < lista.length; i += batchSize) {
       const batch = lista.slice(i, i + batchSize);
-      fetchPostersThrottled(batch);
+      throttledBatchFetch(batch, setPosters);
     }
-  }, [fetchPostersThrottled, lista]);
+  }, [lista, throttledBatchFetch]);
 
+  // IntersectionObserver — re-created only when lista changes, NOT on every poster fetch
   useEffect(() => {
-    observerRef.current = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const director = entry.target.getAttribute("data-director");
-
-          if (!posters[director] || posters[director] === localDefaultImage) {
-            personPoster(director, setPosters);
+          const name = entry.target.getAttribute("data-director");
+          if (!postersRef.current[name] || postersRef.current[name] === localDefaultImage) {
+            personPoster(name, setPosters);
           }
-          observerRef.current.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       });
     });
 
     const elements = document.querySelectorAll(".lazy-load");
-    elements.forEach((element) => observerRef.current.observe(element));
+    elements.forEach((element) => observer.observe(element));
 
-    return () => observerRef.current.disconnect();
-  }, [posters]);
+    return () => observer.disconnect();
+  }, [lista]);
 
   const moviesList = useCallback(
     (name) => {
