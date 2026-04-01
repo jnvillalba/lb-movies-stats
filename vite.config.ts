@@ -31,7 +31,6 @@ export default defineConfig({
           if (id.includes("node_modules/react")) return "vendor-react";
           if (id.includes("node_modules/react-router-dom")) return "vendor-router";
           if (id.includes("node_modules/bootstrap")) return "vendor-bootstrap";
-          if (id.includes("node_modules/lodash")) return "vendor-lodash";
           if (id.includes("node_modules/framer-motion")) return "vendor-framer";
         },
       },

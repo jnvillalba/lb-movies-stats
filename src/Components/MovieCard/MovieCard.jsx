@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { fetchMoviePoster } from "../../Utils/posterUtils";
@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
   const { data: poster } = useQuery({
     queryKey: ["movie-poster", movie.name],
     queryFn: () => fetchMoviePoster(movie.name),
-    enabled: !movie.img, // Skip API call if movie already has a local image
+    enabled: !movie.img,
   });
 
   const finalPoster = movie.img || poster;
@@ -26,48 +26,46 @@ const MovieCard = ({ movie }) => {
   return (
     <motion.div
       className={`movie-card-container ${isOpen ? "expanded" : ""}`}
-      initial={{ width: size.width, height: size.height }}
-      animate={{
-        width: isOpen ? "auto" : size.width,
-        height: isOpen ? "" : size.height,
-      }}
-      transition={{ type: "spring", stiffness: 100 }}
+      layout
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
       <div
         className={`movie-card ${isOpen ? "expanded" : ""}`}
         onClick={toggleOpen}
         style={{
           width: isOpen ? "auto" : size.width,
-          height: isOpen ? "" : size.height,
+          height: isOpen ? "auto" : size.height,
         }}
       >
         <img src={finalPoster} alt={movie.name} className="movie-card-image" />
       </div>
-      {isOpen && (
-        <motion.div
-          className="movie-card-expanded"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div>
-            {movie.name} - {movie.year}
-            <p>
-              <u>{movie.directors.join(", ")}</u>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="movie-card-expanded"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div>
+              {movie.name} - {movie.year}
+              <p>
+                <u>{movie.directors.join(", ")}</u>
+              </p>
+              <p>{movie.writers.join(", ")}</p>
+            </div>
+            <p className="mt-2">
+              <em>Cast:</em>
             </p>
-            <p>{movie.writers.join(", ")}</p>
-          </div>
-          <p className="mt-2">
-            <em>Cast:</em>
-          </p>
-          {movie.actors.slice(0, 10).map((actor, i) => (
-            <p className="px-2" key={i}>
-              {actor}
-            </p>
-          ))}
-        </motion.div>
-      )}
+            {movie.actors.slice(0, 10).map((actor, i) => (
+              <p className="px-2" key={i}>
+                {actor}
+              </p>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

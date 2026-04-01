@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -5,7 +6,7 @@ const YearCard = ({ title, counter, list }) => {
   const [isListVisible, setIsListVisible] = useState(false);
 
   const toggleListVisibility = () => {
-    setIsListVisible((prevVisibility) => !prevVisibility);
+    setIsListVisible((prev) => !prev);
   };
 
   return (
@@ -22,15 +23,24 @@ const YearCard = ({ title, counter, list }) => {
         </h5>
         <span className="badge bg-primary">{counter}</span>
       </div>
-      {isListVisible && (
-        <ul className="list-group list-group-flush">
-          {list.map((item, index) => (
-            <li key={index} className="list-group-item bg-dark text-light">
-              {item.name} ({item.year})
-            </li>
-          ))}
-        </ul>
-      )}
+      <AnimatePresence initial={false}>
+        {isListVisible && (
+          <motion.ul
+            className="list-group list-group-flush"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
+            style={{ overflow: "hidden" }}
+          >
+            {list.map((item, index) => (
+              <li key={index} className="list-group-item bg-dark text-light">
+                {item.name} ({item.year})
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
