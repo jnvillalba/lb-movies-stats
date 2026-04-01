@@ -16,16 +16,27 @@ const CONFIG = {
 
 const NewCard = memo(({ src, title, year, list }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleOpen = useCallback(() => setIsOpen((prev) => !prev), []);
+  const toggleOpen = useCallback(() => {
+    setIsOpen((prev) => {
+      const next = !prev;
+      if (next) setIsExpanded(true);
+      return next;
+    });
+  }, []);
+
+  const handleExitComplete = useCallback(() => {
+    setIsExpanded(false);
+  }, []);
 
   return (
-    <div className={`new-card-container ${isOpen ? "expanded px-2" : ""}`}>
+    <div className={`new-card-container ${isExpanded ? "expanded px-2" : ""}`}>
       <motion.div
-        className={`new-card ${isOpen ? "expanded" : ""}`}
+        className={`new-card ${isExpanded ? "expanded" : ""}`}
         onClick={toggleOpen}
         animate={
-          isOpen
+          isExpanded
             ? { width: `${CONFIG.expandedWidth.card}px` }
             : undefined
         }
@@ -40,7 +51,7 @@ const NewCard = memo(({ src, title, year, list }) => {
         </div>
       </motion.div>
 
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={handleExitComplete}>
         {isOpen && (
           <motion.div
             className="new-card-expanded"
