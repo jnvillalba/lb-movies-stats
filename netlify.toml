@@ -4,3 +4,4 @@
 
 [build.environment]
   NODE_VERSION = "20.19.0"
+  SECRETS_SCAN_OMIT_KEYS = "VITE_TMDB_API_KEY"
