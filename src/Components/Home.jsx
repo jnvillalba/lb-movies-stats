@@ -1,39 +1,49 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { encontrarRepetidos, yearsRepetidos } from "../Utils/Utils.js";
 import Category from "./Category.jsx";
 import MoviesPerYear from "./MoviesPerYear";
 
 function Home({ list }) {
-  const [filterType, setFilterType] = useState("All"); // Estado para manejar el filtro
+  const [filterType, setFilterType] = useState("All");
 
-  // Filtrar la lista según el tipo seleccionado
   const filteredList = useMemo(() => {
-    if (filterType === "TV") {
-      return list.filter((item) => item.type === "TV");
-    } else if (filterType === "Movies") {
-      return list.filter((item) => !item.type);
-    }
+    if (filterType === "TV") return list.filter((item) => item.type === "TV");
+    if (filterType === "Movies") return list.filter((item) => !item.type);
     return list;
   }, [list, filterType]);
 
-
-  const actoresRepetidos = useMemo(
+  const topActors = useMemo(
     () => encontrarRepetidos(filteredList, "actors"),
     [filteredList]
   );
 
-  const añosRepetidos = useMemo(
+  const topYears = useMemo(
     () => yearsRepetidos(filteredList),
     [filteredList]
   );
 
-  const directoresRepetidos = useMemo(
+  const topDirectors = useMemo(
     () => encontrarRepetidos(filteredList, "directors"),
     [filteredList]
   );
 
-  const escritoresRepetidos = useMemo(
+  const topWriters = useMemo(
     () => encontrarRepetidos(filteredList, "writers"),
+    [filteredList]
+  );
+
+  // Factory so each Category section knows which property to filter on,
+  // without the component having to inspect its own title string.
+  const moviesByActor = useCallback(
+    (name) => filteredList.filter((x) => x.actors.includes(name)),
+    [filteredList]
+  );
+  const moviesByDirector = useCallback(
+    (name) => filteredList.filter((x) => x.directors.includes(name)),
+    [filteredList]
+  );
+  const moviesByWriter = useCallback(
+    (name) => filteredList.filter((x) => x.writers.includes(name)),
     [filteredList]
   );
 
@@ -51,7 +61,6 @@ function Home({ list }) {
             {filterType}: {filteredList.length}
           </h2>
 
-          {/* Botones para filtrar */}
           <div>
             {filters.map((option, index, arr) => (
               <button
@@ -70,28 +79,28 @@ function Home({ list }) {
         </div>
 
         <Category
-          title={"Directors"}
-          lista={directoresRepetidos.slice(0, 12)}
-          filterList={filteredList}
+          title="Directors"
+          lista={topDirectors.slice(0, 12)}
+          getMoviesForItem={moviesByDirector}
         />
 
-        {escritoresRepetidos.length > 0 && (
+        {topWriters.length > 0 && (
           <Category
-            title={"Writers"}
-            lista={escritoresRepetidos.slice(0, 12)}
-            filterList={filteredList}
+            title="Writers"
+            lista={topWriters.slice(0, 12)}
+            getMoviesForItem={moviesByWriter}
           />
         )}
 
         <Category
-          title={"Actors"}
-          lista={actoresRepetidos.slice(0, 12)}
-          filterList={filteredList}
+          title="Actors"
+          lista={topActors.slice(0, 12)}
+          getMoviesForItem={moviesByActor}
         />
 
         <MoviesPerYear
-          title={"Years"}
-          lista={añosRepetidos.slice(0, 10)}
+          title="Years"
+          lista={topYears.slice(0, 10)}
           filterList={filteredList}
         />
       </div>
