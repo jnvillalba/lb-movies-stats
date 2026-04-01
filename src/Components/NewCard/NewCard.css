@@ -1,4 +1,5 @@
 .new-card-container {
+  --card-size: 220px;
   margin: 10px;
   display: flex;
   overflow: hidden;
@@ -7,11 +8,13 @@
 .new-card {
   position: relative;
   display: inline-block;
-  width: 220px;
-  height: 220px;
-  position: relative;
+  width: var(--card-size);
+  height: var(--card-size);
   overflow: hidden;
   transition: border-radius 0.3s;
+  /* Promote to its own compositor layer to avoid layout thrash */
+  will-change: width;
+  contain: layout style;
 }
 
 .new-card-image {
@@ -37,25 +40,31 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
+  /* Keep pointer events passing through to the card */
+  pointer-events: none;
 }
 
 .new-card-number {
   margin: 10px;
   position: absolute;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.35);
+  /* Use a cheaper blur for better INP on low-end devices */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   align-self: flex-end;
   color: white;
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 0.8rem;
   margin-bottom: auto;
+  pointer-events: auto;
 }
 
 .new-card-title {
   margin: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: white;
   padding: 5px 5px;
   border-radius: 15px;
@@ -63,6 +72,7 @@
   font-size: 0.8rem;
   text-align: center;
   margin-top: auto;
+  pointer-events: auto;
 }
 
 .new-card-title:hover,
@@ -75,13 +85,13 @@
   color: white;
   padding: 10px;
   border-radius: 0 15px 15px 0;
-
   overflow-y: auto;
   max-height: 220px;
 }
 
 @media (max-width: 767px) {
   .new-card-container {
+    --card-size: 150px;
     margin: 5px;
     padding: 0px;
   }

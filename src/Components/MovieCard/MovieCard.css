@@ -1,7 +1,20 @@
 .movie-card-container {
+  --card-w: 350px;
+  --card-h: 450px;
   margin: 5px;
   display: flex;
   justify-content: center;
+}
+
+.movie-card {
+  width: var(--card-w);
+  height: var(--card-h);
+  contain: layout style;
+}
+
+.movie-card.expanded {
+  width: auto;
+  height: auto;
 }
 
 .movie-card-image {
@@ -12,6 +25,11 @@
 }
 
 @media (max-width: 767px) {
+  .movie-card-container {
+    --card-w: 150px;
+    --card-h: 180px;
+  }
+
   .movie-card-image {
     max-width: 300px;
   }

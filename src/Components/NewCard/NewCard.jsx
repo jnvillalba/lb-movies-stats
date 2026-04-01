@@ -1,15 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { Link } from "react-router-dom";
-import { useIsMobile } from "../../hooks/useIsMobile";
 import "./NewCard.css";
 
 const CONFIG = {
-  breakpoint: 768,
-  sizes: {
-    desktop: { width: 220, height: 220 },
-    mobile: { width: 150, height: 150 },
-  },
   expandedWidth: {
     card: 110,
     list: 200,
@@ -20,35 +14,24 @@ const CONFIG = {
   },
 };
 
-const NewCard = ({ src, title, year, list }) => {
+const NewCard = memo(({ src, title, year, list }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useIsMobile(CONFIG.breakpoint);
 
-  const baseDimensions = useMemo(() => {
-    const size = isMobile ? CONFIG.sizes.mobile : CONFIG.sizes.desktop;
-    return { width: `${size.width}px`, height: `${size.height}px` };
-  }, [isMobile]);
-
-  const cardDimensions = useMemo(() => {
-    if (!isOpen) return baseDimensions;
-    return { width: `${CONFIG.expandedWidth.card}px`, height: "" };
-  }, [isOpen, baseDimensions]);
-
-  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen = useCallback(() => setIsOpen((prev) => !prev), []);
 
   return (
-    <motion.div
-      className={`new-card-container ${isOpen ? "expanded px-2" : ""}`}
-      layout
-      transition={CONFIG.animations.spring}
-    >
+    <div className={`new-card-container ${isOpen ? "expanded px-2" : ""}`}>
       <motion.div
         className={`new-card ${isOpen ? "expanded" : ""}`}
         onClick={toggleOpen}
-        animate={cardDimensions}
+        animate={
+          isOpen
+            ? { width: `${CONFIG.expandedWidth.card}px` }
+            : undefined
+        }
         transition={CONFIG.animations.spring}
       >
-        <img src={src} alt={title} className="new-card-image" />
+        <img src={src} alt={title} className="new-card-image" loading="lazy" />
         <div className="new-card-overlay">
           <div className="new-card-number">{year}</div>
           <Link to={`/${title}`} className="new-card-title">
@@ -79,8 +62,10 @@ const NewCard = ({ src, title, year, list }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
-};
+});
+
+NewCard.displayName = "NewCard";
 
 export default NewCard;

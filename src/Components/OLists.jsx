@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import Vol10 from "../Lists/Vol10";
 import { usePersonPosters } from "../hooks/usePersonPosters";
 import { handleImg } from "../Utils/posterUtils";
@@ -6,8 +7,6 @@ import NewCard from "./NewCard/NewCard";
 
 /**
  * Renders the full "View All" list for a category (Directors, Actors, Writers).
- * Replaced the manual sequential fetch + inline handleImg with useLazyPosters
- * for consistency with Category and better performance (parallel fetching).
  *
  * @param {string} title  - "Directors" | "Actors" | "Writers"
  * @param {Array}  lista  - [name, count] tuples
@@ -15,18 +14,21 @@ import NewCard from "./NewCard/NewCard";
 const OLists = ({ title, lista }) => {
   const { posters } = usePersonPosters(lista);
 
-  const getMoviesForItem = (name) => {
-    switch (title) {
-      case "Actors":
-        return Vol10.filter((x) => x.actors.includes(name));
-      case "Directors":
-        return Vol10.filter((x) => x.directors.includes(name));
-      case "Writers":
-        return Vol10.filter((x) => x.writers.includes(name));
-      default:
-        return [];
-    }
-  };
+  const getMoviesForItem = useCallback(
+    (name) => {
+      switch (title) {
+        case "Actors":
+          return Vol10.filter((x) => x.actors.includes(name));
+        case "Directors":
+          return Vol10.filter((x) => x.directors.includes(name));
+        case "Writers":
+          return Vol10.filter((x) => x.writers.includes(name));
+        default:
+          return [];
+      }
+    },
+    [title]
+  );
 
   return (
     <div className="container">

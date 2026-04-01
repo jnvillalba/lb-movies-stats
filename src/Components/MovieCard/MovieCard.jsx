@@ -1,13 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import { useIsMobile } from "../../hooks/useIsMobile";
+import { memo, useCallback, useState } from "react";
 import { fetchMoviePoster } from "../../Utils/posterUtils";
 import "./MovieCard.css";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = memo(({ movie }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useIsMobile(768);
 
   const { data: poster } = useQuery({
     queryKey: ["movie-poster", movie.name],
@@ -17,27 +15,20 @@ const MovieCard = ({ movie }) => {
 
   const finalPoster = movie.img || poster;
 
-  const size = isMobile
-    ? { width: "150px", height: "180px" }
-    : { width: "350px", height: "450px" };
-
-  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen = useCallback(() => setIsOpen((prev) => !prev), []);
 
   return (
-    <motion.div
-      className={`movie-card-container ${isOpen ? "expanded" : ""}`}
-      layout
-      transition={{ type: "spring", stiffness: 100, damping: 20 }}
-    >
+    <div className={`movie-card-container ${isOpen ? "expanded" : ""}`}>
       <div
         className={`movie-card ${isOpen ? "expanded" : ""}`}
         onClick={toggleOpen}
-        style={{
-          width: isOpen ? "auto" : size.width,
-          height: isOpen ? "auto" : size.height,
-        }}
       >
-        <img src={finalPoster} alt={movie.name} className="movie-card-image" />
+        <img
+          src={finalPoster}
+          alt={movie.name}
+          className="movie-card-image"
+          loading="lazy"
+        />
       </div>
       <AnimatePresence>
         {isOpen && (
@@ -66,8 +57,10 @@ const MovieCard = ({ movie }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
-};
+});
+
+MovieCard.displayName = "MovieCard";
 
 export default MovieCard;
