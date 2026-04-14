@@ -5051,10 +5051,10 @@ let Vol10 = [
     "name": "El espinazo del diablo",
     "year": "2001",
     "directors": [
-      "Guillermo Del Toro"
+      "Guillermo del Toro"
     ],
     "writers": [
-      "Guillermo Del Toro",
+      "Guillermo del Toro",
       "David Munoz",
       "Antonio Trashorras"
     ],
