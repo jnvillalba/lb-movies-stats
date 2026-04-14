@@ -3839,11 +3839,7 @@ let Vol5 = [
     name: "Biutiful",
     year: "2010",
     directors: ["Alejandro Gonzalez Inarritu"],
-    writers: [
-      "Armando Bo",
-      "Nicolas Giacobone",
-      "Alejandro Gonzalez Inarritu",
-    ],
+    writers: ["Armando Bo", "Nicolas Giacobone", "Alejandro Gonzalez Inarritu"],
     actors: [
       "Javier Bardem",
       "Maricel Álvarez",
@@ -5798,7 +5794,7 @@ let Vol5 = [
   {
     name: "Blade II",
     year: "2002",
-    directors: ["Guillermo Del Toro"],
+    directors: ["Guillermo del Toro"],
     writers: ["David S Goyer"],
     actors: [
       "Wesley Snipes",
@@ -9467,7 +9463,6 @@ let Vol5 = [
       "Taylor Murphy",
     ],
   },
-
 ];
 export default Vol5;
 //, "actors": get_stars(url)

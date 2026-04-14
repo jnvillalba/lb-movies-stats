@@ -4306,8 +4306,8 @@ let Vol3 = [
   {
     name: "Pan's Labyrinth",
     year: "2006",
-    directors: ["Guillermo Del Toro"],
-    writers: ["Guillermo Del Toro"],
+    directors: ["Guillermo del Toro"],
+    writers: ["Guillermo del Toro"],
     actors: [
       "Ivana Baquero",
       "Maribel Verdú",

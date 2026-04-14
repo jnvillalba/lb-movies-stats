@@ -5411,8 +5411,8 @@ let Vol2 = [
   {
     name: "Crimson Peak",
     year: "2015",
-    directors: ["Guillermo Del Toro"],
-    writers: ["Matthew Robbins", "Guillermo Del Toro"],
+    directors: ["Guillermo del Toro"],
+    writers: ["Matthew Robbins", "Guillermo del Toro"],
     actors: [
       "Mia Wasikowska",
       "Jessica Chastain",
@@ -6635,8 +6635,8 @@ let Vol2 = [
   {
     name: "The Shape of Water",
     year: "2017",
-    directors: ["Guillermo Del Toro"],
-    writers: ["Vanessa Taylor", "Guillermo Del Toro"],
+    directors: ["Guillermo del Toro"],
+    writers: ["Vanessa Taylor", "Guillermo del Toro"],
     actors: [
       "Sally Hawkins",
       "Doug Jones",

@@ -6171,8 +6171,8 @@ let Vol1 = [
   {
     name: "Pacific Rim",
     year: "2013",
-    directors: ["Guillermo Del Toro"],
-    writers: ["Guillermo Del Toro", "Travis Beacham"],
+    directors: ["Guillermo del Toro"],
+    writers: ["Guillermo del Toro", "Travis Beacham"],
     actors: [
       "Charlie Hunnam",
       "Rinko Kikuchi",

@@ -1704,8 +1704,8 @@ let movies = [
   },
   {
     name: "Guillermo del Toro's Pinocchio",
-    directors: ["Mark Gustafson", "Guillermo Del Toro"],
-    writers: ["Guillermo Del Toro", "Patrick Mchale"],
+    directors: ["Mark Gustafson", "Guillermo del Toro"],
+    writers: ["Guillermo del Toro", "Patrick Mchale"],
     year: 2022,
     url: "https://boxd.it/kjMW",
     actors: [

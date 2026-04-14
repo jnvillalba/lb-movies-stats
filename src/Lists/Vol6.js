@@ -2064,8 +2064,8 @@ let Vol6 = [
   {
     name: "Nightmare Alley",
     year: "2021",
-    directors: ["Guillermo Del Toro"],
-    writers: ["Guillermo Del Toro", "William Lindsay Gresham", "Kim Morgan"],
+    directors: ["Guillermo del Toro"],
+    writers: ["Guillermo del Toro", "William Lindsay Gresham", "Kim Morgan"],
     actors: [
       "Bradley Cooper",
       "Rooney Mara",
@@ -7806,12 +7806,7 @@ let Vol6 = [
     name: "Starsky & Hutch",
     year: "2004",
     directors: ["Todd Phillips"],
-    writers: [
-      "Todd Phillips",
-      "Scot Armstrong",
-      "Stevie Long",
-      "John Obrien",
-    ],
+    writers: ["Todd Phillips", "Scot Armstrong", "Stevie Long", "John Obrien"],
     actors: [
       "Ben Stiller",
       "Owen Wilson",
@@ -9887,7 +9882,6 @@ let Vol6 = [
       "Paul Worley",
     ],
   },
-
 ];
 
 export default Vol6;
