@@ -5047,7 +5047,36 @@ let Vol10 = [
       "Alphaeus Green, Jr.",
       "Wynn Reichert",
     ],
-  },
+  },{
+    "name": "El espinazo del diablo",
+    "year": "2001",
+    "directors": [
+      "Guillermo Del Toro"
+    ],
+    "writers": [
+      "Guillermo Del Toro",
+      "David Munoz",
+      "Antonio Trashorras"
+    ],
+    "actors": [
+      "Marisa Paredes",
+      "Eduardo Noriega",
+      "Federico Luppi",
+      "Fernando Tielve",
+      "Íñigo Garcés",
+      "Irene Visedo",
+      "José Manuel Lorenzo",
+      "Francisco Maestre",
+      "Junio Valverde",
+      "Berta Ojea",
+      "Adrián Lamana",
+      "Daniel Esparza",
+      "Miguel Ortiz",
+      "Juan Carlos Vellido",
+      "Javier Bódalo",
+      "Víctor Elías"
+    ]
+  }
 ];
 // {
 //     name: "",
