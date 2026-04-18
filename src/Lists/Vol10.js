@@ -3341,6 +3341,7 @@ let Vol10 = [
       "Michael Dorn",
       "Phil LaMarr",
       "Shantel VanSanten",
+      "Frank Welker",
     ],
   },
   {
@@ -3874,8 +3875,15 @@ let Vol10 = [
     season: 2,
     name: "Daredevil: Born Again",
     year: "2026",
-    directors: ["Justin Benson", "Aaron Moorhead", "Solvan Naim", ,],
+    directors: [
+      "Justin Benson",
+      "Aaron Moorhead",
+      "Solvan Naim",
+      "Angela Barnes",
+    ],
     writers: [
+      "Stan Lee",
+      "Bill Everett",
       "Dario Scardapane",
       "Matt Corman",
       "Chris Ord",
@@ -3883,6 +3891,7 @@ let Vol10 = [
       "Devon Kliger",
       "Chantelle Wells",
       "Heather Bellson",
+      "Jesse Wigutow",
     ],
     actors: [
       "Charlie Cox",
@@ -3920,7 +3929,6 @@ let Vol10 = [
       "Jeremy Isaiah Earl",
       "Camila Rodriguez",
       "Ashley Marie Ortiz",
-      "Soledad",
       "Bartley Booz",
       "Alexis Frias",
       "Javi Espinosa",
@@ -3941,6 +3949,9 @@ let Vol10 = [
       "Ivan Moutinho",
       "Michael Muñiz",
       "Mark Rome",
+      "Nathan Wallace",
+      "Pej Vahdat",
+      "Jane Fergus",
     ],
   },
   {
@@ -4862,13 +4873,14 @@ let Vol10 = [
     season: 5,
     name: "The Boys",
     year: "2026",
-    directors: ["Philip Sgriccia", "Shana Stein"],
+    directors: ["Philip Sgriccia", "Shana Stein", "Karen Gaviola"],
     writers: [
       "Eric Kripke",
       "Garth Ennis",
       "Darick Robertson",
       "Paul Grellong",
       "Jessica Chou",
+      "Ellie Monahan",
     ],
     actors: [
       "Karl Urban",
@@ -4939,6 +4951,11 @@ let Vol10 = [
       "Michael Dunston",
       "Stewart Adam McKensy",
       "André Blissett",
+      "Elisabeth Shue",
+      "Giancarlo Esposito",
+      "Zach McGowan",
+      "Olivia Morandin",
+      "Nicholas Hamilton",
     ],
   },
   {
@@ -5047,18 +5064,13 @@ let Vol10 = [
       "Alphaeus Green, Jr.",
       "Wynn Reichert",
     ],
-  },{
-    "name": "El espinazo del diablo",
-    "year": "2001",
-    "directors": [
-      "Guillermo del Toro"
-    ],
-    "writers": [
-      "Guillermo del Toro",
-      "David Munoz",
-      "Antonio Trashorras"
-    ],
-    "actors": [
+  },
+  {
+    name: "El espinazo del diablo",
+    year: "2001",
+    directors: ["Guillermo del Toro"],
+    writers: ["Guillermo del Toro", "David Munoz", "Antonio Trashorras"],
+    actors: [
       "Marisa Paredes",
       "Eduardo Noriega",
       "Federico Luppi",
@@ -5074,9 +5086,9 @@ let Vol10 = [
       "Miguel Ortiz",
       "Juan Carlos Vellido",
       "Javier Bódalo",
-      "Víctor Elías"
-    ]
-  }
+      "Víctor Elías",
+    ],
+  },
 ];
 // {
 //     name: "",
