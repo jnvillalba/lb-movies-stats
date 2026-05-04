@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Link } from "react-router-dom";
+import { ANIMATION_CONFIG } from "../../config/animationConfig";
 
-const YearCard = ({ title, counter, list }) => {
+const YearCard = memo(({ title, counter, list }) => {
   const [isListVisible, setIsListVisible] = useState(false);
 
   const toggleListVisibility = () => {
@@ -30,11 +31,11 @@ const YearCard = ({ title, counter, list }) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
+            transition={ANIMATION_CONFIG.listExpand}
             style={{ overflow: "hidden" }}
           >
-            {list.map((item, index) => (
-              <li key={index} className="list-group-item bg-dark text-light">
+            {list.map((item) => (
+              <li key={`${item.name}-${item.year}`} className="list-group-item bg-dark text-light">
                 {item.name} ({item.year})
               </li>
             ))}
@@ -43,6 +44,8 @@ const YearCard = ({ title, counter, list }) => {
       </AnimatePresence>
     </div>
   );
-};
+});
+
+YearCard.displayName = "YearCard";
 
 export default YearCard;

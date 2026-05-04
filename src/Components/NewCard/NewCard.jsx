@@ -1,18 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { memo, useCallback, useState } from "react";
 import { Link } from "react-router-dom";
+import { ANIMATION_CONFIG, CARD_CONFIG } from "../../config/animationConfig";
 import "./NewCard.css";
-
-const CONFIG = {
-  expandedWidth: {
-    card: 110,
-    list: 200,
-  },
-  animations: {
-    spring: { type: "spring", stiffness: 500, damping: 30 },
-    fade: { duration: 0.15 },
-  },
-};
 
 const NewCard = memo(({ src, title, year, list }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,10 +27,10 @@ const NewCard = memo(({ src, title, year, list }) => {
         onClick={toggleOpen}
         animate={
           isExpanded
-            ? { width: `${CONFIG.expandedWidth.card}px` }
+            ? { width: `${CARD_CONFIG.expandedWidth.card}px` }
             : undefined
         }
-        transition={CONFIG.animations.spring}
+        transition={ANIMATION_CONFIG.spring}
       >
         <img src={src} alt={title} className="new-card-image" loading="lazy" />
         <div className="new-card-overlay">
@@ -56,13 +46,13 @@ const NewCard = memo(({ src, title, year, list }) => {
           <motion.div
             className="new-card-expanded"
             initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: `${CONFIG.expandedWidth.list}px` }}
+            animate={{ opacity: 1, width: `${CARD_CONFIG.expandedWidth.list}px` }}
             exit={{ opacity: 0, width: 0 }}
-            transition={CONFIG.animations.fade}
+            transition={ANIMATION_CONFIG.fade}
           >
             <ol
               className="new-card-list"
-              style={{ width: `${CONFIG.expandedWidth.list}px` }}
+              style={{ width: `100%` }}
             >
               {list.map((pelicula) => (
                 <li key={`${pelicula.name}-${pelicula.year}`}>

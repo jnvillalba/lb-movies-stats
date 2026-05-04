@@ -1,104 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "bootstrap/dist/css/bootstrap.min.css";
-
-:root {
-  /* Colores principales */
-  --color-background: #1f2122;
-  --color-surface: #27292a;
-  --color-text-primary: #fff;
-  --color-text-secondary: #ccc;
-  --color-text-tertiary: #666;
-  --color-primary: #ff8000;
-  --color-primary-hover: #40bcf4;
-  --color-link: #ccc;
-  --color-link-hover: #00e054;
-
-  /* Tipografía */
-  --font-family-base: "Poppins", sans-serif;
-  --font-size-base: 16px;
-  --font-size-small: 14px;
-  --font-size-medium: 15px;
-  --font-size-large: 34px;
-
-  /* Espaciado */
-  --spacing-xs: 10px;
-  --spacing-sm: 15px;
-  --spacing-md: 20px;
-  --spacing-lg: 30px;
-  --spacing-xl: 50px;
-
-  /* Border radius */
-  --border-radius-sm: 23px;
-  --border-radius-md: 25px;
-}
-
-/* Reset y estilos generales */
-html,
-body {
-  font-family: var(--font-family-base);
-  font-weight: 400;
-  background-color: var(--color-background);
-  font-size: var(--font-size-base);
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-
-/* Enlaces */
-a {
-  color: var(--color-link);
-  text-decoration: none !important;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--color-link-hover);
-}
-
-/* Tipografía */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  color: var(--color-text-primary);
-  font-weight: 700;
-}
-
-p {
-  font-size: var(--font-size-medium);
-  line-height: var(--spacing-lg);
-  color: var(--color-text-tertiary);
-  margin-bottom: 0;
-}
-
-/* Imágenes */
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Selección de texto */
-::selection {
-  background: var(--color-primary);
-  color: var(--color-text-primary);
-}
-
-::-moz-selection {
-  background: var(--color-primary);
-  color: var(--color-text-primary);
-}
-
 /* Estructura de página */
 .page-content {
   margin-top: var(--spacing-md);
   padding: var(--spacing-xs) var(--spacing-sm);
   background-color: var(--color-surface);
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--radius-sm);
 }
 
 /* Componentes */
@@ -115,11 +20,11 @@ img {
 
 .main-button a {
   font-size: var(--font-size-small);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   background-color: var(--color-primary);
   padding: 12px 30px;
   display: inline-block;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--radius-md);
   font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 0.5px;
@@ -129,7 +34,7 @@ img {
 }
 
 .main-button a:hover {
-  background-color: var(--color-text-primary);
+  background-color: var(--color-text);
   color: var(--color-primary-hover);
 }
 
@@ -138,7 +43,7 @@ img {
   text-decoration: none;
 }
 
-/* Estilos responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .year-card {
     width: 100%;
@@ -146,5 +51,30 @@ img {
 
   li {
     font-size: var(--font-size-small);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-xl: 16px;
+    --spacing-lg: 12px;
+    --spacing-md: 12px;
+  }
+
+  .hero {
+    padding: var(--spacing-lg) var(--spacing-md);
+    min-height: 250px;
+  }
+
+  .heading-section {
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+  }
+
+  .heading-section h4 {
+    font-size: var(--font-size-lg);
+  }
+
+  .page-content {
+    padding: var(--spacing-md);
   }
 }

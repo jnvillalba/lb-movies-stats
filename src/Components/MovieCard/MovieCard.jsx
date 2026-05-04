@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "framer-motion";
 import { memo, useCallback, useState } from "react";
+import { ANIMATION_CONFIG } from "../../config/animationConfig";
 import { fetchMoviePoster } from "../../Utils/posterUtils";
 import "./MovieCard.css";
 
@@ -48,7 +49,7 @@ const MovieCard = memo(({ movie }) => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
+            transition={ANIMATION_CONFIG.slide}
           >
             <div>
               {movie.name} - {movie.year}
@@ -60,8 +61,8 @@ const MovieCard = memo(({ movie }) => {
             <p className="mt-2">
               <em>Cast:</em>
             </p>
-            {movie.actors.slice(0, 10).map((actor, i) => (
-              <p className="px-2" key={i}>
+            {movie.actors.slice(0, 10).map((actor) => (
+              <p className="px-2" key={actor}>
                 {actor}
               </p>
             ))}

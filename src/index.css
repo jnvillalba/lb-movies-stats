@@ -1,1 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+    --color-bg: #1f2122;
+    --color-surface: #27292a;
+    --color-text: #fff;
+    --color-text-secondary: #ccc;
+    --color-text-tertiary: #666;
+    --color-primary: #ff8000;
+    --color-primary-hover: #40bcf4;
+    --color-link: #ccc;
+    --color-link-hover: #00e054;
+
+    --font-family: "Poppins", sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --font-size-medium: 15px;
+    --font-size-large: 34px;
+
+    --spacing-xs: 10px;
+    --spacing-sm: 15px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 50px;
+
+    --radius-sm: 23px;
+    --radius-md: 25px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    background-color: var(--color-bg);
+    font-size: var(--font-size-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+p {
+    font-size: var(--font-size-medium);
+    line-height: var(--spacing-lg);
+    color: var(--color-text-tertiary);
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+::selection {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+::-moz-selection {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+.loader {
+    width: 36px;
+    height: 36px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -91,7 +91,8 @@
   /* prevent horizontal scroll */
   word-break: break-word;
   overflow-wrap: anywhere;
-  max-height: 220px;
+  max-height: 500px;
+  box-sizing: border-box;
 }
 
 .new-card-expanded .new-card-list {
@@ -164,7 +165,7 @@
   }
 
   .new-card.expanded {
-    width: clamp(170px, 20vw, 260px) !important;
+    width: clamp(170px, 20vw, 320px) !important;
   }
 
   .new-card-title {
